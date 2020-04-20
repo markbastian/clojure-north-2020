@@ -4,7 +4,7 @@ Clojure is a fantastically powerful, yet simple language. Despite this assertion
 it is not uncommon for those new to the language to have a hard time grasping
 how to build complete applications from the basic building blocks of Clojure.
 
-This tutorial will bridge the gap from the basics of data literals all the way 
+This workshop will bridge the gap from the basics of data literals all the way 
 to building a complete, stateful web backend application. Participants will 
 learn the following key takeaways:
 
@@ -18,6 +18,7 @@ data-driven and functional concepts.
 pushing state to the edges of their applications and isolating stateful 
 components.
 
+## The Project
 For our project we are going to build a really fun and cool application using 
 data about hundreds of superheroes. 
 
@@ -27,10 +28,22 @@ Specific activities we will do are:
 2. Parse existing data files into a usable format.
 3. Learn about and use a very powerful family of databases 
 (including Datascript & Datahike).
-4. Build a backend web application around our superhero database, including a simple Swagger UI.
+4. Build a stateful backend web application around our superhero database, 
+including a simple Swagger UI.
 
 By the end of the session, you should be able to easily adapt this application 
 and lessons learned to your specific domains.
+
+## Target Audience
+This tutorial is aimed at beginning to intermediate Clojure developers.
+
+## Prerequisites
+Prior to this workshop, you must:
+1. Have Clojure installed on your computer.
+1. Have Leiningen installed on your computer.
+1. Install a Clojure IDE (I will be using Intellij+Cursive).
+1. Clone this project.
+1. Load the project into your IDE with a running REPL.
 
 ## License
 
