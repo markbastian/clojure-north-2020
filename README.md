@@ -8,14 +8,15 @@ This workshop will bridge the gap from the basics of data literals all the way
 to building a complete, stateful web backend application. Participants will 
 learn the following key takeaways:
 
-* Clojure is a data-centric language that frees developers to think about their
+ * Clojure is a data-centric language that frees developers to think about their
 problems simply and clearly.
-* The core functions of Clojure can be thought of as a powerful data DSL that is
-appropriate for working and thinking in any domain.
-* Powerful libraries exist beyond Clojure core that are also built on 
+ * The core functions of Clojure can be thought of as a powerful data DSL that 
+ is appropriate for working and thinking in any domain.
+ * Clojure code is often developed in a bottom-up, functional style.
+ * Powerful libraries exist beyond Clojure core that are also built on 
 data-driven and functional concepts.
-* Stateful applications can be developed and organized in a functional manner by
-pushing state to the edges of their applications and isolating stateful 
+ * Stateful applications can be developed and organized in a functional manner 
+ by pushing state to the edges of their applications and isolating stateful 
 components.
 
 ## The Project
@@ -24,26 +25,35 @@ data about hundreds of superheroes.
 
 Specific activities we will do are:
 
-1. Model our domain as data.
-2. Parse existing data files into a usable format.
-3. Learn about and use a very powerful family of databases 
+ 1. Model our domain as data.
+ 2. Parse existing data files into a usable format.
+ 3. Learn about and use a very powerful family of databases 
 (including Datascript & Datahike).
-4. Build a stateful backend web application around our superhero database, 
+ 4. Build a stateful backend web application around our superhero database, 
 including a simple Swagger UI.
 
 By the end of the session, you should be able to easily adapt this application 
 and lessons learned to your specific domains.
 
 ## Target Audience
-This tutorial is aimed at beginning to intermediate Clojure developers.
+This tutorial is aimed at the following audiences:
+ 
+ * Beginning to intermediate Clojure developers who are still trying to figure
+ out a good workflow to build complete Clojure applications.
+ * Anyone interested in fact-oriented databases
+ (Datascript, Datahike, Datomic, Crux).
+ * People who like superheroes.
 
 ## Prerequisites
 Prior to this workshop, you must:
-1. Have Clojure installed on your computer.
-1. Have Leiningen installed on your computer.
-1. Install a Clojure IDE (I will be using Intellij+Cursive).
-1. Clone this project.
-1. Load the project into your IDE with a running REPL.
+ 1. Have [Clojure](https://clojure.org/guides/getting_started) installed on your 
+ computer.
+ 1. Have [Leiningen](https://leiningen.org/) installed on your computer.
+ 1. Install a Clojure IDE (I will be using 
+ [IntelliJ IDEA](https://www.jetbrains.com/idea/) + 
+ [Cursive](https://cursive-ide.com/)).
+ 1. Clone this project, located [here](https://github.com/markbastian/clojure-north-2020).
+ 1. Load the project into your IDE with a running REPL.
 
 ## License
 
