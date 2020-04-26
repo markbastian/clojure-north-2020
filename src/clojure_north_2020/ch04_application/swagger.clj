@@ -21,6 +21,12 @@
       (fn [[n a]] {:name n :alignment a})
       (d/q queries/alignment-query @dh-conn))))
 
+
+(defn nemeses-query-handler [{:keys [dh-conn params] :as _request}]
+  (let [{n "name"} params]
+    (ok
+      (d/q queries/nemeses-query @dh-conn n))))
+
 (def handler
   (ring/ring-handler
     (ring/router
@@ -29,9 +35,14 @@
                :swagger {:info     {:title "my-api"}
                          :basePath "/"}
                :handler (swagger/create-swagger-handler)}}]
-       ["/queries"
-        {:get {:summary "Query"
-               :handler alignment-query-handler}}]
+       ["/api"
+        ["/alignments"
+         {:get {:summary "Query"
+                :handler alignment-query-handler}}]
+        ["/nemeses"
+         {:get {:summary "Get the nemeses of our hero"
+                :handler nemeses-query-handler
+                :parameters {:query {:name string?}}}}]]
        ["/math"
         {:swagger {:tags ["math"]}}
 

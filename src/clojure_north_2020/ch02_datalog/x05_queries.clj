@@ -7,3 +7,12 @@
     :where
     [?e :name ?name]
     [?e :alignment ?alignment]])
+
+(def nemeses-query
+  "find the nemeses of a given hero."
+  '[:find [?nemesis-name ...]
+    :in $ ?name
+    :where
+    [?e :name ?name]
+    [?e :nemesis ?nemesis]
+    [?nemesis :name ?nemesis-name]])
