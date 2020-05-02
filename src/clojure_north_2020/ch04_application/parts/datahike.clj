@@ -5,6 +5,7 @@
             [clojure.java.io :as io]))
 
 (defn file->datahike-db-uri [file]
+  (println file)
   (let [f (io/file file)
         _ (io/make-parents f)]
     (str "datahike:" (io/as-url f))))

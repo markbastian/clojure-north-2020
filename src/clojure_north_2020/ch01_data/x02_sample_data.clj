@@ -31,30 +31,9 @@
 (ns clojure-north-2020.ch01-data.x02-sample-data
   (:require [clojure-csv.core :as csv]
             [cuerdas.core :as cc]
-            [clojure.string :as cs]))
-
-;; ### Keywordize strings by:
-;;  1. replacing all sequences of nonword characters with a space
-;;  1. Removing all single quotes
-;;  1. Turning the string into a keyword using the [Cuerdas](https://cljdoc.org/d/funcool/cuerdas/2020.03.26-3/doc/user-guide) library.
-(defn kwize [s]
-  (-> s (cs/replace #"\W+" " ") (cs/replace #"'" "") cc/keyword))
-
-(defn remove-bad-entries [m]
-  (into (empty m)
-        (remove (fn [[k v]] (or (nil? k) (#{"-" ""} v))) m)))
-
-(defn table->maps [[headers & cols]]
-  (let [h (map cc/keyword headers)]
-    (->> cols
-         (map (fn [col] (zipmap h (map cs/trim col))))
-         (map remove-bad-entries))))
-
-(defn maybe-update [m k f]
-  (cond-> m (m k) (update k f)))
-
-(defn maybe-bulk-update [m ks f]
-  (reduce (fn [m k] (maybe-update m k f)) m ks))
+            [clojure.string :as cs]
+            [clojure-north-2020.ch01-data.x01-data :refer
+             [table->maps maybe-bulk-update kwize]]))
 
 ;;; Process heroes_information.csv to get basic superhero data
 (defn normalize-hero-info [m]
@@ -64,65 +43,24 @@
         (maybe-bulk-update dbl-fields #(Double/parseDouble %))
         (maybe-bulk-update kw-fields kwize))))
 
-(def heroes-data
+(defn heroes-data []
   (let [filename "resources/heroes_information.csv"]
     (->> filename slurp csv/parse-csv table->maps (map normalize-hero-info))))
 
-;;; Process super_hero_powers.csv to get powers data
-(defn power-reducer [raw-hero-map]
-  (letfn [(f [m [k v]]
-            (cond
-              (= k :hero-names) (assoc m :name v)
-              (= v "True") (update m :powers (comp set conj) k)
-              :else m))]
-    (reduce f {} raw-hero-map)))
+;; Note that there are data quality issues. We are going to just accept the
+;; situation and move on.
+(comment
+  (heroes-data)
 
-(def powers-data
-  (let [filename "resources/super_hero_powers.csv"]
-    (->> filename slurp csv/parse-csv table->maps (map power-reducer))))
+  (def dupes
+    (->> (heroes-data)
+         (map :name)
+         frequencies
+         (filter (fn [[_ v]] (> v 1)))
+         (into {})))
 
-;;; Process SuperheroDataset.csv to get additional source data
-
-(defn process-team-affiliations [s]
-  (let [[c f] (->> (cs/split s #"Formerly:")
-                   (map (fn [s] (->> (cs/split s #",") (map cs/trim) (filter seq) set))))]
-    (into
-      (map (fn [t] {:current-team t}) c)
-      (map (fn [t] {:former-team t}) f))))
-
-(defn process-units-field [s]
-  (let [multipliers {"ton" 1000 "meter" 100}
-        [mag units] (-> s (cs/split #"//") last cs/trim (cs/split #"\s+"))]
-    (* (Double/parseDouble (cs/replace mag #"," ""))
-       (multipliers units 1))))
-
-(defn process-aliases [s]
-  (map (fn [a] {:alias a}) (map cs/trim (cs/split s #","))))
-
-(defn normalize-hero-info-2 [m]
-  (let [dbl-fields [:speed :intelligence :unnamed-0 :power :durability :strength :total-power :combat]
-        kw-fields [:alignment :hair-color :eye-color :gender]
-        unit-fields [:weight :height]]
-    (-> m
-        (maybe-bulk-update dbl-fields #(Double/parseDouble %))
-        (maybe-bulk-update kw-fields kwize)
-        (maybe-bulk-update unit-fields process-units-field)
-        (maybe-update :team-affiliation process-team-affiliations)
-        (maybe-update :aliases process-aliases))))
-(time
-  (let [filename "resources/SuperheroDataset.csv"]
-    (->> filename slurp csv/parse-csv table->maps (map normalize-hero-info-2) (take 4)
-         )))
-
-(def dupes
-  (->> heroes-data
-       (map :name)
-       frequencies
-       (filter (fn [[_ v]] (> v 1)))
-       (into {})))
-
-(def spidey-dupes
-  (->> (filter (fn [{:keys [name]}] (= name "Spider-Man")) heroes-data)
-       (apply merge-with (fn [a b] (if (= a b) a (flatten (vector a b)))))
-       (filter (fn [[_ v]] (seq? v)))
-       (into {})))
+  (def (spidey-dupes)
+    (->> (filter (fn [{:keys [name]}] (= name "Spider-Man")) heroes-data)
+         (apply merge-with (fn [a b] (if (= a b) a (flatten (vector a b)))))
+         (filter (fn [[_ v]] (seq? v)))
+         (into {}))))
