@@ -152,20 +152,6 @@
     :db/valueType   :db.type/keyword
     :db/cardinality :db.cardinality/many}])
 
-(defn key->idents [key]
-  (->> data/heroes-data
-       (map key)
-       distinct
-       (filter some?)
-       (mapv (fn [race] {:db/ident race}))))
-
-(def races (key->idents :race))
-(def genders (key->idents :gender))
-(def alignments (key->idents :alignment))
-(def colors
-  (let [c [:hair-color :eye-color :skin-color]]
-    (vec (distinct (mapcat key->idents c)))))
-
 (defn tx-hero [{:keys [publisher] :as hero}]
   (cond-> hero publisher (update :publisher (fn [p] {:name p}))))
 

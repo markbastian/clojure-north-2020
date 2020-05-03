@@ -59,8 +59,10 @@
          (filter (fn [[_ v]] (> v 1)))
          (into {})))
 
-  (def (spidey-dupes)
-    (->> (filter (fn [{:keys [name]}] (= name "Spider-Man")) heroes-data)
+  (def spidey-dupes
+    (->> (heroes-data)
+         (filter (fn [{:keys [name]}] (= name "Spider-Man")))
          (apply merge-with (fn [a b] (if (= a b) a (flatten (vector a b)))))
          (filter (fn [[_ v]] (seq? v)))
-         (into {}))))
+         (into {})))
+  )

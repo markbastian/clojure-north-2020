@@ -11,14 +11,14 @@
               :else m))]
     (reduce f {} raw-hero-map)))
 
-(comment
-  ;Non-reduced powers
-  (let [filename "resources/super_hero_powers.csv"]
-    (->> filename slurp csv/parse-csv table->maps (take 4))))
-
 (defn powers-data []
   (let [filename "resources/super_hero_powers.csv"]
     (->> filename slurp csv/parse-csv table->maps (map power-reducer))))
 
 (comment
-  (powers-data))
+  ;Non-reduced powers
+  (let [filename "resources/super_hero_powers.csv"]
+    (->> filename slurp csv/parse-csv table->maps (take 4)))
+
+  (take 2 (powers-data))
+  )

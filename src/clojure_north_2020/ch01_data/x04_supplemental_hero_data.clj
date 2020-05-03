@@ -49,7 +49,7 @@
       (apply dissoc m attrs)
       :stats (map (fn [[k v]] {:stat/name k :stat/value v}) stats))))
 
-(defn normalize-hero-info-2 [m]
+(defn normalize [m]
   (let [dbl-fields [:speed :intelligence :unnamed-0 :power :durability :strength
                     :total-power :combat]
         kw-fields [:alignment :hair-color :eye-color :gender :skin-color :race]
@@ -65,20 +65,18 @@
         (maybe-update :occupation process-occupations)
         (maybe-update :relatives process-relatives)
         (maybe-update :base process-bases)
-        gather-stats
-        )))
+        gather-stats)))
 
 (defn supplemental-hero-data []
   (let [filename "resources/SuperheroDataset.csv"]
-    (->> filename slurp csv/parse-csv table->maps
-         (map normalize-hero-info-2))))
+    (->> filename slurp csv/parse-csv table->maps (map normalize))))
 
 (comment
   (take 10 (supplemental-hero-data))
 
   (let [filename "resources/SuperheroDataset.csv"]
     (->> filename slurp csv/parse-csv table->maps
-         (map normalize-hero-info-2)
+         (map normalize)
          (mapcat :relatives)
          (map first)
          (filter identity)
@@ -86,7 +84,7 @@
 
   (let [filename "resources/SuperheroDataset.csv"]
     (->> filename slurp csv/parse-csv table->maps
-         (map normalize-hero-info-2)
+         (map normalize)
          (map :team-affiliation)
          (filter (fn [team-affiliation] (some-> team-affiliation (cs/includes? "Formerly"))))
          (take 100)))

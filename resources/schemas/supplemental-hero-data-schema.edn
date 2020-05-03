@@ -1,0 +1,132 @@
+[{:db/ident       :name
+  :db/valueType   :db.type/string
+  :db/unique      :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :url
+  :db/valueType   :db.type/string
+  :db/unique      :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :creator
+  :db/valueType   :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :team-affiliation
+  :db/valueType   :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :aliases
+  :db/valueType   :db.type/string
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :team/name
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :first-appearance
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :team/leader?
+  :db/valueType   :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :team/former?
+  :db/valueType   :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :occupation
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :base
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :full-name
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :place-of-birth
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :stats
+  :db/valueType   :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :hero.stat/id
+  :db/valueType   :db.type/string
+  :db/unique      :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :hero.relative/id
+  :db/valueType   :db.type/string
+  :db/unique      :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :hero.team/id
+  :db/valueType   :db.type/string
+  :db/unique      :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :stat/name
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :stat/value
+  :db/valueType   :db.type/double
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :relatives
+  :db/valueType   :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :relative
+  :db/valueType   :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :relationship
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :alter-egos
+  :db/valueType   :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident       :race
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :alignment
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :hair-color
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :eye-color
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :skin-color
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :gender
+  :db/valueType   :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :height
+  :db/valueType   :db.type/double
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident       :weight
+  :db/valueType   :db.type/double
+  :db/cardinality :db.cardinality/one}]
