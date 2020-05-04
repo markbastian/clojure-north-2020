@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch04-application.parts.jetty
-  (:require [ring.adapter.jetty :as jetty]
-            [taoensso.timbre :as timbre]
-            [integrant.core :as ig])
+  (:require [integrant.core :as ig]
+            [ring.adapter.jetty :as jetty]
+            [taoensso.timbre :as timbre])
   (:import (org.eclipse.jetty.server Server)))
 
 (defn wrap-component [handler component]

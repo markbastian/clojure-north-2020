@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x03-datahike-batman
-  (:require [datahike.api :as d]
+  (:require [clojure-north-2020.ch01-data.x01-data :refer [data]]
             [clojure.java.io :as io]
-            [clojure-north-2020.ch01-data.x01-data :refer [data]]))
+            [datahike.api :as d]))
 
 ;; ## Datahike Schemas
 ;; Datahike (and Datomic) schemas are a vector of maps in which each map

@@ -1,6 +1,6 @@
 (ns clojure-north-2020.ch03-web.x01-basic
-  (:require [ring.adapter.jetty :as jetty]
-            [clojure.pprint :as pp]))
+  (:require [clojure.pprint :as pp]
+            [ring.adapter.jetty :as jetty]))
 
 ;; ## Clojure Web App Basics
 ;; Here we have the most basic Clojure application possible, consisting of

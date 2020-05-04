@@ -13,7 +13,7 @@
             [reitit.swagger-ui :as swagger-ui]
             [ring.util.http-response
              :refer
-             [ok content-type not-found file-response header bad-request]]))
+             [bad-request content-type file-response header not-found ok]]))
 
 (defn alignment-query-handler [{:keys [dh-conn] :as _request}]
   (ok

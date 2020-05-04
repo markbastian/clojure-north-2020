@@ -28,15 +28,15 @@
 ;; * Lists
 ;;   * `() ;Empty list`
 ;;   * `'(1 2 3 :a :b :c) ;A list literal with heterogeneous contents. Note the tick. This quotes the list as it would otherwise be evaluated. It is not common to use list literals.`
-(ns clojure-north-2020.ch01-data.x02-sample-data
+(ns clojure-north-2020.ch01-data.x02-hero-data
   (:require [clojure-csv.core :as csv]
-            [cuerdas.core :as cc]
-            [clojure.string :as cs]
             [clojure-north-2020.ch01-data.x01-data :refer
-             [table->maps maybe-bulk-update kwize]]))
+             [kwize maybe-bulk-update table->maps]]
+            [clojure.string :as cs]
+            [cuerdas.core :as cc]))
 
 ;;; Process heroes_information.csv to get basic superhero data
-(defn normalize-hero-info [m]
+(defn normalize [m]
   (let [dbl-fields [:height :weight]
         kw-fields [:gender :alignment :hair-color :skin-color :eye-color :race]]
     (-> m
@@ -45,12 +45,12 @@
 
 (defn heroes-data []
   (let [filename "resources/heroes_information.csv"]
-    (->> filename slurp csv/parse-csv table->maps (map normalize-hero-info))))
+    (->> filename slurp csv/parse-csv table->maps (map normalize))))
 
 ;; Note that there are data quality issues. We are going to just accept the
 ;; situation and move on.
 (comment
-  (heroes-data)
+  (take 10 (heroes-data))
 
   (def dupes
     (->> (heroes-data)

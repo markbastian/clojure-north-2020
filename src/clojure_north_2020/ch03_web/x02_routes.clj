@@ -1,6 +1,6 @@
 (ns clojure-north-2020.ch03-web.x02-routes
-  (:require [ring.adapter.jetty :as jetty]
-            [clojure.pprint :as pp]))
+  (:require [clojure.pprint :as pp]
+            [ring.adapter.jetty :as jetty]))
 
 ;; ## Handler Roles/Concerns
 ;; Handlers have 3 main concerns:

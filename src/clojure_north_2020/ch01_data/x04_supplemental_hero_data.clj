@@ -1,8 +1,8 @@
 (ns clojure-north-2020.ch01-data.x04-supplemental-hero-data
   (:require [clojure-csv.core :as csv]
-            [clojure.string :as cs]
             [clojure-north-2020.ch01-data.x01-data :refer
-             [table->maps maybe-bulk-update maybe-update kwize]]))
+             [kwize maybe-bulk-update maybe-update table->maps]]
+            [clojure.string :as cs]))
 
 ;;; Process SuperheroDataset.csv to get additional source data
 (defn remove-trash-fields [m]

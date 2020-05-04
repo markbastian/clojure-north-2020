@@ -1,30 +1,19 @@
 (ns clojure-north-2020.ch02-datalog.x03a-hero-powers-schema
-  (:require [clojure.edn :as edn]
-            [clojure.java.io :as io]))
+  (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
-(def schema
-  (->> (io/resource "schemas/hero-powers-schema.edn")
-       slurp
-       edn/read-string))
+(def schema (du/read-edn "schemas/datahike/hero-powers-schema.edn"))
 
 (comment
   (require
     '[clojure-north-2020.ch01-data.x03-hero-powers-data :as hpd]
     '[datahike.api :as d])
 
-  ;Create the db
-  (let [db-dir (doto
-                 (io/file "tmp/hero-powers-schema")
-                 io/make-parents)]
-    (def uri (str "datahike:" (io/as-url db-dir))))
-
-  (when-not (d/database-exists? uri)
-    (d/create-database uri))
-
-  (def conn (d/connect uri))
+  (def conn (du/conn-from-dirname "tmp/hero-powers-schema"))
 
   (d/transact conn schema)
-  (d/transact conn (vec (hpd/powers-data)))
+  (count (d/transact conn (vec (hpd/powers-data))))
+
+  (d/pull @conn '[*] [:name "Spider-Man"])
 
   (d/q
     '[:find [?name ...]
@@ -44,9 +33,7 @@
            [?f :name ?that-name]
            [(not= ?e ?f)]]
          @conn "Yoda")
-       (group-by second)
-       (map (fn [[k v]] [k (sort (map first v))]))
-       (into {}))
+       (reduce (fn [m [n p]] (update m p conj n)) {}))
 
   (sort-by
     second
@@ -58,7 +45,5 @@
         [?e :powers ?power]]
       @conn))
 
-  (do
-    (d/release conn)
-    (d/delete-database uri))
+  (du/cleanup conn)
   )

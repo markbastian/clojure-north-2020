@@ -1,12 +1,12 @@
 (ns clojure-north-2020.ch04-application.x10-system
-  (:require [integrant.core :as ig]
-            [datahike.api :as d]
+  (:require [clojure-north-2020.ch01-data.x01-data :as data]
+            [clojure-north-2020.ch01-data.x02-hero-data :as sd]
             [clojure-north-2020.ch02-datalog.x03-datahike-batman :as batman]
-            [clojure-north-2020.ch01-data.x01-data :as data]
-            [clojure-north-2020.ch01-data.x02-sample-data :as sd]
-            [clojure-north-2020.ch04-application.swagger :as sw]
             [clojure-north-2020.ch04-application.parts.datahike :as datahike]
-            [clojure-north-2020.ch04-application.parts.jetty :as jetty]))
+            [clojure-north-2020.ch04-application.parts.jetty :as jetty]
+            [clojure-north-2020.ch04-application.swagger :as sw]
+            [datahike.api :as d]
+            [integrant.core :as ig]))
 
 (defn handler [_request]
   {:status 200 :body "OK"})

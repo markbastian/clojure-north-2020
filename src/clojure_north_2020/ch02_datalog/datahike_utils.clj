@@ -1,6 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.datahike-utils
-  (:require [datahike.api :as d]
-            [clojure.java.io :as io]))
+  (:require [clojure.edn :as edn]
+            [clojure.java.io :as io]
+            [datahike.api :as d]))
 
 (defn conn-from-dirname [dirname]
   (let [db-dir (doto
@@ -17,6 +18,9 @@
   (let [{:keys [uri]} (meta conn)]
     (d/release conn)
     (when uri (d/delete-database uri))))
+
+(defn read-edn [resource]
+  (->> (io/resource resource) slurp edn/read-string))
 
 (comment
   (conn-from-dirname "tmp/abc")

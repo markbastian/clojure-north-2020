@@ -40,14 +40,65 @@
 ;; For this project, we'll be modeling superheroes. Consider how you might model
 ;; a superhero with attributes such as name, alias, powers, weapons, etc.
 ;;
+;; One interesting aspect of this problem is how we reference other entities,
+;; such as villains/nemeses. These are also top-level items, so perhaps it makes
+;; sense to ID them by name vs. a plain old string.
+;;
 (def data
   [{:name      "Batman"
     :alias     "Bruce Wayne"
-    :powers    ["Rich"]
-    :weapons   ["Belt" "Kryptonite Spear"]
+    :powers    #{"Rich"}
+    :weapons   #{"Utility Belt" "Kryptonite Spear"}
     :alignment "Chaotic Good"
     :nemesis   [{:name "Joker"}
-                {:name "Penguin"}]}])
+                {:name "Penguin"}]}
+   ;;TODO - Add more supers
+   {:name      "Superman"
+    :alias     "Clark Kent"
+    :powers    #{"Strength" "Flight" "Bullet Immunity"}
+    :alignment "Lawful Good"
+    :nemesis   [{:name "Lex Luthor"}
+                {:name "Zod"}
+                {:name "Faora"}]}
+   {:name      "Wonder Woman"
+    :alias     "Diana Prince"
+    :powers    #{"Strength" "Flight"}
+    :weapons   #{"Lasso of Truth" "Bracers"}
+    :alignment "Lawful Good"
+    :nemesis   [{:name "Ares"}]}
+   {:name      "Shazam"
+    :alias     "Billy Batson"
+    :powers    #{"Strength" "Bullet Immunity"}
+    :alignment "Neutral Good"
+    :nemesis   [{:name "Dr. Thaddeus Sivana"}
+                {:name "Pride"}
+                {:name "Envy"}
+                {:name "Greed"}
+                {:name "Wrath"}
+                {:name "Sloth"}
+                {:name "Gluttony"}
+                {:name "Lust"}]}
+   ;TODO - Add villains
+   {:name      "Joker"
+    :alias     "Jack Napier"
+    :alignment "Chaotic Evil"
+    :nemesis   [{:name "Batman"}]
+    }
+   ])
+
+;; ## Working with our data
+;; Find the names of the nemesis of everyone with bullet immunity
+(comment
+  (->> data
+       (filter (fn [{:keys [powers]}] (get powers "Bullet Immunity")))
+       (mapcat :nemesis))
+
+  ;Find the alias of the nemesis of everyone with an alias
+  (let [d (->> data (filter :alias) (mapcat :nemesis) (map :name) set)]
+    (->> data
+         (filter (fn [{:keys [name]}] (d name)))
+         (map :alias)))
+  )
 
 ;; ## Clojure works with Data
 ;; As a language, Clojure is great at working with data. Here are some functions

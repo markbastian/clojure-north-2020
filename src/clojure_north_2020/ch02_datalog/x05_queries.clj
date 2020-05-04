@@ -16,3 +16,14 @@
     [?e :name ?name]
     [?e :nemesis ?nemesis]
     [?nemesis :name ?nemesis-name]])
+
+(def shared-powers-query
+  "Find powers "
+  '[:find ?that-name ?power
+    :in $ ?this-name
+    :where
+    [?e :name ?this-name]
+    [?e :powers ?power]
+    [?f :powers ?power]
+    [?f :name ?that-name]
+    [(not= ?e ?f)]])

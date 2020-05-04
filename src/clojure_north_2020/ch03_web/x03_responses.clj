@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch03-web.x03-responses
-  (:require [ring.adapter.jetty :as jetty]
-            [ring.util.http-response :refer [ok not-found header content-type]]
-            [clojure.pprint :as pp]))
+  (:require [clojure.pprint :as pp]
+            [ring.adapter.jetty :as jetty]
+            [ring.util.http-response :refer [content-type header not-found ok]]))
 
 ;; ## Use ring.util.http-response
 ;; In this namespace we introduce the ring.util.http-response library.

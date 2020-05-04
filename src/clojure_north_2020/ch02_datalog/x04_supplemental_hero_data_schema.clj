@@ -1,11 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x04-supplemental-hero-data-schema
-  (:require [clojure.java.io :as io]
-            [clojure.edn :as edn]))
+  (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
-(def schema
-  (->> (io/resource "schemas/supplemental-hero-data-schema.edn")
-       slurp
-       edn/read-string))
+(def schema (du/read-edn "schemas/datahike/supplemental-hero-data-schema.edn"))
 
 (defn add-stat-ids [{hero-name :name :as hero}]
   (letfn [(add-stat-id [stats]
@@ -29,7 +25,7 @@
     (update hero :team-affiliation add-team-affiliation)))
 
 (defn creator-name->creator-ref [{:keys [creator] :as hero}]
-  (cond-> hero creator (update hero :creator (fn [p] {:name p}))))
+  (cond-> hero creator (update :creator (fn [p] {:name p}))))
 
 (defn hero->dh-format [hero]
   (-> hero
@@ -43,23 +39,12 @@
     '[clojure-north-2020.ch01-data.x04-supplemental-hero-data :as shd]
     '[datahike.api :as d])
 
-  ;Create the db
-  (let [db-dir (doto
-                 (io/file "tmp/supplemental-hero-data-schema")
-                 io/make-parents)]
-    (def uri (str "datahike:" (io/as-url db-dir))))
-
-  (when-not (d/database-exists? uri)
-    (d/create-database uri))
-
-  (def conn (d/connect uri))
+  (def conn (du/conn-from-dirname "tmp/supplemental-hero-data-schema"))
 
   (d/transact conn schema)
   (count (d/transact conn (mapv hero->dh-format (shd/supplemental-hero-data))))
 
   (d/pull @conn '[*] [:name "Spider-Man"])
 
-  (do
-    (d/release conn)
-    (d/delete-database uri))
+  (du/cleanup conn)
   )

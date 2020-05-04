@@ -1,11 +1,11 @@
 (ns clojure-north-2020.ch02-datalog.x06-schema
-  (:require [datahike.api :as d]
-            [clojure.java.io :as io]
-            [clojure-north-2020.ch01-data.x02-sample-data :as data]
+  (:require [clojure-north-2020.ch01-data.x02-hero-data :as data]
             [clojure-north-2020.ch01-data.x03-hero-powers-data :as hp]
             [clojure-north-2020.ch01-data.x04-supplemental-hero-data :as shp]
             [clojure-north-2020.ch04-application.parts.datahike :as dh]
             [clojure-north-2020.ch04-application.queries :as queries]
+            [clojure.java.io :as io]
+            [datahike.api :as d]
             [integrant.core :as ig]
             [taoensso.timbre :as timbre]))
 

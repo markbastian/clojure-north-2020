@@ -1,8 +1,8 @@
 (ns clojure-north-2020.ch04-application.parts.datahike
-  (:require [datahike.api :as d]
-            [taoensso.timbre :as timbre]
+  (:require [clojure.java.io :as io]
+            [datahike.api :as d]
             [integrant.core :as ig]
-            [clojure.java.io :as io]))
+            [taoensso.timbre :as timbre]))
 
 (defn file->datahike-db-uri [file]
   (println file)
