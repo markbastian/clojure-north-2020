@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch04-application.x10-system
   (:require [clojure-north-2020.ch01-data.x01-data :as data]
             [clojure-north-2020.ch01-data.x03-hero-data :as sd]
-            [clojure-north-2020.ch02-datalog.x03-datahike-batman :as batman]
+            [clojure-north-2020.ch02-datalog.x02b-datahike-batman :as batman]
             [clojure-north-2020.ch04-application.parts.datahike :as datahike]
             [clojure-north-2020.ch04-application.parts.jetty :as jetty]
             [clojure-north-2020.ch04-application.swagger :as sw]

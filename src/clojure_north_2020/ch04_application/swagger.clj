@@ -1,5 +1,5 @@
 (ns clojure-north-2020.ch04-application.swagger
-  (:require [clojure-north-2020.ch02-datalog.x05-queries :as queries]
+  (:require [clojure-north-2020.ch02-datalog.x06-queries :as queries]
             [datahike.core :as d]
             [muuntaja.core :as m]
             [reitit.coercion.spec]

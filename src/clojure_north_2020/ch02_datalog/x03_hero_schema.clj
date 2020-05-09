@@ -1,4 +1,4 @@
-(ns clojure-north-2020.ch02-datalog.x03a-hero-schema
+(ns clojure-north-2020.ch02-datalog.x03-hero-schema
   (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
 (def schema (du/read-edn "schemas/datahike/hero-schema.edn"))

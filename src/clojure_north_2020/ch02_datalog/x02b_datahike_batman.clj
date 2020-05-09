@@ -1,4 +1,4 @@
-(ns clojure-north-2020.ch02-datalog.x03-datahike-batman
+(ns clojure-north-2020.ch02-datalog.x02b-datahike-batman
   (:require [clojure-north-2020.ch01-data.x01-data :refer [data]]
             [clojure.java.io :as io]
             [datahike.api :as d]))

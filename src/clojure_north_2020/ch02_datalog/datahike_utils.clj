@@ -4,9 +4,7 @@
             [datahike.api :as d]))
 
 (defn conn-from-dirname [dirname]
-  (let [db-dir (doto
-                 (io/file dirname)
-                 io/make-parents)
+  (let [db-dir (doto (io/file dirname) io/make-parents)
         uri (str "datahike:" (io/as-url db-dir))
         _ (when-not (d/database-exists? uri)
             (d/create-database uri))

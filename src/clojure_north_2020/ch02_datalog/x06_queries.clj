@@ -1,4 +1,4 @@
-(ns clojure-north-2020.ch02-datalog.x05-queries)
+(ns clojure-north-2020.ch02-datalog.x06-queries)
 
 (def alignment-query
   "find the and alignment for all entities in the db."

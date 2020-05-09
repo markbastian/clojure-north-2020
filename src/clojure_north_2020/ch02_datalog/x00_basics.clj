@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x00-basics
   (:require [datascript.core :as d]))
 
-;; ## A Datascript (and Datahike, Datomic, and Crux) creates a "Datom" store
+;; ## Datascript (and Datahike, Datomic, and Crux) are Fact Stores
 (def db
   (d/db-with
     (d/empty-db)
@@ -9,7 +9,7 @@
      {:name "Pat" :favorite-food "Ice Cream" :age 42}
      {:name "Chloe" :favorite-food "Chips"}]))
 
-;; ## Datoms are Tuples
+;; ## "Facts" are Datoms
 ;; Evaluate the above code in a REPL. `db` explodes to the following set of
 ;; entries:
 [[1 :favorite-food "Pizza" 536870913]
