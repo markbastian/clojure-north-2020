@@ -8,7 +8,7 @@
 
 (comment
   (require
-    '[clojure-north-2020.ch01-data.x02-hero-data :as hd]
+    '[clojure-north-2020.ch01-data.x03-hero-data :as hd]
     '[datahike.api :as d])
 
   (def conn (du/conn-from-dirname "tmp/hero-data-schema"))

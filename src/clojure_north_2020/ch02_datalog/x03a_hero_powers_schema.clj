@@ -5,7 +5,7 @@
 
 (comment
   (require
-    '[clojure-north-2020.ch01-data.x03-hero-powers-data :as hpd]
+    '[clojure-north-2020.ch01-data.x04-hero-powers-data :as hpd]
     '[datahike.api :as d])
 
   (def conn (du/conn-from-dirname "tmp/hero-powers-schema"))

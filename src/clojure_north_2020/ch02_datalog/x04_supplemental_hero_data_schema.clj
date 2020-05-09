@@ -1,4 +1,4 @@
-(ns clojure-north-2020.ch02-datalog.x04-supplemental-hero-data-schema
+(ns clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema
   (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
 (def schema (du/read-edn "schemas/datahike/supplemental-hero-data-schema.edn"))
@@ -36,7 +36,7 @@
 
 (comment
   (require
-    '[clojure-north-2020.ch01-data.x04-supplemental-hero-data :as shd]
+    '[clojure-north-2020.ch01-data.x05-supplemental-hero-data :as shd]
     '[datahike.api :as d])
 
   (def conn (du/conn-from-dirname "tmp/supplemental-hero-data-schema"))
