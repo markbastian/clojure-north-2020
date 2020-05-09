@@ -11,7 +11,7 @@
             [reitit.swagger :as swagger]
             [reitit.swagger-ui :as swagger-ui]
             [ring.adapter.jetty :as jetty]
-            [ring.util.http-response :refer [content-type header not-found ok]]))
+            [ring.util.http-response :refer [ok]]))
 
 ;; ## State: Let's make our app do something
 ;; Any useful app will have some sort of backend state, usually a database.
@@ -21,7 +21,7 @@
   (format "Hello, %s!" (or greetee "Clojurian")))
 
 ;; "Local" handlers
-(defn hello-handler [{:keys [params] :as request}]
+(defn hello-handler [{:keys [params] :as _request}]
   (ok (greet (params "name"))))
 
 (defn request-dump-handler [request]

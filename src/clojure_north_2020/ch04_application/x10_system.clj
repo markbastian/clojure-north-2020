@@ -38,9 +38,9 @@
   (alter-var-root #'*system* (fn [s] (if-not s (ig/init config) s))))
 
 (defn stop []
-  (alter-var-root #'*system* (fn [s] (when s (do (ig/halt! s) nil)))))
+  (alter-var-root #'*system* (fn [s] (when s (ig/halt! s) nil))))
 
-(defn restart [] (do (stop) (start)))
+(defn restart [] (stop) (start))
 
 (comment
   (let [db (::datahike/connection (system))]

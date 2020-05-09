@@ -31,9 +31,7 @@
 (ns clojure-north-2020.ch01-data.x02-hero-data
   (:require [clojure-csv.core :as csv]
             [clojure-north-2020.ch01-data.x01-data :refer
-             [kwize maybe-bulk-update table->maps]]
-            [clojure.string :as cs]
-            [cuerdas.core :as cc]))
+             [kwize maybe-bulk-update table->maps]]))
 
 ;;; Process heroes_information.csv to get basic superhero data
 (defn normalize [m]

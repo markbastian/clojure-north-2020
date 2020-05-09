@@ -20,13 +20,13 @@
 ;;   * `[1 2 3 :a :b :c] ;A vector literal with heterogeneous contents.`
 ;; * Map
 ;;   * `{} ;Empty map`
-;;   * `{:a 1 "b" 2.0} ;A map literal with heterogeneous contents. Note that it is canonical to have keywords as keys.`
+;;   * `{:a 1 "b" 2.0} ;A map literal with heterogeneous contents.`
 ;; * Sets
 ;;   * `#{} ;Empty set`
 ;;   * `#{1 2 3 :a :b :c} ;A set literal with heterogeneous contents.`
 ;; * Lists
 ;;   * `() ;Empty list`
-;;   * `'(1 2 3 :a :b :c) ;A list literal with heterogeneous contents. Note the tick. This quotes the list as it would otherwise be evaluated. It is not common to use list literals.`
+;;   * `'(1 2 3 :a :b :c) ;A list literal with heterogeneous contents.`
 ;;
 ;; Given these simple literal data structures you should be able to model any
 ;; problem in any domain. Model actual cases. This is a far more powerful
@@ -113,7 +113,8 @@
 
 (comment
   (remove-bad-entries
-    {nil "A" :a nil :b "" :c "OK"}))
+    {nil "A" :a nil :b "" :c "OK"})
+  )
 
 ;; Convert a sequence of vectors into a sequence of maps, assuming the first row
 ;; of the vectors is a header row
@@ -133,7 +134,8 @@
 ;; ### Keywordize strings by:
 ;;  1. replacing all sequences of nonword characters with a space
 ;;  1. Removing all single quotes
-;;  1. Turning the string into a keyword using the [Cuerdas](https://cljdoc.org/d/funcool/cuerdas/2020.03.26-3/doc/user-guide) library.
+;;  1. Turning the string into a keyword using the 
+;;  [Cuerdas](https://cljdoc.org/d/funcool/cuerdas/2020.03.26-3/doc/user-guide) library.
 (defn kwize [s]
   (-> s (cs/replace #"\W+" " ") (cs/replace #"'" "") cc/keyword))
 
