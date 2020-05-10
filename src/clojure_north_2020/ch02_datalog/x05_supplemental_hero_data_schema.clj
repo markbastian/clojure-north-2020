@@ -1,6 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema
   (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
+;; ## Loading the Supplemental Hero Schema and Normalizing the Data
 (def schema (du/read-edn "schemas/datahike/supplemental-hero-data-schema.edn"))
 
 (defn add-stat-ids [{hero-name :name :as hero}]

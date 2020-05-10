@@ -52,7 +52,7 @@
 
  {:db/ident       :place-of-birth
   :db/valueType   :db.type/string
-  :db/cardinality :db.cardinality/many}
+  :db/cardinality :db.cardinality/one}
 
  {:db/ident       :stats
   :db/valueType   :db.type/ref

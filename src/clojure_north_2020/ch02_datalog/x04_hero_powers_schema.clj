@@ -1,6 +1,8 @@
 (ns clojure-north-2020.ch02-datalog.x04-hero-powers-schema
   (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
 
+;; ## Loading the Hero Powers Schema
+;; No modification of data is required.
 (def schema (du/read-edn "schemas/datahike/hero-powers-schema.edn"))
 
 (comment
