@@ -13,7 +13,9 @@
 ;; ### Protip - Separate logic from handlers
 ;; Business logic should know *nothing* about the calling context. If you are
 ;; returning http response codes or passing in web concepts you are complecting
-;; your application.
+;; your application. This particular "API" is contrived, but as we'l see in the
+;; future we can use completely independent API logic in our servers without the
+;; logic knowing anything about its surrounding context.
 (defn greet [greetee]
   (format "Hello, %s!" (or greetee "Clojurian")))
 

@@ -8,12 +8,19 @@
 ;; with both datascript and datahike.
 
 (def alignment-query
-  "find the and alignment for all entities in the db."
+  "find the name and alignment for all entities in the db."
   '[:find ?name ?alignment
     :in $
     :where
     [?e :name ?name]
     [?e :alignment ?alignment]])
+
+(def distinct-alignments-query
+  "find the distinct alignments in db."
+  '[:find [?alignment ...]
+    :in $
+    :where
+    [_ :alignment ?alignment]])
 
 (def nemeses-query
   "find the nemeses of a given hero."
@@ -54,6 +61,27 @@
     [?f :name ?name]
     [?f :powers ?powers]
     [(not= ?e ?f)]])
+
+(def schema-query
+  '[:find [(pull ?e [*]) ...]
+    :in $
+    :where
+    [?e :db/ident ?ident]])
+
+(def name-query
+  '[:find [?name ...]
+    :in $
+    :where
+    [?e :name ?name]])
+
+(def distinct-ident-keywords-query
+  "Determine the set of valid for each keyword (enum) type in the db."
+  '[:find ?ident ?v
+    :in $
+    :where
+    [?e :db/ident ?ident]
+    [?e :db/valueType :db.type/keyword]
+    [_ ?ident ?v]])
 
 (comment
   (require '[clojure-north-2020.ch02-datalog.datahike-utils :as du]
@@ -105,6 +133,11 @@
 
   (:race (d/entity @conn [:name "Odin"]))
   (:race (d/entity @conn [:name "Thor"]))
+
+  (->> (d/q x07/distinct-ident-keywords-query @conn :db.type/keyword)
+       (group-by first)
+       (map (fn [[k v]] [k (set (map second v))]))
+       (into {}))
 
   (du/cleanup conn)
   )

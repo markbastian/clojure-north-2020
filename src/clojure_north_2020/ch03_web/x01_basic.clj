@@ -3,6 +3,14 @@
             [ring.adapter.jetty :as jetty]))
 
 ;; ## Clojure Web App Basics
+;; Now that we have a cool database, let's build a backend application that
+;; allows us to interact with it via RESTful service. We'll start with a simple
+;; explanation of what and how web apps work in Clojure. Once we understand how
+;; web apps work we'll wire in our database. Finally, we'll look at a technique
+;; for "pushing state to the edges" of our application for a truly functional
+;; app that still has state.
+;;
+;; ### The Basic Web App
 ;; Here we have the most basic Clojure application possible, consisting of
 ;; exactly two things:
 ;;
