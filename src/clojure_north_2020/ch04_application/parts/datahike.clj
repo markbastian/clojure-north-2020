@@ -2,10 +2,10 @@
   (:require [clojure.java.io :as io]
             [datahike.api :as d]
             [integrant.core :as ig]
-            [taoensso.timbre :as timbre]))
+            [taoensso.timbre :as timbre]
+            [clojure.pprint :as pp]))
 
 (defn file->datahike-db-uri [file]
-  (println file)
   (let [f (io/file file)
         _ (io/make-parents f)]
     (str "datahike:" (io/as-url f))))
@@ -18,9 +18,11 @@
                        initial-tx (conj :initial-tx initial-tx)
                        schema-on-read (conj :schema-on-read schema-on-read)
                        temporal-index (conj :temporal-index temporal-index))]
-      (timbre/debug "Creating Datahike DB database.")
+      (timbre/debug "Ensuring Datahike DB database.")
       (when-not (d/database-exists? uri)
+        (timbre/debugf "Datahike DB database does not exist... Creating %s." uri)
         (apply d/create-database args))
+      (timbre/debugf "Datahike DB uri: %s" uri)
       (assoc config :db-uri uri))
     (timbre/error "No uri provided for database")))
 

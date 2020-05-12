@@ -1,8 +1,7 @@
 ;; Overview
 ;;
-;; 1. Clojure programs are built on data
-;; 1. Clojure is a data DSL
-;; 1. Datalog DBs are a powerful and flexible way to model and query data
-;; 1. It is simple and straightforward to create full-stack stateful
-;; applications in Clojure
+;; This workshop is organized in numerical order of progression. Start with ch01
+;; and move through each exercise (x0n) all the way through chapter 04/x04.
+;;
+;; Have fun!!
 (ns clojure-north-2020.core)

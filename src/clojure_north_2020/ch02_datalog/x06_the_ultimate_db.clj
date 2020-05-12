@@ -19,7 +19,7 @@
 ;; unified data set. The existence of shared unique attributes provides implicit
 ;; joins for a very interesting data set.
 (def schema
-  (distinct (concat x03/schema x04/schema x05/schema)))
+  (vec (distinct (concat x03/schema x04/schema x05/schema))))
 
 (comment
   (def conn (du/conn-from-dirname "tmp/the-ultimate-db"))
