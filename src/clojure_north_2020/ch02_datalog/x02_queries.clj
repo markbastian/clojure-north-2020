@@ -27,6 +27,8 @@
      {:name  "Batman"
       :alias "Bruce"}]))
 
+;; ## Exercise: Try the following in a REPL to understand the query methods.
+
 ;; ### The Pull API
 ;; This allows you to 'pull' facts straight from a db given an identity.
 (ds/pull dsdb '[*] 1)
@@ -44,6 +46,9 @@
 ;; You can also do 'backrefs' to walk the link backwards.
 (->> (ds/entity dsdb [:name "Joker"])
      :_nemesis)
+;; Exercise: How might you modify the last two queries to get the names of the
+;; nemeses? This is much more straightforward than our brute-force seq function
+;; driven approach.
 
 ;; ### The Query API
 ;; This is the most powerful and most commonly used API.
@@ -59,18 +64,16 @@
     [?e :nemesis ?n]
     [?n :name ?enemy-name]])
 
+;;Get the nemeses of Batman
 (ds/q nemeses-query dsdb "Batman")
 
 ;; Exercise - Write a query to list the name and alignment of all individuals
 ;; in the database.
-(ds/q
-  ;TODO - Blank out
-  '[:find ?name ?alignment
-    :in $
-    :where
-    [?e :name ?name]
-    [?e :alignment ?alignment]]
-  (ds/db-with
-    dsdb
-    [{:name "Joker" :alignment "Chaotic Evil"}
-     {:name "Darth Vader" :alignment "Lawful Evil"}]))
+(comment
+  (ds/q
+    '[:find ...]
+    ;;Add some more facts to make it interesting
+    (ds/db-with
+      dsdb
+      [{:name "Joker" :alignment "Chaotic Evil"}
+       {:name "Darth Vader" :alignment "Lawful Evil"}])))

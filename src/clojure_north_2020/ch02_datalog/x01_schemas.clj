@@ -18,7 +18,7 @@
 ;;a Datascript database. You get full query powers, but not all of your entities
 ;; explode as expected and not all queries are as efficient.
 ;;
-;; Execute the folling in a REPL. How many entities are created?
+;; Execute the following in a REPL. How many entities are created?
 (ds/db-with
   (ds/empty-db)
   [{:name       "Batman"
@@ -64,6 +64,7 @@
 ;; What happens when a key is missing?
 (ds/db-with
   (ds/empty-db
+    ;Note that we're removing the alias cardinality/many attribute
     (dissoc datascript-schema :alias))
   [{:name       "Batman"
     :alias      "Bruce Wayne"
@@ -112,6 +113,7 @@
   (def conn (du/conn-from-dirname "tmp/x01-schemas"))
   (dh/transact conn schema)
   ;What happens when we transact this? How do we fix it?
+  ;Exercise - Fix the a schema.
   (dh/transact
     conn
     [{:name       "Batman"
