@@ -1,6 +1,6 @@
 (ns clojure-north-2020.ch01-data.x04-hero-powers-data
   (:require [clojure-csv.core :as csv]
-            [clojure-north-2020.ch01-data.x02-functions :refer [csv-file->maps]]))
+            [clojure-north-2020.ch01-data.x02-functions :refer [csv-file->maps table->maps]]))
 
 ;; ## Get Powers Data
 ;;

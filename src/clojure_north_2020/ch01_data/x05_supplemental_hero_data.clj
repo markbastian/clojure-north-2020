@@ -1,13 +1,16 @@
 (ns clojure-north-2020.ch01-data.x05-supplemental-hero-data
   (:require [clojure-csv.core :as csv]
             [clojure-north-2020.ch01-data.x02-functions :refer
-             [kwize maybe-bulk-update maybe-update table->maps]]
+             [csv-file->maps kwize maybe-bulk-update maybe-update table->maps]]
             [clojure.string :as cs]))
 
 ;; ## Supplemental Hero Data
 ;;
 ;; Process SuperheroDataset.csv to get additional source data. This is a fairly
 ;; ugly file and requires extra processing.
+;;
+;; We are not going to do any exercises here, but it is worthwhile to scroll to
+;; the bottom of the file and view the rich comments.
 (defn remove-trash-fields [m]
   (let [trash-values #{"No team connections added yet." "No alter egos found."}]
     (into {} (remove (fn [[_ v]] (trash-values v)) m))))
@@ -72,23 +75,17 @@
 
 (defn supplemental-hero-data []
   (let [filename "resources/SuperheroDataset.csv"]
-    (->> filename slurp csv/parse-csv table->maps (map normalize))))
+    (->> filename csv-file->maps (map normalize))))
 
 (comment
   (take 10 (supplemental-hero-data))
 
   (let [filename "resources/SuperheroDataset.csv"]
-    (->> filename slurp csv/parse-csv table->maps
+    (->> filename
+         csv-file->maps
          (map normalize)
          (mapcat :relatives)
          (map first)
          (filter identity)
          distinct))
-
-  (let [filename "resources/SuperheroDataset.csv"]
-    (->> filename slurp csv/parse-csv table->maps
-         (map normalize)
-         (map :team-affiliation)
-         (filter (fn [team-affiliation] (some-> team-affiliation (cs/includes? "Formerly"))))
-         (take 100)))
   )
