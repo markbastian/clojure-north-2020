@@ -43,44 +43,19 @@
 ;; such as villains/nemeses. These are also top-level items, so perhaps it makes
 ;; sense to ID them by name vs. a plain old string.
 ;;
+
+;; Exercise: Model at least 2 superheros as data.
+;;
+;; For example, Batman may have the
+;; following characteristics:
+;; * His name is "Batman"
+;; * His alias is "Bruce Wayne"
+;; * His powers are that he is rich
+;; * His weapons are his utility belt and a kryptonite spear
+;; * His alignment is "Chaotic Good"
+;; * His nemeses include the Joker and Penguin
+;;
+;; How might you model referential relations, such as nemeses, alliances, or
+;; familial relationships?
 (def data
-  [{:name      "Batman"
-    :alias     "Bruce Wayne"
-    :powers    #{"Rich"}
-    :weapons   #{"Utility Belt" "Kryptonite Spear"}
-    :alignment "Chaotic Good"
-    :nemesis   [{:name "Joker"}
-                {:name "Penguin"}]}
-   ;;TODO - Add more supers
-   {:name      "Superman"
-    :alias     "Clark Kent"
-    :powers    #{"Strength" "Flight" "Bullet Immunity"}
-    :alignment "Lawful Good"
-    :nemesis   [{:name "Lex Luthor"}
-                {:name "Zod"}
-                {:name "Faora"}]}
-   {:name      "Wonder Woman"
-    :alias     "Diana Prince"
-    :powers    #{"Strength" "Flight"}
-    :weapons   #{"Lasso of Truth" "Bracers"}
-    :alignment "Lawful Good"
-    :nemesis   [{:name "Ares"}]}
-   {:name      "Shazam"
-    :alias     "Billy Batson"
-    :powers    #{"Strength" "Bullet Immunity"}
-    :alignment "Neutral Good"
-    :nemesis   [{:name "Dr. Thaddeus Sivana"}
-                {:name "Pride"}
-                {:name "Envy"}
-                {:name "Greed"}
-                {:name "Wrath"}
-                {:name "Sloth"}
-                {:name "Gluttony"}
-                {:name "Lust"}]}
-   ;TODO - Add villains
-   {:name      "Joker"
-    :alias     "Jack Napier"
-    :alignment "Chaotic Evil"
-    :nemesis   [{:name "Batman"}]
-    }
-   ])
+  [])

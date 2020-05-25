@@ -1,5 +1,13 @@
 (ns clojure-north-2020.ch04-application.x02-the-final-handler
-  (:require [clojure.pprint :as pp]
+  (:require [clojure-north-2020.ch01-data.x03-hero-data :as x03d]
+            [clojure-north-2020.ch01-data.x04-hero-powers-data :as x04d]
+            [clojure-north-2020.ch01-data.x05-supplemental-hero-data :as x05d]
+            [clojure-north-2020.ch02-datalog.x03-hero-schema :as x03]
+            [clojure-north-2020.ch02-datalog.x04-hero-powers-schema :as x04]
+            [clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema :as x05]
+            [clojure-north-2020.ch02-datalog.x07-queries :as x07]
+            [clojure.pprint :as pp]
+            [datahike.api :as d]
             [muuntaja.core :as m]
             [reitit.coercion.spec]
             [reitit.ring :as ring]
@@ -10,15 +18,7 @@
             [reitit.ring.middleware.parameters :as parameters]
             [reitit.swagger :as swagger]
             [reitit.swagger-ui :as swagger-ui]
-            [ring.util.http-response :refer [ok not-found bad-request]]
-            [clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema :as x05]
-            [datahike.api :as d]
-            [clojure-north-2020.ch02-datalog.x04-hero-powers-schema :as x04]
-            [clojure-north-2020.ch02-datalog.x03-hero-schema :as x03]
-            [clojure-north-2020.ch01-data.x03-hero-data :as x03d]
-            [clojure-north-2020.ch01-data.x04-hero-powers-data :as x04d]
-            [clojure-north-2020.ch01-data.x05-supplemental-hero-data :as x05d]
-            [clojure-north-2020.ch02-datalog.x07-queries :as x07]))
+            [ring.util.http-response :refer [bad-request not-found ok]]))
 
 ;; ## Threading State: A Purely Functional API
 ;; We are now going to modify our API in a very simple way - We remove the

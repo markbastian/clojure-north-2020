@@ -2,10 +2,10 @@
   (:require [clojure-north-2020.ch01-data.x03-hero-data :as x03d]
             [clojure-north-2020.ch01-data.x04-hero-powers-data :as x04d]
             [clojure-north-2020.ch01-data.x05-supplemental-hero-data :as x05d]
+            [clojure-north-2020.ch02-datalog.datahike-utils :as du]
             [clojure-north-2020.ch02-datalog.x03-hero-schema :as x03]
             [clojure-north-2020.ch02-datalog.x04-hero-powers-schema :as x04]
             [clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema :as x05]
-            [clojure-north-2020.ch02-datalog.datahike-utils :as du]
             [datahike.api :as d]))
 
 ;; ## Create our Final Schema

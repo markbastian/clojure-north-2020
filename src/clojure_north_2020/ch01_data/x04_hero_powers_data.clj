@@ -1,6 +1,6 @@
 (ns clojure-north-2020.ch01-data.x04-hero-powers-data
   (:require [clojure-csv.core :as csv]
-            [clojure-north-2020.ch01-data.x02-functions :refer [table->maps]]))
+            [clojure-north-2020.ch01-data.x02-functions :refer [csv-file->maps]]))
 
 ;; ## Get Powers Data
 ;;
@@ -23,9 +23,7 @@
 (defn powers-data []
   (let [filename "resources/super_hero_powers.csv"]
     (->> filename
-         slurp
-         csv/parse-csv
-         table->maps
+         csv-file->maps
          (map normalize))))
 
 (comment

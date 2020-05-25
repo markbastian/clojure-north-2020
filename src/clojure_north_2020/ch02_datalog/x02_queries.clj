@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x02-queries
   (:require [clojure-north-2020.ch02-datalog.x01-schemas :refer [datascript-schema]]
-            [datascript.core :as ds]
-            [datahike.api :as d]))
+            [datahike.api :as d]
+            [datascript.core :as ds]))
 
 ;; ## Queries and Data Access
 ;; In this section we discuss the key ways to get data from a db.

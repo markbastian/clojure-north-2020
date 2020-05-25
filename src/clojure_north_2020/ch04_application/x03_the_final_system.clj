@@ -1,9 +1,9 @@
 (ns clojure-north-2020.ch04-application.x03-the-final-system
-  (:require [integrant.core :as ig]
-            [clojure-north-2020.ch02-datalog.x06-the-ultimate-db :as x06]
-            [clojure-north-2020.ch04-application.x02-the-final-handler :as tfh]
+  (:require [clojure-north-2020.ch02-datalog.x06-the-ultimate-db :as x06]
             [clojure-north-2020.ch04-application.parts.datahike :as datahike]
-            [clojure-north-2020.ch04-application.parts.jetty :as jetty]))
+            [clojure-north-2020.ch04-application.parts.jetty :as jetty]
+            [clojure-north-2020.ch04-application.x02-the-final-handler :as tfh]
+            [integrant.core :as ig]))
 
 ;; # Building a Library of Restartable Components
 ;; In a prior section we saw how to create a restartable system that contains

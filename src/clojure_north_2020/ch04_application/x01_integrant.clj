@@ -1,8 +1,8 @@
 (ns clojure-north-2020.ch04-application.x01-integrant
-  (:require [integrant.core :as ig]
+  (:require [clojure-north-2020.ch03-web.x05-state :as x05-state]
+            [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
-            [taoensso.timbre :as timbre]
-            [clojure-north-2020.ch03-web.x05-state :as x05-state])
+            [taoensso.timbre :as timbre])
   (:import (org.eclipse.jetty.server Server)))
 
 ;; # Building Reloadable Systems with Integrant

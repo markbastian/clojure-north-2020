@@ -1,7 +1,7 @@
 (ns clojure-north-2020.ch02-datalog.x01-schemas
-  (:require [datascript.core :as ds]
+  (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]
             [datahike.api :as dh]
-            [clojure-north-2020.ch02-datalog.datahike-utils :as du]))
+            [datascript.core :as ds]))
 
 ;; ## Schemas
 ;; A key concept in data modeling with datalog databases is that schema is
