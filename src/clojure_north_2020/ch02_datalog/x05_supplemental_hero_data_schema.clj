@@ -45,6 +45,7 @@
   (d/transact conn schema)
   (count (d/transact conn (mapv hero->dh-format (shd/supplemental-hero-data))))
 
+  ;;Execute the following to see what data is provided by this dataset.
   (d/pull @conn '[*] [:name "Spider-Man"])
 
   (du/cleanup conn)

@@ -50,17 +50,10 @@
     [?e :name ?name]
     [?e :powers ?powers]])
 
+;; ## Exercise - Return a set of 3-tuples (name, race, power) of all heroes in
+;; the db of the same race as the input hero.
 (def shared-powers-by-race-query
-  '[:find ?name ?race ?powers
-    :in $ ?n
-    :where
-    [?e :name ?n]
-    [?e :race ?race]
-    [?e :powers ?powers]
-    [?f :race ?race]
-    [?f :name ?name]
-    [?f :powers ?powers]
-    [(not= ?e ?f)]])
+  [])
 
 (def schema-query
   '[:find [(pull ?e [*]) ...]
@@ -74,14 +67,12 @@
     :where
     [?e :name ?name]])
 
+;; ## Exercise - write a query that determines all values for attributes where
+;; the type is schema. For example, what are the extant eye-colors or genders in
+;; the db?
 (def distinct-ident-keywords-query
   "Determine the set of valid for each keyword (enum) type in the db."
-  '[:find ?ident ?v
-    :in $
-    :where
-    [?e :db/ident ?ident]
-    [?e :db/valueType :db.type/keyword]
-    [_ ?ident ?v]])
+  [])
 
 (comment
   (require '[clojure-north-2020.ch02-datalog.datahike-utils :as du]
@@ -109,6 +100,7 @@
   ;; their name. Using this query, determine the powers of Kryptonians.
   (defn shared-powers-by-race [hero-name]
     (->> (d/q
+           ;Fill this in above. Might want to inline for the exercise.
            shared-powers-by-race-query
            @conn hero-name)
          (group-by (fn [[n r]] [n r]))
@@ -120,21 +112,17 @@
   (shared-powers-by-race "Spider-Man")
   (shared-powers-by-race "Thor")
 
-  ;;Given the above result, determine all powers common to this race
-  (->> "Superman"
-       shared-powers-by-race
-       (map :powers)
-       (apply intersection))
+  ;;Given the above result, determine all powers common to Kryptonians
+  ;;and Asgardians by starting with an example of one.
 
-  (->> "Thor"
-       shared-powers-by-race
-       (map :powers)
-       (apply intersection))
-
+  ;;Note - Data quality issue.
   (:race (d/entity @conn [:name "Odin"]))
   (:race (d/entity @conn [:name "Thor"]))
 
-  (->> (d/q x07/distinct-ident-keywords-query @conn :db.type/keyword)
+  ;; We can query the db using the schemas as well. The
+  ;; distinct-ident-keywords-query should return the attribute-value
+  ;; combinations for all idents in the db where the type is keyword.
+  (->> (d/q distinct-ident-keywords-query @conn)
        (group-by first)
        (map (fn [[k v]] [k (set (map second v))]))
        (into {}))

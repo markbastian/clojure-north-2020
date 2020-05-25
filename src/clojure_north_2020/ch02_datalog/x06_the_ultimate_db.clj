@@ -23,7 +23,7 @@
 
 (comment
   (def conn (du/conn-from-dirname "tmp/the-ultimate-db"))
-  (count@conn)
+  (count @conn)
 
   (d/transact conn x03/schema)
   (d/transact conn x04/schema)
@@ -31,8 +31,10 @@
   (keys (d/transact conn (mapv x03/hero->dh-format (x03d/heroes-data))))
   (keys (d/transact conn (vec (x04d/powers-data))))
   (keys (d/transact conn (mapv x05/hero->dh-format (x05d/supplemental-hero-data))))
-  (count@conn)
+  (count @conn)
 
+  ;;Once you load the above, try the following out.
+  ;;
   ;; We now have a very cool set of information about our heroes, with
   ;; attributes such as teams, powers, occupations, stats, alter egos, and more.
   (d/pull @conn '[*] [:name "Spider-Man"])
