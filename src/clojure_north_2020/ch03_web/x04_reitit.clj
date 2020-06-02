@@ -54,6 +54,7 @@
               :handler    hello-handler}}]
       ["/dump"
        {:get {:summary    "Dump the request"
+              :parameters {:query {:query-param string?}}
               :responses  {200 {:body string?}}
               :handler    request-dump-handler}}]]]
 

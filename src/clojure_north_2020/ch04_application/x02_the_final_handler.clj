@@ -27,6 +27,14 @@
 ;; are nothing more than a function that takes a request and returns a response.
 ;; All we need to do is inject our connection into the request to thread it
 ;; through the handler. We'll do this in the next section.
+;;
+;; This approach has several advantages:
+;;
+;; * To the extent that the parameters are values, the function is pure
+;; * There is no global state floating around
+;; * It is trivial to synthesize inputs to the handler
+;; * It is trivial to consistently manage arguments for different environments
+;;   (e.g. test, dev, staging, etc.)
 
 ;; Business Logic
 (defn greet [greetee]

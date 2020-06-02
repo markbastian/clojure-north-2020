@@ -39,6 +39,12 @@
 ;; server component from the config that gets poured into the request, not the
 ;; entire system.
 ;;
+;; #### Protip: Build a library of components
+;; Whether you use Integrant, Component, or Mount, you will likely find yourself
+;; using the same boilerplate code for a given library (e.g. Jetty or Datahike).
+;; Write a library to collect your implementations or use an existing one. Mine,
+;; called "Partsbin," can be found [here](https://github.com/markbastian/partsbin).
+;;
 ;; ### Configuring the Components
 ;; Here is our config map. It now has 3 components:
 ;; * ::datahike/database - Configuration required to create a datahike database.

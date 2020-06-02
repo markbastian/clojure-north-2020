@@ -28,6 +28,9 @@
   {:status 200
    :body   (with-out-str (pp/pprint request))})
 
+;; ## Exercise - Change the handler to request dump handler.
+;; This can be done as simply as evaluating
+;; (def handler request-dump-handler) in the REPL and refreshing your browser.
 (def handler hello-handler)
 
 ;; Our one and only web server. Notice that the hander is "var quoted" using

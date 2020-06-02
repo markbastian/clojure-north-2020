@@ -13,7 +13,7 @@
 ;; ### Protip - Separate logic from handlers
 ;; Business logic should know *nothing* about the calling context. If you are
 ;; returning http response codes or passing in web concepts you are complecting
-;; your application. This particular "API" is contrived, but as we'l see in the
+;; your application. This particular "API" is contrived, but as we'll see in the
 ;; future we can use completely independent API logic in our servers without the
 ;; logic knowing anything about its surrounding context.
 (defn greet [greetee]
@@ -24,10 +24,9 @@
 ;; simply parse a request, invoke external business logic, and format a
 ;; response, including setting proper response codes for non-happy-path
 ;; execution.
-(defn hello-handler [{:keys [query-string] :as _request}]
-  (let [[_ greetee] (some->> query-string (re-matches #"name=(.+)"))]
-    {:status 200
-     :body   (greet greetee)}))
+(defn hello-handler [_request]
+  {:status 200
+   :body   (greet nil)})
 
 (defn request-dump-handler [request]
   {:status 200
@@ -46,6 +45,10 @@
 ;; independent testing of each handler and recomposition of routes.
 (defn handler [{:keys [uri] :as request}]
   (case uri
+    ;; ### Exercise - modify the hello handler to greet the invoker by name if
+    ;; the "name" query param is set. E.g. http://localhost:3000/hello?name=Mark
+    ;; should return "Hello, Mark!" Tip - Use the request-dump-handler to
+    ;; understand how to parse the request map.
     "/hello" (hello-handler request)
     "/dump" (request-dump-handler request)
     {:status 404

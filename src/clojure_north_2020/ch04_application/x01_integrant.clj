@@ -40,6 +40,11 @@
 (defn handler [_request]
   {:status 200 :body "OK"})
 
+;; ### Exercise - Change the handler
+;; Once you've started the system (below), swap out the handler for the one
+;; we've already developed. Note that we're decoupling yet another concern -
+;; system state management. You can just pull in existing functions and use
+;; them (However, this handler does have issues that we'll fix later).
 ;(def handler x05-state/handler)
 
 ;; ### Configuration
@@ -72,8 +77,9 @@
 ;; 1. `(restart)` - Restart the system
 ;; 1. `(system)` - Get a handle to the system
 ;;
-;; Try them out. What we've done so far may not seem awesome, but we've done a
-;; few useful things:
+;; ### Exercise - Try them out.
+;; What we've done so far may not seem awesome, but we've done a few useful
+;; things:
 ;;
 ;; * Created a method to centrally contain and manage stateful items
 ;; * Created a facility to centrally and cleanly manage system states

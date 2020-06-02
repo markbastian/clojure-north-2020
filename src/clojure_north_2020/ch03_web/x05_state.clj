@@ -7,6 +7,7 @@
             [clojure-north-2020.ch02-datalog.x04-hero-powers-schema :as x04]
             [clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema :as x05]
             [clojure-north-2020.ch02-datalog.x07-queries :as x07]
+            [clojure.edn :as edn]
             [clojure.pprint :as pp]
             [datahike.api :as d]
             [muuntaja.core :as m]
@@ -117,6 +118,9 @@
               :responses {200 {:body [string?]}}
               :handler   (fn [_request]
                            (ok (sort (d/q x07/name-query @conn))))}}]
+      ;; ## Exercise: Add an endpoint
+      ;; Add any endpoiont you want. Suggestion: Add a "q" endpoint that takes
+      ;; a query as data and returns the result.
       ["/add"
        {:post {:summary    "Add a new superhero"
                :responses  {200 {:body {}}}

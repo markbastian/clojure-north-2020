@@ -39,6 +39,8 @@
                                             :port  3000
                                             :join? false}))
 
+;; ## Exercise - Evaluate the following forms to see that these helper functions
+;; are nothing more than simple data manipulators.
 (comment
   ;Basic responses
   (ok "All I do is modify maps.")
@@ -46,7 +48,7 @@
   ;Use a threading macro with a basic response + response modifiers
   (-> (ok "Watch this")
       (content-type "text/plain")
-      (header "Content-Disposition" (format "attachment; filename=\"foo.txt\"")))
+      (header "Content-Disposition" "attachment; filename=\"foo.txt\""))
 
   (require '[clojure.java.browse :refer [browse-url]])
   (browse-url "http://localhost:3000")
