@@ -1,4 +1,4 @@
-(ns clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions)
+(ns clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions)
 
 (comment
   ;; ## Exercise: Who has the power :levitation?
