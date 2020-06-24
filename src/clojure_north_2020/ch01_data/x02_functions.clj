@@ -12,7 +12,8 @@
 ;; relations it is common to "lift" a form into a function.
 ;;
 ;; ### Exercise: Interact with our data
-;; Explore your data and write a useful function. Examples:
+;; Explore the data generated in the last ns and write a useful function.
+;; Examples:
 ;; * Find everyone with a given power.
 ;; * List the names of all characters that are the nemesis of someone with a
 ;; given power.
@@ -20,6 +21,11 @@
 ;; * Lift one of these explorations to a function.
 
 ;; ## Some Utility Functions
+;; It is common to develop an data model and then bring in data from an external
+;; source such as a csv file. You will then wish to conform this csv data to
+;; your created internal model. We'll be doing this in the next few exercises so
+;; that we don't have to create data for hundreds of supers by hand.
+;;
 ;; We will be reading in our data from csv files. Let's write some functions for
 ;; converting our raw files into our data as we've modeled it previously. One of
 ;; the great things about Clojure is that is effectively a DSL for data, so the
