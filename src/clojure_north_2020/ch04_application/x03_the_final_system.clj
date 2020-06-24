@@ -69,9 +69,11 @@
                           :join?   false
                           :handler #'tfh/handler
                           :dh-conn (ig/ref ::datahike/connection)}
-   ::datahike/database   {:db-file         "tmp/the-final-dhdb"
-                          :delete-on-halt? true
+   ::datahike/database   {:db-file         "tmp/the-ultimate-db"
                           :initial-tx      x06/schema}
+   ;::datahike/database   {:db-file         "tmp/the-final-dhdb"
+   ;                       :delete-on-halt? true
+   ;                       :initial-tx      x06/schema}
    ::datahike/connection {:db-config (ig/ref ::datahike/database)}})
 
 ;; ### System Boilerplate
@@ -87,3 +89,13 @@
   (alter-var-root #'*system* (fn [s] (when s (ig/halt! s) nil))))
 
 (defn restart [] (stop) (start))
+
+(comment
+  (keys (system))
+  (let [conn (::datahike/connection (system))]
+    (count @conn))
+
+  (use '[clojure.repl])
+  (require '[clojure.java.browse :refer [browse-url]])
+  (browse-url "http://localhost:3000")
+  )
