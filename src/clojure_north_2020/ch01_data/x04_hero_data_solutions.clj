@@ -21,8 +21,9 @@
 
   (defn dupes [m]
     (->> m
-         (apply merge-with (fn [a b] (if (= a b) a (flatten (vector a b)))))
-         (filter (fn [[_ v]] (seq? v)))
+         (apply merge-with (fn [a b] (if (= a b) [a] (vector a b))))
+         (map (fn [[k v]] [k (distinct (flatten v))]))
+         (filter (fn [[_ [_ s]]] s))
          (into {})))
 
   (->> (heroes-data)

@@ -29,10 +29,15 @@
 (comment
   ;Non-reduced powers
   (let [filename "resources/super_hero_powers.csv"]
-    (->> filename slurp csv/parse-csv table->maps (take 4)))
+    (->> filename
+         csv-file->maps
+         (take 2)))
 
+  ; Reduced powers
   (take 2 (powers-data))
 
+  ; See who has the powers flight, super-strength, and vision-x-ray?
+  ; Before trying it out, who might you expect to have these powers?
   (->> (powers-data)
        (filter (fn [{:keys [name powers]}]
                  (and (powers :flight)

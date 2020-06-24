@@ -64,10 +64,15 @@
        )
 
   ;Given a hero name, determine the duplicate values associated with
-  ; non-distinct keys. May also just pull the data from below.
+  ; non-distinct keys. You may want to use the test data from below.
   (->> (heroes-data)
        ;...
        )
+
+  ; Hint:
+  (do
+    (use 'clojure.repl)
+    (doc merge-with))
 
   ;TODO - Promote to the function "dupes"
   (defn dupes [maps]
@@ -75,9 +80,11 @@
     )
 
   ;We've build a generally useful function
-  (= {:age [12 14]}
+  (= {:age [12 14 16]
+      :height [100 101]}
      (dupes
        [{:name "Mark" :age 12}
         {:name "Mark" :age 12 :height 100}
-        {:name "Mark" :age 14 :height 100}]))
+        {:name "Mark" :age 14 :height 100}
+        {:name "Mark" :age 16 :height 101}]))
   )
