@@ -64,7 +64,7 @@
 ;; What happens when a key is missing?
 (ds/db-with
   (ds/empty-db
-    ;Note that we're removing the alias cardinality/many attribute
+    ; Note that we're removing the alias cardinality/many attribute
     (dissoc datascript-schema :alias))
   [{:name       "Batman"
     :alias      "Bruce Wayne"
@@ -74,6 +74,7 @@
     :alignment  "Chaotic Good"
     :nemesis    [{:name "Joker"}
                  {:name "Penguin"}]}
+   ; Observe that alias and hair color are overwritten
    {:name       "Batman"
     :alias      "Bruce"
     :hair-color :black}])
