@@ -15,8 +15,8 @@
 
 ;; ### Schema-free Datascript
 ;; Datascript is very forgiving. You can pretty much dump whatever you want into
-;;a Datascript database. You get full query powers, but not all of your entities
-;; explode as expected and not all queries are as efficient.
+;; a Datascript database. You get full query powers, but not all of your
+;; entities explode as expected and not all queries are as efficient.
 ;;
 ;; Execute the following in a REPL. How many entities are created?
 (ds/db-with
