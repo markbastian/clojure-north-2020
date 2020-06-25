@@ -17,6 +17,8 @@
 
   (d/pull @conn '[*] [:name "Spider-Man"])
 
+  ;;NOTE! - The attribute is :powers, not :power!!!
+
   ;; ## Exercise: Who has the power :levitation?
   (d/q
     '[...]
