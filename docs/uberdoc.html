@@ -2866,7 +2866,7 @@ net.brehaut.ClojureTools = (function (SH) {
   };
 })(SyntaxHighlighter);
 </script><title>clojure-north-2020 -- Marginalia</title></head><body><table><tr><td class="docs"><div class="header"><h1 class="project-name"><a href="http://example.com/FIXME">clojure-north-2020</a></h1><h2 class="project-version">0.1.0-SNAPSHOT</h2><br /><p>FIXME: write description</p>
-</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.10.1</td></tr><tr><td class="dep-name">ring/ring-jetty-adapter</td><td class="dotted"><hr /></td><td class="dep-version">1.8.0</td></tr><tr><td class="dep-name">metosin/ring-http-response</td><td class="dotted"><hr /></td><td class="dep-version">0.9.1</td></tr><tr><td class="dep-name">hiccup</td><td class="dotted"><hr /></td><td class="dep-version">1.0.5</td></tr><tr><td class="dep-name">metosin/reitit</td><td class="dotted"><hr /></td><td class="dep-version">0.4.2</td></tr><tr><td class="dep-name">ring</td><td class="dotted"><hr /></td><td class="dep-version">1.8.0</td></tr><tr><td class="dep-name">integrant</td><td class="dotted"><hr /></td><td class="dep-version">0.8.0</td></tr><tr><td class="dep-name">funcool/cuerdas</td><td class="dotted"><hr /></td><td class="dep-version">2.1.0</td></tr><tr><td class="dep-name">clojure-csv/clojure-csv</td><td class="dotted"><hr /></td><td class="dep-version">2.0.2</td></tr><tr><td class="dep-name">datascript</td><td class="dotted"><hr /></td><td class="dep-version">0.18.11</td></tr><tr><td class="dep-name">datascript-transit</td><td class="dotted"><hr /></td><td class="dep-version">0.3.0</td></tr><tr><td class="dep-name">io.replikativ/datahike</td><td class="dotted"><hr /></td><td class="dep-version">0.2.1</td></tr><tr><td class="dep-name">com.taoensso/timbre</td><td class="dotted"><hr /></td><td class="dep-version">4.10.0</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</a></li><li><a href="#clojure-north-2020.ch02-datalog.x07-queries">clojure-north-2020.ch02-datalog.x07-queries</a></li><li><a href="#clojure-north-2020.ch02-datalog.x07-queries-solutions">clojure-north-2020.ch02-datalog.x07-queries-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions">clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.x02-queries">clojure-north-2020.ch02-datalog.x02-queries</a></li><li><a href="#clojure-north-2020.ch02-datalog.datahike-utils">clojure-north-2020.ch02-datalog.datahike-utils</a></li><li><a href="#clojure-north-2020.ch02-datalog.x04-hero-powers-schema">clojure-north-2020.ch02-datalog.x04-hero-powers-schema</a></li><li><a href="#clojure-north-2020.ch02-datalog.x06-the-ultimate-db">clojure-north-2020.ch02-datalog.x06-the-ultimate-db</a></li><li><a href="#clojure-north-2020.ch02-datalog.x01-schemas">clojure-north-2020.ch02-datalog.x01-schemas</a></li><li><a href="#clojure-north-2020.ch02-datalog.x00-basics">clojure-north-2020.ch02-datalog.x00-basics</a></li><li><a href="#clojure-north-2020.ch02-datalog.x02-queries-solutions">clojure-north-2020.ch02-datalog.x02-queries-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.x03-hero-schema">clojure-north-2020.ch02-datalog.x03-hero-schema</a></li><li><a href="#clojure-north-2020.ch03-web.x04-reitit">clojure-north-2020.ch03-web.x04-reitit</a></li><li><a href="#clojure-north-2020.ch03-web.x01-basic">clojure-north-2020.ch03-web.x01-basic</a></li><li><a href="#clojure-north-2020.ch03-web.x02-routes-solutions">clojure-north-2020.ch03-web.x02-routes-solutions</a></li><li><a href="#clojure-north-2020.ch03-web.x03-responses">clojure-north-2020.ch03-web.x03-responses</a></li><li><a href="#clojure-north-2020.ch03-web.x02-routes">clojure-north-2020.ch03-web.x02-routes</a></li><li><a href="#clojure-north-2020.ch03-web.x05-state">clojure-north-2020.ch03-web.x05-state</a></li><li><a href="#clojure-north-2020.core">clojure-north-2020.core</a></li><li><a href="#clojure-north-2020.ch01-data.x05-supplemental-hero-data">clojure-north-2020.ch01-data.x05-supplemental-hero-data</a></li><li><a href="#clojure-north-2020.ch01-data.x02-functions">clojure-north-2020.ch01-data.x02-functions</a></li><li><a href="#clojure-north-2020.ch01-data.x03-hero-data">clojure-north-2020.ch01-data.x03-hero-data</a></li><li><a href="#clojure-north-2020.ch01-data.x01-data-solutions">clojure-north-2020.ch01-data.x01-data-solutions</a></li><li><a href="#clojure-north-2020.ch01-data.x04-hero-powers-data">clojure-north-2020.ch01-data.x04-hero-powers-data</a></li><li><a href="#clojure-north-2020.ch01-data.x06-yoda-quotes">clojure-north-2020.ch01-data.x06-yoda-quotes</a></li><li><a href="#clojure-north-2020.ch01-data.x01-data">clojure-north-2020.ch01-data.x01-data</a></li><li><a href="#clojure-north-2020.ch01-data.x02-functions-solutions">clojure-north-2020.ch01-data.x02-functions-solutions</a></li><li><a href="#clojure-north-2020.ch01-data.x04-hero-data-solutions">clojure-north-2020.ch01-data.x04-hero-data-solutions</a></li><li><a href="#clojure-north-2020.ch04-application.x04-parting-thoughts">clojure-north-2020.ch04-application.x04-parting-thoughts</a></li><li><a href="#clojure-north-2020.ch04-application.x01-integrant">clojure-north-2020.ch04-application.x01-integrant</a></li><li><a href="#clojure-north-2020.ch04-application.x02-the-final-handler">clojure-north-2020.ch04-application.x02-the-final-handler</a></li><li><a href="#clojure-north-2020.ch04-application.parts.jetty">clojure-north-2020.ch04-application.parts.jetty</a></li><li><a href="#clojure-north-2020.ch04-application.parts.datahike">clojure-north-2020.ch04-application.parts.datahike</a></li><li><a href="#clojure-north-2020.ch04-application.x03-the-final-system">clojure-north-2020.ch04-application.x03-the-final-system</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema" name="clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema"><h1 class="project-name">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.10.1</td></tr><tr><td class="dep-name">ring/ring-jetty-adapter</td><td class="dotted"><hr /></td><td class="dep-version">1.8.0</td></tr><tr><td class="dep-name">metosin/ring-http-response</td><td class="dotted"><hr /></td><td class="dep-version">0.9.1</td></tr><tr><td class="dep-name">hiccup</td><td class="dotted"><hr /></td><td class="dep-version">1.0.5</td></tr><tr><td class="dep-name">metosin/reitit</td><td class="dotted"><hr /></td><td class="dep-version">0.4.2</td></tr><tr><td class="dep-name">ring</td><td class="dotted"><hr /></td><td class="dep-version">1.8.0</td></tr><tr><td class="dep-name">integrant</td><td class="dotted"><hr /></td><td class="dep-version">0.8.0</td></tr><tr><td class="dep-name">funcool/cuerdas</td><td class="dotted"><hr /></td><td class="dep-version">2.1.0</td></tr><tr><td class="dep-name">clojure-csv/clojure-csv</td><td class="dotted"><hr /></td><td class="dep-version">2.0.2</td></tr><tr><td class="dep-name">datascript</td><td class="dotted"><hr /></td><td class="dep-version">0.18.11</td></tr><tr><td class="dep-name">datascript-transit</td><td class="dotted"><hr /></td><td class="dep-version">0.3.0</td></tr><tr><td class="dep-name">io.replikativ/datahike</td><td class="dotted"><hr /></td><td class="dep-version">0.2.1</td></tr><tr><td class="dep-name">com.taoensso/timbre</td><td class="dotted"><hr /></td><td class="dep-version">4.10.0</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</a></li><li><a href="#clojure-north-2020.ch02-datalog.x07-queries">clojure-north-2020.ch02-datalog.x07-queries</a></li><li><a href="#clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions">clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.x07-queries-solutions">clojure-north-2020.ch02-datalog.x07-queries-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.x02-queries">clojure-north-2020.ch02-datalog.x02-queries</a></li><li><a href="#clojure-north-2020.ch02-datalog.datahike-utils">clojure-north-2020.ch02-datalog.datahike-utils</a></li><li><a href="#clojure-north-2020.ch02-datalog.x04-hero-powers-schema">clojure-north-2020.ch02-datalog.x04-hero-powers-schema</a></li><li><a href="#clojure-north-2020.ch02-datalog.x06-the-ultimate-db">clojure-north-2020.ch02-datalog.x06-the-ultimate-db</a></li><li><a href="#clojure-north-2020.ch02-datalog.x01-schemas">clojure-north-2020.ch02-datalog.x01-schemas</a></li><li><a href="#clojure-north-2020.ch02-datalog.x00-basics">clojure-north-2020.ch02-datalog.x00-basics</a></li><li><a href="#clojure-north-2020.ch02-datalog.x02-queries-solutions">clojure-north-2020.ch02-datalog.x02-queries-solutions</a></li><li><a href="#clojure-north-2020.ch02-datalog.x03-hero-schema">clojure-north-2020.ch02-datalog.x03-hero-schema</a></li><li><a href="#clojure-north-2020.ch03-web.x04-reitit">clojure-north-2020.ch03-web.x04-reitit</a></li><li><a href="#clojure-north-2020.ch03-web.x01-basic">clojure-north-2020.ch03-web.x01-basic</a></li><li><a href="#clojure-north-2020.ch03-web.x02-routes-solutions">clojure-north-2020.ch03-web.x02-routes-solutions</a></li><li><a href="#clojure-north-2020.ch03-web.x03-responses">clojure-north-2020.ch03-web.x03-responses</a></li><li><a href="#clojure-north-2020.ch03-web.x05-state-solutions">clojure-north-2020.ch03-web.x05-state-solutions</a></li><li><a href="#clojure-north-2020.ch03-web.x02-routes">clojure-north-2020.ch03-web.x02-routes</a></li><li><a href="#clojure-north-2020.ch03-web.x05-state">clojure-north-2020.ch03-web.x05-state</a></li><li><a href="#clojure-north-2020.core">clojure-north-2020.core</a></li><li><a href="#clojure-north-2020.ch01-data.x05-supplemental-hero-data">clojure-north-2020.ch01-data.x05-supplemental-hero-data</a></li><li><a href="#clojure-north-2020.ch01-data.x02-functions">clojure-north-2020.ch01-data.x02-functions</a></li><li><a href="#clojure-north-2020.ch01-data.x03-hero-data">clojure-north-2020.ch01-data.x03-hero-data</a></li><li><a href="#clojure-north-2020.ch01-data.x01-data-solutions">clojure-north-2020.ch01-data.x01-data-solutions</a></li><li><a href="#clojure-north-2020.ch01-data.x04-hero-powers-data">clojure-north-2020.ch01-data.x04-hero-powers-data</a></li><li><a href="#clojure-north-2020.ch01-data.x06-yoda-quotes">clojure-north-2020.ch01-data.x06-yoda-quotes</a></li><li><a href="#clojure-north-2020.ch01-data.x01-data">clojure-north-2020.ch01-data.x01-data</a></li><li><a href="#clojure-north-2020.ch01-data.x02-functions-solutions">clojure-north-2020.ch01-data.x02-functions-solutions</a></li><li><a href="#clojure-north-2020.ch01-data.x04-hero-data-solutions">clojure-north-2020.ch01-data.x04-hero-data-solutions</a></li><li><a href="#clojure-north-2020.ch04-application.x04-parting-thoughts">clojure-north-2020.ch04-application.x04-parting-thoughts</a></li><li><a href="#clojure-north-2020.ch04-application.x01-integrant">clojure-north-2020.ch04-application.x01-integrant</a></li><li><a href="#clojure-north-2020.ch04-application.x02-the-final-handler">clojure-north-2020.ch04-application.x02-the-final-handler</a></li><li><a href="#clojure-north-2020.ch04-application.parts.jetty">clojure-north-2020.ch04-application.parts.jetty</a></li><li><a href="#clojure-north-2020.ch04-application.parts.datahike">clojure-north-2020.ch04-application.parts.datahike</a></li><li><a href="#clojure-north-2020.ch04-application.x03-the-final-system">clojure-north-2020.ch04-application.x03-the-final-system</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema" name="clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema"><h1 class="project-name">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema
   (:require [clojure-north-2020.ch02-datalog.datahike-utils :as du]))</pre></td></tr><tr><td class="docs"><h2>Loading the Supplemental Hero Schema and Normalizing the Data</h2>
 </td><td class="codes"><pre class="brush: clojure">(def schema (du/read-edn &quot;schemas/datahike/supplemental-hero-data-schema.edn&quot;))</pre></td></tr><tr><td class="docs">
@@ -2960,7 +2960,7 @@ with both datascript and datahike.</p>
   '[:find [?name ...]
     :in $
     :where
-    [?e :name ?name]])</pre></td></tr><tr><td class="docs"><p>Determine the set of valid for each keyword (enum) type in the db.</p>
+    [?e :name ?name]])</pre></td></tr><tr><td class="docs"><p>Determine the set of valid values for each keyword (enum) type in the db.</p>
 
 <h2>Exercise - write a query that determines all values for attributes where</h2>
 
@@ -3012,38 +3012,8 @@ the db?</p>
        (group-by first)
        (map (fn [[k v]] [k (set (map second v))]))
        (into {}))
-  (du/cleanup conn))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x07-queries-solutions" name="clojure-north-2020.ch02-datalog.x07-queries-solutions"><h1 class="project-name">clojure-north-2020.ch02-datalog.x07-queries-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.x07-queries-solutions)</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(def shared-powers-by-race-query
-  '[:find ?name ?race ?powers
-    :in $ ?n
-    :where
-    [?e :name ?n]
-    [?e :race ?race]
-    [?e :powers ?powers]
-    [?f :race ?race]
-    [?f :name ?name]
-    [?f :powers ?powers]
-    [(not= ?e ?f)]])</pre></td></tr><tr><td class="docs"><p>Determine the set of valid for each keyword (enum) type in the db.</p>
-</td><td class="codes"><pre class="brush: clojure">(comment
-  ;;All powers shared by Kryptonians
-  (-&gt;&gt; &quot;Superman&quot;
-       shared-powers-by-race
-       (map :powers)
-       (apply intersection))
-  ;;All powers shared by Asgardians
-  (-&gt;&gt; &quot;Thor&quot;
-       shared-powers-by-race
-       (map :powers)
-       (apply intersection))
-  (def distinct-ident-keywords-query
-    '[:find ?ident ?v
-      :in $
-      :where
-      [?e :db/ident ?ident]
-      [?e :db/valueType :db.type/keyword]
-      [_ ?ident ?v]]))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions" name="clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions"><h1 class="project-name">clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions)</pre></td></tr><tr><td class="docs">
+  (du/cleanup conn))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions" name="clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions"><h1 class="project-name">clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions)</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
   ;; ## Exercise: Who has the power :levitation?
   (d/q
@@ -3078,7 +3048,37 @@ the db?</p>
         :where
         [?e :name ?name]
         [?e :powers ?power]]
-      @conn)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x02-queries" name="clojure-north-2020.ch02-datalog.x02-queries"><h1 class="project-name">clojure-north-2020.ch02-datalog.x02-queries</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+      @conn)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x07-queries-solutions" name="clojure-north-2020.ch02-datalog.x07-queries-solutions"><h1 class="project-name">clojure-north-2020.ch02-datalog.x07-queries-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.x07-queries-solutions)</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(def shared-powers-by-race-query
+  '[:find ?name ?race ?powers
+    :in $ ?n
+    :where
+    [?e :name ?n]
+    [?e :race ?race]
+    [?e :powers ?powers]
+    [?f :race ?race]
+    [?f :name ?name]
+    [?f :powers ?powers]
+    [(not= ?e ?f)]])</pre></td></tr><tr><td class="docs"><p>Determine the set of valid values for each keyword (enum) type in the db.</p>
+</td><td class="codes"><pre class="brush: clojure">(comment
+  ;;All powers shared by Kryptonians
+  (-&gt;&gt; &quot;Superman&quot;
+       shared-powers-by-race
+       (map :powers)
+       (apply intersection))
+  ;;All powers shared by Asgardians
+  (-&gt;&gt; &quot;Thor&quot;
+       shared-powers-by-race
+       (map :powers)
+       (apply intersection))
+  (def distinct-ident-keywords-query
+    '[:find ?ident ?v
+      :in $
+      :where
+      [?e :db/ident ?ident]
+      [?e :db/valueType :db.type/keyword]
+      [_ ?ident ?v]]))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.x02-queries" name="clojure-north-2020.ch02-datalog.x02-queries"><h1 class="project-name">clojure-north-2020.ch02-datalog.x02-queries</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.x02-queries
   (:require [clojure-north-2020.ch02-datalog.x01-schemas :refer [datascript-schema]]
             [datahike.api :as d]
@@ -3179,6 +3179,7 @@ in the database.</p>
   (d/transact conn schema)
   (count (d/transact conn (vec (hpd/powers-data))))
   (d/pull @conn '[*] [:name &quot;Spider-Man&quot;])
+  ;;NOTE! - The attribute is :powers, not :power!!!
   ;; ## Exercise: Who has the power :levitation?
   (d/q
     '[...]
@@ -3253,8 +3254,8 @@ specified at the attribute level.</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><h3>Schema-free Datascript</h3>
 
 <p>Datascript is very forgiving. You can pretty much dump whatever you want into
-a Datascript database. You get full query powers, but not all of your entities
-explode as expected and not all queries are as efficient.</p>
+a Datascript database. You get full query powers, but not all of your
+entities explode as expected and not all queries are as efficient.</p>
 
 <p>Execute the following in a REPL. How many entities are created?</p>
 </td><td class="codes"><pre class="brush: clojure">(ds/db-with
@@ -3298,7 +3299,7 @@ database and the values describe the keys.</p>
     :alias &quot;Bruce&quot;}])</pre></td></tr><tr><td class="docs"><p>What happens when a key is missing?</p>
 </td><td class="codes"><pre class="brush: clojure">(ds/db-with
   (ds/empty-db
-    ;Note that we're removing the alias cardinality/many attribute
+    ; Note that we're removing the alias cardinality/many attribute
     (dissoc datascript-schema :alias))
   [{:name       &quot;Batman&quot;
     :alias      &quot;Bruce Wayne&quot;
@@ -3308,6 +3309,7 @@ database and the values describe the keys.</p>
     :alignment  &quot;Chaotic Good&quot;
     :nemesis    [{:name &quot;Joker&quot;}
                  {:name &quot;Penguin&quot;}]}
+   ; Observe that alias and hair color are overwritten
    {:name       &quot;Batman&quot;
     :alias      &quot;Bruce&quot;
     :hair-color :black}])</pre></td></tr><tr><td class="docs"><h3>Datahike/Datomic Schemas</h3>
@@ -3600,7 +3602,39 @@ the previous exercise.</p>
   (require '[clojure.java.browse :refer [browse-url]])
   (browse-url &quot;http://localhost:3000&quot;)
   (.stop server)
-  )</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch03-web.x02-routes" name="clojure-north-2020.ch03-web.x02-routes"><h1 class="project-name">clojure-north-2020.ch03-web.x02-routes</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+  )</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch03-web.x05-state-solutions" name="clojure-north-2020.ch03-web.x05-state-solutions"><h1 class="project-name">clojure-north-2020.ch03-web.x05-state-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch03-web.x05-state-solutions
+  (:require [clojure.edn :as edn]
+            [datahike.api :as d]
+            [ring.util.http-response :refer [bad-request ok]]))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(comment
+  [&quot;/q&quot;
+   {:post {:summary    &quot;Invoke a generic query on the db.&quot;
+           :parameters {:body {:query string?}}
+           :handler    (fn [{:keys [body-params] :as _request}]
+                         (try
+                           (let [q (edn/read-string (:query body-params))]
+                             (ok (d/q q @conn)))
+                           (catch Exception e
+                             (bad-request (.getMessage e)))))}}]
+
+  ;Example request with content type of application/edn
+  {:query &quot;[:find [(pull ?e [*]) ...]
+    :in $
+    :where
+    [?e :db/ident ?ident]]&quot;}
+
+  ;Use later for state threaded version
+  [&quot;/q&quot;
+   {:post {:summary    &quot;Invoke a generic query on the db.&quot;
+           :responses  {200 []}
+           :parameters {:body {:query string?}}
+           :handler    (fn [{:keys [body-params dh-conn] :as _request}]
+                         (try
+                           (let [q (edn/read-string (:query body-params))]
+                             (ok (d/q q @dh-conn)))
+                           (catch Exception e
+                             (bad-request (.getMessage e)))))}}])</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch03-web.x02-routes" name="clojure-north-2020.ch03-web.x02-routes"><h1 class="project-name">clojure-north-2020.ch03-web.x02-routes</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch03-web.x02-routes
   (:require [clojure.pprint :as pp]
             [ring.adapter.jetty :as jetty]))</pre></td></tr><tr><td class="docs"><h2>Handler Roles/Concerns</h2>
@@ -3770,8 +3804,6 @@ current state is retrieved for use in queries.</p>
               :handler   (fn [_request]
                            (ok (sort (d/q x07/name-query @conn))))}}]
       ;; ## Exercise: Add an endpoint
-      ;; Add any endpoiont you want. Suggestion: Add a &quot;q&quot; endpoint that takes
-      ;; a query as data and returns the result.
       [&quot;/add&quot;
        {:post {:summary    &quot;Add a new superhero&quot;
                :responses  {200 {:body {}}}
@@ -3917,13 +3949,19 @@ relations it is common to "lift" a form into a function.</p>
 
 <h3>Exercise: Interact with our data</h3>
 
-<p>Explore your data and write a useful function. Examples:
+<p>Explore the data generated in the last ns and write a useful function.
+Examples:
 * Find everyone with a given power.
 * List the names of all characters that are the nemesis of someone with a
 given power.
 * Find the alias of the nemesis of everyone with an alias.
 * Lift one of these explorations to a function.</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><h2>Some Utility Functions</h2>
+
+<p>It is common to develop an data model and then bring in data from an external
+source such as a csv file. You will then wish to conform this csv data to
+your created internal model. We'll be doing this in the next few exercises so
+that we don't have to create data for hundreds of supers by hand.</p>
 
 <p>We will be reading in our data from csv files. Let's write some functions for
 converting our raw files into our data as we've modeled it previously. One of
@@ -4064,18 +4102,24 @@ situation and move on.</li>
   (-&gt;&gt; (heroes-data)
        ;...)
   ;Given a hero name, determine the duplicate values associated with
-  ; non-distinct keys. May also just pull the data from below.
+  ; non-distinct keys. You may want to use the test data from below.
   (-&gt;&gt; (heroes-data)
        ;...)
+  ; Hint:
+  (do
+    (use 'clojure.repl)
+    (doc merge-with))
   ;TODO - Promote to the function &quot;dupes&quot;
   (defn dupes [maps]
     ;Extract by promoting the previous exercise)
   ;We've build a generally useful function
-  (= {:age [12 14]}
+  (= {:age [12 14 16]
+      :height [100 101]}
      (dupes
        [{:name &quot;Mark&quot; :age 12}
         {:name &quot;Mark&quot; :age 12 :height 100}
-        {:name &quot;Mark&quot; :age 14 :height 100}])))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch01-data.x01-data-solutions" name="clojure-north-2020.ch01-data.x01-data-solutions"><h1 class="project-name">clojure-north-2020.ch01-data.x01-data-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+        {:name &quot;Mark&quot; :age 14 :height 100}
+        {:name &quot;Mark&quot; :age 16 :height 101}])))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch01-data.x01-data-solutions" name="clojure-north-2020.ch01-data.x01-data-solutions"><h1 class="project-name">clojure-north-2020.ch01-data.x01-data-solutions</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch01-data.x01-data-solutions)</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(def data
   [{:name      &quot;Batman&quot;
@@ -4142,10 +4186,15 @@ set of keywords (e.g. #{:super-strength :flight}).</p>
 </td><td class="codes"><pre class="brush: clojure">(comment
   ;Non-reduced powers
   (let [filename &quot;resources/super_hero_powers.csv&quot;]
-    (-&gt;&gt; filename slurp csv/parse-csv table-&gt;maps (take 4)))
+    (-&gt;&gt; filename
+         csv-file-&gt;maps
+         (take 2)))
 
+  ; Reduced powers
   (take 2 (powers-data))
 
+  ; See who has the powers flight, super-strength, and vision-x-ray?
+  ; Before trying it out, who might you expect to have these powers?
   (-&gt;&gt; (powers-data)
        (filter (fn [{:keys [name powers]}]
                  (and (powers :flight)
@@ -4155,7 +4204,8 @@ set of keywords (e.g. #{:super-strength :flight}).</p>
   )</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch01-data.x06-yoda-quotes" name="clojure-north-2020.ch01-data.x06-yoda-quotes"><h1 class="project-name">clojure-north-2020.ch01-data.x06-yoda-quotes</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch01-data.x06-yoda-quotes
   (:require [clojure-csv.core :as csv]
-            [clojure-north-2020.ch01-data.x02-functions :refer [csv-file-&gt;maps]]))</pre></td></tr><tr><td class="docs">
+            [clojure-north-2020.ch01-data.x02-functions :refer [csv-file-&gt;maps]]))</pre></td></tr><tr><td class="docs"><p>Not used today :( Sorry!
+However, you can inspect it with our generic csv-file->maps function.</p>
 </td><td class="codes"><pre class="brush: clojure">(comment
   (csv-file-&gt;maps &quot;resources/yoda-corpus.csv&quot;))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch01-data.x01-data" name="clojure-north-2020.ch01-data.x01-data"><h1 class="project-name">clojure-north-2020.ch01-data.x01-data</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch01-data.x01-data)</pre></td></tr><tr><td class="docs"><h2>A Clojure Application Starts as Data</h2>
@@ -4268,8 +4318,9 @@ of the vectors is a header row</p>
        (into {}))
   (defn dupes [m]
     (-&gt;&gt; m
-         (apply merge-with (fn [a b] (if (= a b) a (flatten (vector a b)))))
-         (filter (fn [[_ v]] (seq? v)))
+         (apply merge-with (fn [a b] (if (= a b) [a] (vector a b))))
+         (map (fn [[k v]] [k (distinct (flatten v))]))
+         (filter (fn [[_ [_ s]]] s))
          (into {})))
   (-&gt;&gt; (heroes-data)
        (filter (comp #{&quot;Spider-Man&quot;} :name))
@@ -4319,7 +4370,10 @@ feel free to check out these projects:
 * <a href="https://www.youtube.com/watch?v=Tb823aqgX_0">Bottom Up vs Top Down Design in Clojure</a>
   - My Clojure/conj 2015 talk in which I describe building an application
   using many of the techniques discussed today - start with data, build
-  functions, work your way up to an application.</p>
+  functions, work your way up to an application.
+* <a href="https://www.amazon.com/Web-Development-Clojure-Build-Bulletproof/dp/1680500821">Web Development with Clojure</a> -
+  An authoritative guide to building web apps with Clojure from the author of
+  the <a href="https://luminusweb.com">Luminus</a> framework.</p>
 
 <p>Feedback
 I hope you enjoyed this workshop. I value any feedback you may have, positive
@@ -4564,7 +4618,9 @@ through the handler. We'll do this in the next section.</p>
   (:require [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
             [taoensso.timbre :as timbre])
-  (:import (org.eclipse.jetty.server Server)))</pre></td></tr><tr><td class="docs">
+  (:import (org.eclipse.jetty.server Server)))</pre></td></tr><tr><td class="docs"><p>This is a 'middleware' - a function that takes a handler and returns a new
+handler. For ring middlewares, both inbound handler and new hander take a
+request and return a response.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn wrap-component [handler component]
   (fn [request] (handler (into component request))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defmethod ig/init-key ::server [_ {:keys [handler] :as m}]
@@ -4688,9 +4744,11 @@ into it and feed that into the handler.</p>
                           :join?   false
                           :handler #'tfh/handler
                           :dh-conn (ig/ref ::datahike/connection)}
-   ::datahike/database   {:db-file         &quot;tmp/the-final-dhdb&quot;
-                          :delete-on-halt? true
+   ::datahike/database   {:db-file         &quot;tmp/the-ultimate-db&quot;
                           :initial-tx      x06/schema}
+   ;::datahike/database   {:db-file         &quot;tmp/the-final-dhdb&quot;
+   ;                       :delete-on-halt? true
+   ;                       :initial-tx      x06/schema}
    ::datahike/connection {:db-config (ig/ref ::datahike/database)}})</pre></td></tr><tr><td class="docs"><h3>System Boilerplate</h3>
 
 <p>Same as before</p>
@@ -4700,7 +4758,16 @@ into it and feed that into the handler.</p>
   (alter-var-root #'*system* (fn [s] (if-not s (ig/init config) s))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defn stop []
   (alter-var-root #'*system* (fn [s] (when s (ig/halt! s) nil))))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(defn restart [] (stop) (start))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr></table><div class="footer">Generated by <a href="https://github.com/gdeer81/marginalia">Marginalia</a>.&nbsp;&nbsp;Syntax highlighting provided by Alex Gorbatchev's <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a><div id="floating-toc"><ul><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x07-queries">clojure-north-2020.ch02-datalog.x07-queries</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x07-queries-solutions">clojure-north-2020.ch02-datalog.x07-queries-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions">clojure-north-2020.ch02-datalog.ch04-hero-powers-schema-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x02-queries">clojure-north-2020.ch02-datalog.x02-queries</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.datahike-utils">clojure-north-2020.ch02-datalog.datahike-utils</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x04-hero-powers-schema">clojure-north-2020.ch02-datalog.x04-hero-powers-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x06-the-ultimate-db">clojure-north-2020.ch02-datalog.x06-the-ultimate-db</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x01-schemas">clojure-north-2020.ch02-datalog.x01-schemas</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x00-basics">clojure-north-2020.ch02-datalog.x00-basics</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x02-queries-solutions">clojure-north-2020.ch02-datalog.x02-queries-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x03-hero-schema">clojure-north-2020.ch02-datalog.x03-hero-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x04-reitit">clojure-north-2020.ch03-web.x04-reitit</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x01-basic">clojure-north-2020.ch03-web.x01-basic</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x02-routes-solutions">clojure-north-2020.ch03-web.x02-routes-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x03-responses">clojure-north-2020.ch03-web.x03-responses</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x02-routes">clojure-north-2020.ch03-web.x02-routes</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x05-state">clojure-north-2020.ch03-web.x05-state</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.core">clojure-north-2020.core</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x05-supplemental-hero-data">clojure-north-2020.ch01-data.x05-supplemental-hero-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x02-functions">clojure-north-2020.ch01-data.x02-functions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x03-hero-data">clojure-north-2020.ch01-data.x03-hero-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x01-data-solutions">clojure-north-2020.ch01-data.x01-data-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x04-hero-powers-data">clojure-north-2020.ch01-data.x04-hero-powers-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x06-yoda-quotes">clojure-north-2020.ch01-data.x06-yoda-quotes</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x01-data">clojure-north-2020.ch01-data.x01-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x02-functions-solutions">clojure-north-2020.ch01-data.x02-functions-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x04-hero-data-solutions">clojure-north-2020.ch01-data.x04-hero-data-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x04-parting-thoughts">clojure-north-2020.ch04-application.x04-parting-thoughts</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x01-integrant">clojure-north-2020.ch04-application.x01-integrant</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x02-the-final-handler">clojure-north-2020.ch04-application.x02-the-final-handler</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.parts.jetty">clojure-north-2020.ch04-application.parts.jetty</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.parts.datahike">clojure-north-2020.ch04-application.parts.datahike</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x03-the-final-system">clojure-north-2020.ch04-application.x03-the-final-system</li></ul></div></div><script type="text/javascript">SyntaxHighlighter.defaults['gutter'] = false;
+</td><td class="codes"><pre class="brush: clojure">(defn restart [] (stop) (start))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(comment
+  (keys (system))
+  (let [conn (::datahike/connection (system))]
+    (count @conn))
+
+  (use '[clojure.repl])
+  (require '[clojure.java.browse :refer [browse-url]])
+  (browse-url &quot;http://localhost:3000&quot;)
+  )</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr></table><div class="footer">Generated by <a href="https://github.com/gdeer81/marginalia">Marginalia</a>.&nbsp;&nbsp;Syntax highlighting provided by Alex Gorbatchev's <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a><div id="floating-toc"><ul><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema">clojure-north-2020.ch02-datalog.x05-supplemental-hero-data-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x07-queries">clojure-north-2020.ch02-datalog.x07-queries</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions">clojure-north-2020.ch02-datalog.x04-hero-powers-schema-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x07-queries-solutions">clojure-north-2020.ch02-datalog.x07-queries-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x02-queries">clojure-north-2020.ch02-datalog.x02-queries</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.datahike-utils">clojure-north-2020.ch02-datalog.datahike-utils</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x04-hero-powers-schema">clojure-north-2020.ch02-datalog.x04-hero-powers-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x06-the-ultimate-db">clojure-north-2020.ch02-datalog.x06-the-ultimate-db</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x01-schemas">clojure-north-2020.ch02-datalog.x01-schemas</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x00-basics">clojure-north-2020.ch02-datalog.x00-basics</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x02-queries-solutions">clojure-north-2020.ch02-datalog.x02-queries-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch02-datalog.x03-hero-schema">clojure-north-2020.ch02-datalog.x03-hero-schema</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x04-reitit">clojure-north-2020.ch03-web.x04-reitit</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x01-basic">clojure-north-2020.ch03-web.x01-basic</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x02-routes-solutions">clojure-north-2020.ch03-web.x02-routes-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x03-responses">clojure-north-2020.ch03-web.x03-responses</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x05-state-solutions">clojure-north-2020.ch03-web.x05-state-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x02-routes">clojure-north-2020.ch03-web.x02-routes</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch03-web.x05-state">clojure-north-2020.ch03-web.x05-state</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.core">clojure-north-2020.core</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x05-supplemental-hero-data">clojure-north-2020.ch01-data.x05-supplemental-hero-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x02-functions">clojure-north-2020.ch01-data.x02-functions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x03-hero-data">clojure-north-2020.ch01-data.x03-hero-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x01-data-solutions">clojure-north-2020.ch01-data.x01-data-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x04-hero-powers-data">clojure-north-2020.ch01-data.x04-hero-powers-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x06-yoda-quotes">clojure-north-2020.ch01-data.x06-yoda-quotes</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x01-data">clojure-north-2020.ch01-data.x01-data</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x02-functions-solutions">clojure-north-2020.ch01-data.x02-functions-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch01-data.x04-hero-data-solutions">clojure-north-2020.ch01-data.x04-hero-data-solutions</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x04-parting-thoughts">clojure-north-2020.ch04-application.x04-parting-thoughts</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x01-integrant">clojure-north-2020.ch04-application.x01-integrant</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x02-the-final-handler">clojure-north-2020.ch04-application.x02-the-final-handler</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.parts.jetty">clojure-north-2020.ch04-application.parts.jetty</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.parts.datahike">clojure-north-2020.ch04-application.parts.datahike</li><li class="floating-toc-li" id="floating-toc_clojure-north-2020.ch04-application.x03-the-final-system">clojure-north-2020.ch04-application.x03-the-final-system</li></ul></div></div><script type="text/javascript">SyntaxHighlighter.defaults['gutter'] = false;
 SyntaxHighlighter.all();
 
 // hackity hack
