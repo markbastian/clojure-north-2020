@@ -26,7 +26,7 @@
        (apply intersection))
 
   (def distinct-ident-keywords-query
-    "Determine the set of valid for each keyword (enum) type in the db."
+    "Determine the set of valid values for each keyword (enum) type in the db."
     '[:find ?ident ?v
       :in $
       :where
