@@ -21,6 +21,7 @@
 ;; ## Additional Material
 ;; If you liked this workshop and want to learn more about any of the topics,
 ;; feel free to check out these projects:
+;;
 ;; * [datascript-playground](https://github.com/markbastian/datascript-playground)
 ;; - This is a somewhat disorganized project of mine that explores datascript,
 ;;   topics, but it has a lot of examples that I've worked through to
@@ -44,7 +45,7 @@
 ;;   An authoritative guide to building web apps with Clojure from the author of
 ;;   the [Luminus](https://luminusweb.com) framework.
 ;;
-;; Feedback
+;; ## Feedback
 ;; I hope you enjoyed this workshop. I value any feedback you may have, positive
 ;; or otherwise. Please feel free to reach our to me on twitter (@mark_bastian),
-;; gmail (markbastian@gmail.com), or linkedin (https://www.linkedin.com/in/mark-bastian-295553102/).
+;; gmail (markbastian@gmail.com), or [linkedin](https://www.linkedin.com/in/mark-bastian-295553102/).

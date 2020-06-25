@@ -58,9 +58,7 @@ Prior to this workshop, you must:
 ## Format
 All namespaces are sorted, starting with ch01/x01 through ch04/x04. You can follow along with the tutorial or move ahead if anything seems too slow. All exercises have solutions in an accompanying namespace ending with _solutions. If, at any point, you feel like you are falling behind, that's ok. The whole project is documented so you can revisit it at any time and solutions are wired in at future points so that everything works.
 
-You may also find the Marginalia documentation useful. It is found [here](./docs/uberdoc.html).
-However, the documentation doesn't sort the nses correctly. I welcome any
-assistance in making that work.
+You may also find the [Marginalia documentation](https://markbastian.github.io/clojure-north-2020/docs/uberdoc.html) useful.
 
 ## License
 
