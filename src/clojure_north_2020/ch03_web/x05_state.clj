@@ -119,8 +119,6 @@
               :handler   (fn [_request]
                            (ok (sort (d/q x07/name-query @conn))))}}]
       ;; ## Exercise: Add an endpoint
-      ;; Add any endpoiont you want. Suggestion: Add a "q" endpoint that takes
-      ;; a query as data and returns the result.
       ["/add"
        {:post {:summary    "Add a new superhero"
                :responses  {200 {:body {}}}
