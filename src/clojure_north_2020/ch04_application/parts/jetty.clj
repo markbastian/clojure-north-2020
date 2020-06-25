@@ -4,6 +4,9 @@
             [taoensso.timbre :as timbre])
   (:import (org.eclipse.jetty.server Server)))
 
+;This is a 'middleware' - a function that takes a handler and returns a new
+; handler. For ring middlewares, both inbound handler and new hander take a
+; request and return a response.
 (defn wrap-component [handler component]
   (fn [request] (handler (into component request))))
 

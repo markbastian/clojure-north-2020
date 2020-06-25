@@ -40,6 +40,9 @@
 ;;   - My Clojure/conj 2015 talk in which I describe building an application
 ;;   using many of the techniques discussed today - start with data, build
 ;;   functions, work your way up to an application.
+;; * [Web Development with Clojure](https://www.amazon.com/Web-Development-Clojure-Build-Bulletproof/dp/1680500821) -
+;;   An authoritative guide to building web apps with Clojure from the author of
+;;   the [Luminus](https://luminusweb.com) framework.
 ;;
 ;; Feedback
 ;; I hope you enjoyed this workshop. I value any feedback you may have, positive
