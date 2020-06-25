@@ -4187,17 +4187,49 @@ until now has been purely functional. The db itself is a value when the
 current state is retrieved for use in queries.</p>
 </td><td class="codes"><pre class="brush: clojure">(defonce conn (du/conn-from-dirname &quot;tmp/the-ultimate-db&quot;))</pre></td></tr><tr><td class="docs"><p>Business Logic</p>
 </td><td class="codes"><pre class="brush: clojure">(defn greet [greetee]
-  (format &quot;Hello, %s!&quot; (or greetee &quot;Clojurian&quot;)))</pre></td></tr><tr><td class="docs"><p>"Local" handlers</p>
+  (format &quot;Hello, %s!&quot; (or greetee &quot;Clojurian&quot;)))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-schemas []
+  (d/transact conn x03/schema)
+  (d/transact conn x04/schema)
+  (d/transact conn x05/schema))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-data []
+  (let [before (count @conn)
+        _ (d/transact conn (mapv x03/hero-&gt;dh-format (x03d/heroes-data)))
+        _ (d/transact conn (vec (x04d/powers-data)))
+        _ (d/transact conn (mapv x05/hero-&gt;dh-format (x05d/supplemental-hero-data)))
+        after (count @conn)]
+    {:datoms-before before
+     :datoms-after  after
+     :datoms-added  (- after before)}))</pre></td></tr><tr><td class="docs"><p>"Local" handlers</p>
 </td><td class="codes"><pre class="brush: clojure">(defn hello-handler [{:keys [params] :as _request}]
   (ok (greet (params &quot;name&quot;))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defn request-dump-handler [request]
-  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs"><p>(defn add-hero [conn {keys [name alignment] :as hero}]
- (let [alignments (set (d/q x07/distinct-alignments-query @conn))]
-   (try</p>
-
-<pre><code> (catch Throwable e (timbre/warn "Bad hero data.")))))
-</code></pre>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>"Global" handler which is mostly routing to local handlers</p>
+  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-schemas-handler [_request]
+  (load-schemas)
+  (ok &quot;Schemas Loaded&quot;))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-data-handler [_request]
+  (ok (load-data)))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn hero-data-handler [{:keys [params] :as _request}]
+  (let [n (params &quot;name&quot;)]
+    (try
+      (ok (d/pull @conn '[*] [:name n]))
+      (catch Throwable e
+        (not-found (format &quot;Superhero \&quot;%s\&quot; not found.&quot; n))))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn datom-count-handler [_request]
+  (ok {:datoms (count @conn)}))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn schema-handler [_request]
+  (ok (map
+        #(dissoc % :db/id)
+        (d/q x07/schema-query @conn))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn hero-names-handler [_request]
+  (ok (sort (d/q x07/name-query @conn))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn add-hero-handler [{:keys [body-params] :as _request}]
+  (try
+    (let [{:keys [tempids]} (d/transact conn [body-params])]
+      (ok tempids))
+    (catch Exception e
+      (bad-request (.getMessage e)))))</pre></td></tr><tr><td class="docs"><p>"Global" handler which is mostly routing to local handlers</p>
 </td><td class="codes"><pre class="brush: clojure">(def router
   (ring/router
     [[&quot;/swagger.json&quot;
@@ -4210,58 +4242,38 @@ current state is retrieved for use in queries.</p>
       [&quot;/load-schemas&quot;
        {:get {:summary   &quot;Load the schemas in the db.&quot;
               :responses {200 {:body string?}}
-              :handler   (fn [_request]
-                           (let [a (d/transact conn x03/schema)
-                                 b (d/transact conn x04/schema)
-                                 c (d/transact conn x05/schema)])
-                           (ok &quot;Schemas Loaded&quot;))}}]
+              :handler   load-schemas-handler}}]
       [&quot;/load-data&quot;
        {:get {:summary   &quot;Load the data in the db.&quot;
-              :responses {200 {:body int?}}
-              :handler   (fn [_request]
-                           (let [a (count (d/transact conn (mapv x03/hero-&gt;dh-format (x03d/heroes-data))))
-                                 b (count (d/transact conn (vec (x04d/powers-data))))
-                                 c (count (d/transact conn (mapv x05/hero-&gt;dh-format (x05d/supplemental-hero-data))))])
-                           (ok (count @conn)))}}]
+              :responses {200 {:body {:datoms-before int?
+                                      :datoms-after  int?
+                                      :datoms-added  int?}}}
+              :handler   load-data-handler}}]
       [&quot;/hero&quot;
        {:get {:summary    &quot;Get data about a hero.&quot;
               :parameters {:query {:name string?}}
               :responses  {200 {:body {}}
                            404 {:body string?}}
-              :handler    (fn [{:keys [params] :as _request}]
-                            (let [n (params &quot;name&quot;)]
-                              (try
-                                (ok (d/pull @conn '[*] [:name n]))
-                                (catch Throwable e
-                                  (not-found (format &quot;Superhero \&quot;%s\&quot; not found.&quot; n))))))}}]
+              :handler    hero-data-handler}}]
       [&quot;/datom-count&quot;
        {:get {:summary   &quot;Get the number of datoms in the system.&quot;
               :responses {200 {:body {:datoms int?}}}
-              :handler   (fn [_request]
-                           (ok {:datoms (count @conn)}))}}]
+              :handler   datom-count-handler}}]
       [&quot;/schema&quot;
        {:get {:summary   &quot;Get the schema from the db.&quot;
               :responses {200 {:body [{}]}}
-              :handler   (fn [_request]
-                           (ok (map
-                                 #(dissoc % :db/id)
-                                 (d/q x07/schema-query @conn))))}}]
+              :handler   schema-handler}}]
       [&quot;/names&quot;
        {:get {:summary   &quot;Get all superhero names&quot;
               :responses {200 {:body [string?]}}
-              :handler   (fn [_request]
-                           (ok (sort (d/q x07/name-query @conn))))}}]
-      ;; ## Exercise: Add an endpoint
+              :handler   hero-names-handler}}]
       [&quot;/add&quot;
        {:post {:summary    &quot;Add a new superhero&quot;
                :responses  {200 {:body {}}}
                :parameters {:body {:name string?}}
-               :handler    (fn [{:keys [body-params] :as _request}]
-                             (try
-                               (let [{:keys [tempids]} (d/transact conn [body-params])]
-                                 (ok tempids))
-                               (catch Exception e
-                                 (bad-request (.getMessage e)))))}}]]
+               :handler    add-hero-handler}}]
+      ;; ## Exercise: Add an endpoint
+      ]
      [&quot;/basic&quot;
       {:swagger {:tags [&quot;Basic Routes&quot;]}}
       [&quot;/hello&quot;
@@ -4302,33 +4314,21 @@ current state is retrieved for use in queries.</p>
             [datahike.api :as d]
             [ring.util.http-response :refer [bad-request ok]]))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
+  (defn q-handler [{:keys [body-params] :as _request}]
+    (try
+      (let [q (edn/read-string (:query body-params))]
+        (ok (d/q q @conn)))
+      (catch Exception e
+        (bad-request (.getMessage e)))))
   [&quot;/q&quot;
    {:post {:summary    &quot;Invoke a generic query on the db.&quot;
            :parameters {:body {:query string?}}
-           :handler    (fn [{:keys [body-params] :as _request}]
-                         (try
-                           (let [q (edn/read-string (:query body-params))]
-                             (ok (d/q q @conn)))
-                           (catch Exception e
-                             (bad-request (.getMessage e)))))}}]
-
+           :handler    q-handler}}]
   ;Example request with content type of application/edn
   {:query &quot;[:find [(pull ?e [*]) ...]
     :in $
     :where
-    [?e :db/ident ?ident]]&quot;}
-
-  ;Use later for state threaded version
-  [&quot;/q&quot;
-   {:post {:summary    &quot;Invoke a generic query on the db.&quot;
-           :responses  {200 []}
-           :parameters {:body {:query string?}}
-           :handler    (fn [{:keys [body-params dh-conn] :as _request}]
-                         (try
-                           (let [q (edn/read-string (:query body-params))]
-                             (ok (d/q q @dh-conn)))
-                           (catch Exception e
-                             (bad-request (.getMessage e)))))}}])</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.datahike" name="clojure-north-2020.ch04-application.parts.datahike"><h1 class="project-name">clojure-north-2020.ch04-application.parts.datahike</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+    [?e :db/ident ?ident]]&quot;})</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.datahike" name="clojure-north-2020.ch04-application.parts.datahike"><h1 class="project-name">clojure-north-2020.ch04-application.parts.datahike</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch04-application.parts.datahike
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
@@ -4498,7 +4498,8 @@ things:</p>
             [reitit.ring.middleware.parameters :as parameters]
             [reitit.swagger :as swagger]
             [reitit.swagger-ui :as swagger-ui]
-            [ring.util.http-response :refer [bad-request not-found ok]]))</pre></td></tr><tr><td class="docs"><h2>Threading State: A Purely Functional API</h2>
+            [ring.util.http-response :refer [bad-request not-found ok]]
+            [clojure.edn :as edn]))</pre></td></tr><tr><td class="docs"><h2>Threading State: A Purely Functional API</h2>
 
 <p>We are now going to modify our API in a very simple way - We remove the
 global reference to the datahike connection and instead add it as a function
@@ -4518,11 +4519,59 @@ through the handler. We'll do this in the next section.</p>
 </ul>
 </td><td class="codes"></td></tr><tr><td class="docs"><p>Business Logic</p>
 </td><td class="codes"><pre class="brush: clojure">(defn greet [greetee]
-  (format &quot;Hello, %s!&quot; (or greetee &quot;Clojurian&quot;)))</pre></td></tr><tr><td class="docs"><p>"Local" handlers</p>
+  (format &quot;Hello, %s!&quot; (or greetee &quot;Clojurian&quot;)))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-schemas [conn]
+  (d/transact conn x03/schema)
+  (d/transact conn x04/schema)
+  (d/transact conn x05/schema))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-data [conn]
+  (let [before (count @conn)
+        _ (d/transact conn (mapv x03/hero-&gt;dh-format (x03d/heroes-data)))
+        _ (d/transact conn (vec (x04d/powers-data)))
+        _ (d/transact conn (mapv x05/hero-&gt;dh-format (x05d/supplemental-hero-data)))
+        after (count @conn)]
+    {:datoms-before before
+     :datoms-after  after
+     :datoms-added  (- after before)}))</pre></td></tr><tr><td class="docs"><p>"Local" handlers</p>
 </td><td class="codes"><pre class="brush: clojure">(defn hello-handler [{:keys [params] :as _request}]
   (ok (greet (params &quot;name&quot;))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defn request-dump-handler [request]
-  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs"><p>"Global" handler which is mostly routing to local handlers</p>
+  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-schemas-handler [{:keys [dh-conn] :as _request}]
+  (load-schemas dh-conn)
+  (ok &quot;Schemas Loaded&quot;))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn load-data-handler [{:keys [dh-conn] :as _request}]
+  (ok (load-data dh-conn)))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn hero-data-handler [{:keys [params dh-conn] :as _request}]
+  (let [n (params &quot;name&quot;)]
+    (try
+      (ok (d/pull @dh-conn '[*] [:name n]))
+      (catch Throwable e
+        (not-found (format &quot;Superhero \&quot;%s\&quot; not found.&quot; n))))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn datom-count-handler [{:keys [dh-conn] :as _request}]
+  (ok {:datoms (count @dh-conn)}))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn schema-handler [{:keys [dh-conn] :as _request}]
+  (ok (map
+        #(dissoc % :db/id)
+        (d/q x07/schema-query @dh-conn))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn hero-names-handler [{:keys [dh-conn] :as _request}]
+  (ok (sort (d/q x07/name-query @dh-conn))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn add-hero-handler [{:keys [body-params dh-conn] :as _request}]
+  (try
+    (let [{:keys [tempids]} (d/transact dh-conn [body-params])]
+      (ok tempids))
+    (catch Exception e
+      (bad-request (.getMessage e)))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn q-handler [{:keys [body-params dh-conn] :as _request}]
+  (try
+    (let [q (edn/read-string (:query body-params))]
+      (ok (d/q q @dh-conn)))
+    (catch Exception e
+      (bad-request (.getMessage e)))))</pre></td></tr><tr><td class="docs"><p>"Global" handler which is mostly routing to local handlers.
+Note that this DID NOT CHANGE AT ALL from the previous example.
+The state is at the edges, just being piped through.
+You could even put the hander/router in one ns, the function defs in
+another, and use an alias or import to swap out the handlers.</p>
 </td><td class="codes"><pre class="brush: clojure">(def router
   (ring/router
     [[&quot;/swagger.json&quot;
@@ -4535,63 +4584,38 @@ through the handler. We'll do this in the next section.</p>
       [&quot;/load-schemas&quot;
        {:get {:summary   &quot;Load the schemas in the db.&quot;
               :responses {200 {:body string?}}
-              :handler   (fn [{:keys [dh-conn] :as _request}]
-                           (let [a (d/transact dh-conn x03/schema)
-                                 b (d/transact dh-conn x04/schema)
-                                 c (d/transact dh-conn x05/schema)])
-                           (ok &quot;Schemas Loaded&quot;))}}]
+              :handler   load-schemas-handler}}]
       [&quot;/load-data&quot;
        {:get {:summary   &quot;Load the data in the db.&quot;
               :responses {200 {:body {:datoms-before int?
                                       :datoms-after  int?
                                       :datoms-added  int?}}}
-              :handler   (fn [{:keys [dh-conn] :as _request}]
-                           (let [before (count @dh-conn)
-                                 _ (count (d/transact dh-conn (mapv x03/hero-&gt;dh-format (x03d/heroes-data))))
-                                 _ (count (d/transact dh-conn (vec (x04d/powers-data))))
-                                 _ (count (d/transact dh-conn (mapv x05/hero-&gt;dh-format (x05d/supplemental-hero-data))))
-                                 after (count @dh-conn)]
-                             (ok {:datoms-before before
-                                  :datoms-after  after
-                                  :datoms-added  (- after before)})))}}]
+              :handler   load-data-handler}}]
       [&quot;/hero&quot;
        {:get {:summary    &quot;Get data about a hero.&quot;
               :parameters {:query {:name string?}}
               :responses  {200 {:body {}}
                            404 {:body string?}}
-              :handler    (fn [{:keys [params dh-conn] :as _request}]
-                            (let [n (params &quot;name&quot;)]
-                              (try
-                                (ok (d/pull @dh-conn '[*] [:name n]))
-                                (catch Throwable e
-                                  (not-found (format &quot;Superhero \&quot;%s\&quot; not found.&quot; n))))))}}]
+              :handler    hero-data-handler}}]
       [&quot;/datom-count&quot;
        {:get {:summary   &quot;Get the number of datoms in the system.&quot;
               :responses {200 {:body {:datoms int?}}}
-              :handler   (fn [{:keys [dh-conn] :as _request}]
-                           (ok {:datoms (count @dh-conn)}))}}]
+              :handler   datom-count-handler}}]
       [&quot;/schema&quot;
        {:get {:summary   &quot;Get the schema from the db.&quot;
               :responses {200 {:body [{}]}}
-              :handler   (fn [{:keys [dh-conn] :as _request}]
-                           (ok (map
-                                 #(dissoc % :db/id)
-                                 (d/q x07/schema-query @dh-conn))))}}]
+              :handler   schema-handler}}]
       [&quot;/names&quot;
        {:get {:summary   &quot;Get all superhero names&quot;
               :responses {200 {:body [string?]}}
-              :handler   (fn [{:keys [dh-conn] :as _request}]
-                           (ok (sort (d/q x07/name-query @dh-conn))))}}]
+              :handler   hero-names-handler}}]
       [&quot;/add&quot;
        {:post {:summary    &quot;Add a new superhero&quot;
                :responses  {200 {:body {}}}
                :parameters {:body {:name string?}}
-               :handler    (fn [{:keys [body-params dh-conn] :as _request}]
-                             (try
-                               (let [{:keys [tempids]} (d/transact dh-conn [body-params])]
-                                 (ok tempids))
-                               (catch Exception e
-                                 (bad-request (.getMessage e)))))}}]]
+               :handler    add-hero-handler}}]
+      ;; ## Exercise: Add an endpoint
+      ]
      [&quot;/basic&quot;
       {:swagger {:tags [&quot;Basic Routes&quot;]}}
       [&quot;/hello&quot;
