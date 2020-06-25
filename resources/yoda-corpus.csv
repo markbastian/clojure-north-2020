@@ -1,0 +1,372 @@
+movie,scene,line,character,text,slug,component
+1,129,1158,narrator,"QUI-GON stands in a tall stately room. Twelve JEDI sit in a semi-circle. OBI-WAN stands behind QUI-GON in the center of the room. The Senior Jedi is MACE WINDU. To his left is an alien Jedi named KI-ADI-MUNDI, and to his right, the Jedi Master, YODA.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,action
+1,129,1159,QUI-GON,...my only conclusion can be that it was a Sith Lord.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1160,MACE WINDU,A Sith Lord?!?,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1161,KI-ADI,Impossible! The Sith have been extinct for a millenium.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1162,YODA,"The very Republic is threatened, if involved the Sith are.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1163,MACE WINDU,I do not believe they could have returned without us knowing.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1164,YODA,"Hard to see, the dark side is. Discover who this assassin is, we must.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1165,KI-ADI,I sense he will reveal himself again.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1166,MACE WINDU,"This attack was with purpose, that is clear, and I agree the Queen is the target.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1167,YODA,"With this Naboo queen you must stay, Qui-Gon. Protect her.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1168,MACE WINDU,We will use all our resources here to unravel this mystery and discover the identity of your attacker... May the Force be with you.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1169,YODA,May the Force be with you.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1170,narrator,"OBI-WAN turns to leave, but QUI-GON continues to face the Council.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,action
+1,129,1171,YODA,(Cont'd) Master Qui-Gon more to say have you?,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1172,QUI-GON,"With your permission, my Master. I have encountered a vergence in the Force.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1173,YODA,"A vergence, you say?",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1174,MACE WINDU,Located around a person?,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1175,QUI-GON,A boy... his cells have the highest concentration of midi-chlorians I have seen in a life form. It is possible he was conceived by the midi-chlorians.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1176,MACE WINDU,You're referring to the prophesy of the one who will bring balance to the Force...you believe it's this boy??,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1177,QUI-GON,I don't pressume...,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1178,YODA,But you do! Rrevealed your opinion is.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1179,QUI-GON,I request the boy be tested.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1180,narrator,The JEDI all look to one another. They nod and turn back to OBI-WAN and QUI-GON.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,action
+1,129,1181,YODA,"Trained as a Jedi, you request for him?",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1182,QUI-GON,Finding him was the will of the Force...I have no doubt of that. There is too much happening here...,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1183,MACE WINDU,"Bring him before us, then.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,129,1184,YODA,Tested he will be.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - DAY,character
+1,134,1258,narrator,"ANAKIN stands before the TWELVE JEDI. MACE WINDU holds a small hand-held viewing screen. In rapid succession, images flash across the screen.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,action
+1,134,1259,ANAKIN,A ship...a cup...a speeder.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1260,narrator,MACE WINDU turns the viewing screen off and nods toward YODA.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,action
+1,134,1261,YODA,"Good, good, young one. How feel you?",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1262,ANAKIN,"Cold, sir.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1263,YODA,Afraid are you?,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1264,ANAKIN,"No, sir.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1265,MACE WINDU,Afraid to give up your life?,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1266,ANAKIN,I don't think so.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1267,narrator,ANAKIN hesitates for a moment.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,action
+1,134,1268,YODA,"See through you, we can.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1269,MACE WINDU,Be mindful of your feelings...,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1270,KI-ADI,YOur thoughts dwell on your mother.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1271,ANAKIN,I miss her.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1272,YODA,Afraid to lose her..I think.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1273,ANAKIN,(a little angry) What's that got to do with anything?,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1274,YODA,Eveything. Fear is the path to the dark side... fear leads to anger... anger leads to hate.. hate leads to suffering.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1275,ANAKIN,(angrily) I am not afraid!,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1276,YODA,"A Jedi must have the deepest commitment, the most serious mind. I sense much fear in you.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1277,ANAKIN,(quietly) I am not afraid.,INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,134,1278,YODA,"Then continue, we will.",INT. PALACE OF THE JEDI - COUNCIL CHAMBERS - SUNSET,character
+1,136,1303,narrator,"ANAKIN, OBI-WAN, and QUI-GON stand before the TWELVE MEMBERS OF THE JEDI COUNCIL.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1304,YODA,"...Correct you were, Qui-Gon.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1305,MACE WINDU,His cells contain a high concentration of midi-chlorians.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1306,KI-ADI,The Force is strong with him.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1307,QUI-GON,"He's to be trained, then.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1308,narrator,The COUNCIL MEMBERS look to one another.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1309,MACE WINDU,No. He will not be trained.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1310,narrator,ANAKIN is crestfallen; tears begin to form in his eyes.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1311,QUI-GON,No??!!,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1312,narrator,OBI-WAN smiles.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1313,MACE WINDU,He is too old. There is already too much anger in him.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1314,QUI-GON,He is the chosen one...you must see it.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1315,YODA,"Clouded, this boy's future is. Masked by his youth.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1316,QUI-GON,"I will trin him, then. I take Anakin as my Padawan learner.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1317,narrator,OBI-WAN reacts with surprise. ANAKIN watches with interest.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1318,YODA,"An apprentice, you have, Qui-Gon. Impossible, to take on a second.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1319,MACE WINDU,We forbid it.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1320,QUI-GON,Obi-Wan is ready...,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1321,OBI-WAN,Iam ready to face the trials.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1322,YODA,"Ready so early, are you? What know you of ready?",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1323,narrator,ANAKIN watches as QUI-GON and OBI-WAN exchange angry looks.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,136,1324,QUI-GON,"Headstrong....and he has much to learn about the living Force, but he is capabe. There is little more he will learn from me.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1325,YODA,"Our own council we will keep on who is ready. More to learn, he has...",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1326,MACE WINDU,"Now is not the time for this...the Senate is voting for a new Spreme Chancellor. Queen Amidala is returning home, which will put pressure on the Federation, and could widen the confrontation.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1327,YODA,And draw out the Queen's attacker.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1328,KI-ADI,Events are moving fast...too fast.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1329,MACE WINDU,Go with the Queen to Naboo and discover the identity of the dark warrior. That is the clue we need to unravel this mystery of the Sith.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1330,YODA,Young Skywalker's fate will be decided later.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1331,QUI-GON,I brought Anakin here; he must stay in my charge. He has nowhere else to go.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1332,MACE WINDU,"He is your ward, Qui-Gon...we will not dispute that.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1333,YODA,"Train him not. Take him with you, but train him not!",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1334,MACE WINDU,"Protect the Queen, but do not intercede if it comes to war until we have the Senate's approval.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1335,YODA,May the Force be with you.,INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,character
+1,136,1336,narrator,"OBI-WAN, QUI-GON, and ANAKIN leave.",INT. TEMPLE OF THE JEDI - COUNCIL CHAMBERS - TWILIGHT,action
+1,185,1687,narrator,"The sun streams into the multi-windowed room at a low angle. It is not quite sunset. YODA paces before OBI-WAN, who is kneeling in the center of the room.",INT. TURRET ROOM - NABOO PALACE - LATE DAY,action
+1,185,1688,YODA,"Confer on you, the level of Jedi Knight the Coucil does. But agree on you taking this boy as your Padawan learner, I do not.",INT. TURRET ROOM - NABOO PALACE - LATE DAY,character
+1,185,1689,OBI-WAN,Qui-Gon believed in him. I believe in Qui-Gon.,INT. TURRET ROOM - NABOO PALACE - LATE DAY,character
+1,185,1690,YODA,"The Chosen One the boy may be; nevertheless, grave danger I fear in his training.",INT. TURRET ROOM - NABOO PALACE - LATE DAY,character
+1,185,1691,OBI-WAN,"Master Yoda, Igave Qui-Gon my word. I will train Anakin. Without the approval of the Council if I must.",INT. TURRET ROOM - NABOO PALACE - LATE DAY,character
+1,185,1692,YODA,"Qui-Gon's defiance I sense in you. Need that, you do not. Agree, the council does. Your apprentice, young Skywalker will be.",INT. TURRET ROOM - NABOO PALACE - LATE DAY,character
+1,186,1693,narrator,"QUI-GON's body goes up in flames as the JEDI COUNCIL, the QUEEN, SIO BIBBLE, CAPTAIN PANAKA, the HANDMAIDENS, and ABOUT ONE HUNDRED NABOO TROOPES, TWENTY OTHER JEDI, PALPATINE, OBI-WAN (standing with ANAKIN), JAR JAR, BOSS NASS, and TWENTY OTHER GUNGAN WARRIORS watch. There is a drum roll that stops. Doves are released, and the body is gone. ANAKIN looks to OBI-WAN.",EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,action
+1,186,1694,OBI-WAN,"He is one with the Force, Anakin...You must let go.",EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1695,ANAKIN,What will happen to me now?,EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1696,OBI-WAN,"I am your Master now. You will become a Jedi, I promise.",EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1697,narrator,"To one side, MACE WINDU turns to YODA.",EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,action
+1,186,1698,MACE WINDU,There is no doubt. The mysterious warrior was a Sith.,EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1699,YODA,Always two there are....no more...no less. A master and an apprentice.,EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1700,MACE WINDU,"But which one was destroyed, the master or the apprentice?",EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,character
+1,186,1701,narrator,They give each other a concerned look.,EXT. THEED - CENTRAL PLAZA - FUNERAL TEMPLE STEPS - SUNSET,action
+3,77,543,narrator,"YODA and ANAKIN sit in Yoda 's room, deep in thought.",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,action
+3,77,544,YODA, Premonitions . . . premonitions . . . Hmmmm . . . these visions you have . . .,77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,545,ANAKIN," They are of pain, suffering, death . . .",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,546,YODA," Yourself you speak of, or someone you know?",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,547,ANAKIN, Someone . . .,77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,548,YODA, . . . close to you?,77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,549,ANAKIN, Yes.,77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,550,YODA," Careful you must be when sensing the future, Anakin. The fear of loss is a path to the dark side.",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,551,ANAKIN," I won't let these visions come true, Master Yoda.",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,552,YODA," Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them, do not. Miss them, do not. Attachment leads to jealousy. The shadow of greed, that is.",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,553,ANAKIN," What must I do, Master Yoda?",77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,77,554,YODA, Train yourself to let go of everything you fear to lose.,77 INT. CORUSCANT-JEDI TEMPLE-YODAS QUARTERS-DAY,character
+3,83,617,narrator,"ANAKIN enters and stands in the middle of the room. He is surrounded by the Jedi Council MACE WINDU, EETH KOTH OBI-WAN, YODA, the HOLOGRAMS of PLO KOON and KI-ADI-MUNDI.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,action
+3,83,618,MACE," Anakin Skywalker, we have approved your appointment to the Council as the Chancellor's personal representative.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,619,ANAKIN, I will do my best to uphold the principles of the Jedi Order.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,620,YODA," Allow this appointment lightly, the Council does not. Disturbing is this move by Chancellor Palpatine.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,621,ANAKIN, I understand.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,622,MACE," You are on this Council, but we do not grant you the rank of Master.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,623,narrator,Anakin reacts with anger.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,action
+3,83,624,ANAKIN," What? ! How can you do this?? This is outrageous, it's unfair . . . I'm more powerful than any of you. How can you be on the Council and not be a Master?",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,625,MACE," Take a seat, young Skywalker.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,626,ANAKIN," Forgive me, Master.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,627,narrator,"ANAKIN goes and sits in one of the empty chairs. Everyone is embarrassed. KI-ADI-MUNDI WHO APPEARS AS A HOLOGRAM, speaks.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,action
+3,83,628,Kl-ADI-MUNDI," We have surveyed all systems in the Republic, and have found no sign of General Grievous.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,629,YODA," Hiding in the Outer Rim, Grievous is. The outlying systems, you must sweep.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,630,OBI-WAN, It may take some time . . . we do not have many ships to spare.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,631,MACE, We cannot take ships from the front line.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,632,OBI-WAN," And yet, it would be fatal for us to allow the droid armies to regroup.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,633,YODA," Master Kenobi, our spies contact, you must, and then wait.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,634,Kl-ADI-MUNDI, What about the droid attack on the Wookiees?,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,635,MACE," It is critical we send an attack group there, immediately!",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,636,OBI-WAN," He's right, that is a system we cannot afford to lose. It's the main navigation route for the southwestern quadrant.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,637,ANAKIN, I know that system well. It would take us little time to drive the droids off that planet.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,638,MACE," Skywalker, your assignment is here with the Chancellor, and Kenobi must find General Grievous.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,639,YODA," Go, I will. Good relations with the Wookiees, I have.",83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,640,MACE, It is settled then. Yoda will take a battalion of clones to reinforce the Wookiees on Kashyyyk. May the Force be with us all.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,character
+3,83,641,narrator,ANAKIN is disappointed.,83 INT. CORUSCANT-JEDI TEMPLE-COUNCIL CHAMBERS-DAY,action
+3,86,672,narrator,"YODA, MACE, and OBI-WAN ride in the GUNSHIP as it heads for the Clone landing platform. Mace and Obi-Wan are sitting.",86 INT. CORUSCANT-JEDI GUNSHIP-DAY,action
+3,86,673,OBI-WAN , Anakin did not take to his assignment with much enthusiasm.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,674,YODA," Too much under the sway of the Chancellor, he is. Much anger there is in him. Too much pride in his powers.",86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,675,MACE," It's very dangerous, putting them together. I don't think the boy can handle it. I don't trust him.",86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,676,OBI-WAN, He'll be all right. I trust him with my life.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,677,MACE,I wish I did.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,678,OBI-WAN," With all due respect, Master, is he not the Chosen One? Is he not to destroy the Sith and bring balance to the Force?",86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,679,MACE, So the prophecy says.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,680,YODA, A prophecy . . . that misread could have been.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,681,OBI-WAN, He will not let me down. He never has.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,682,YODA," I hope right you are. And now destroy the Droid armies on Kashyyyk, I will. May the Force be with you.",86 INT. CORUSCANT-JEDI GUNSHIP-DAY,character
+3,86,683,narrator,The GUNSHIP lands and the ramp lowers. YODA exits the GUNSHIP. MACE and OBI-WAN stand and give him a brief bow then take off in the GUNSHIP.,86 INT. CORUSCANT-JEDI GUNSHIP-DAY,action
+3,90,770,narrator,"YODA and various JEDI speak via hologram. The discussion includes OBI-WAN, MACE, AGEN KOLAR, YODA- KI-ADI-MUNDI and PLO KOON.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,771,Kl-ADI-MUNDI, (holo) Palpatine thinks General Grievous is on Utapau. We have had no reports of this from our agents.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,772,MACE, (holo) How could the Chancellor have come by this information and we know nothing about it? We have had contact with Baron Papanoida and he said no one was there.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,773,ANAKIN, A partial message was intercepted in a diplomatic packet from the Chairman of Utapau.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,774,YODA," Act on this, we must. The capture of General Grievous will end this war. Quickly and decisively we should proceed.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,775,OBI-WAN, Does everyone agree?,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,776,narrator,All the JEDI concur.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,777,ANAKIN, The Chancellor has requested that I lead the campaign.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,778,narrator,They all look at ANAKIN a bit disturbed.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,779,MACE," (a little peeved) The Council will make up its own mind who is to go, not the Chancellor.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,780,Kl-ADI-MUNDI," Yes, this decision is ours to make.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,781,narrator,ANAKIN is embarrassed and becomes sullen.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,782,YODA," A Master is needed, with more experience.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,783,MACE," Given our resources, I recommend we send only one Jedi . . . Master Kenobi.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,784,ANAKIN, He was not so successful the last time he met Grievous.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,785,narrator,OBI-WAN throws ANAKIN a dirty look.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,786,ANAKIN," (continuing) No offense, my Master, but I'm only stating a fact.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,787,OBI-WAN," Oh no, you're quite right, but I do have the most experience with his ways of combat.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,788,YODA," Obi-Wan, my choice is.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,789,Kl-ADI-MUNDI, I concur. Master Kenobi should go.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,790,YODA, I agree.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,791,narrator,All the JEDI concur.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,792,MACE, Very well. Council is adjourned.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,90,793,narrator,ANAKIN is angry.,90 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,90,794,MACE," (continuing) Obi-Wan, prepare two clone brigades as quickly as you can. If this report is true, there's no telling how many battle droids he may have with him.",90 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,91,795,narrator,YODA gets out of his chair and walks to the edge of the platform.,91 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,91,796,CLONE COMMANDER GREE, The droids have started up their main power generators.,91 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,91,797,YODA," Then now the time is, Commander.",91 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,91,798,CLONE COMMANDER GREE," Yes, sir.",91 INT. KASHYYYK-HOLOGRAM AREA-DAY,character
+3,91,799,narrator,The battle begins.,91 INT. KASHYYYK-HOLOGRAM AREA-DAY,action
+3,117,1003,narrator,"KI-ADI-MUNDI, ANAKIN, YODA, MACE, CLONE COMMANDER CODY, and AAYLA SECURA talk via holograms.",117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,action
+3,117,1004,CLONE COMMANDER CODY," Master Windu, may I interrupt? General Kenobi has made contact with General Grievous, and we",117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1005,narrator,have begun our attack.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,action
+3,117,1006,MACE WlNDU," Thank you, Commander. Anakin, deliver this report to the Chancellor. His reaction will give us a clue to his",117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1007,narrator,intentions.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,action
+3,117,1008,ANAKIN," Yes, Master.",117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1009,narrator,ANAKIN leaves the room. COMMANDER CODY's hologram disappears.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,action
+3,117,1010,MACE WINDU, I sense a plot to destroy the Jedi. The dark side of the Force surrounds the Chancellor.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1011,Kl-ADI-MUNDI," If he does not give up his emergency powers after the destruction of Grievous, then he should be removed from",117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1012,narrator,office.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,action
+3,117,1013,MACE WiNDU, That could be a dangerous move ... the Jedi Council would have to take control of the Senate in order to secure a peaceful transition . . .,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1014,Kl-ADI-MUNDI, . . . and replace the Congress with Senators who are not filled with greed and corruption.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,117,1015,YODA, To a dark place this line of thought will carry us. Hmmmmm. . . . great care we must take.,117 INT. CORUSCANT-JEDI WAR ROOM-EARLY EVENING,character
+3,153,1212,narrator,CLONES in modified one-man AT-ST's and Swamp Speeders flash their searchlights across the gloomy lake. The light of one of the AT-ST's spots something floating in the water. It is what's left of a Wookiee catamaran. The body of a dead Wookiee (TARFFUL) is lying across the stern of the wreckage of the flying boat. There is some movement on the boat. The CLONE SERGEANT on the AT-ST fires a warning shot past the boat.,152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,153,1213,AT-ST CLONE SERGEANT, Everyone out of there!,152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1214,narrator,A CRAZY LITTLE CREATURE about two feet high pops its head over the rail. The creature is covered with mud. His long hair is frizzed out in all directions.,152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,153,1215,CREATURE, Wookiee good . . . eat Wookiee. (crazy little laugh),152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1216,CLONE SERGEANT, Did you find something?,152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1217,CREATURE," It's nothing, nothing. (laughs)",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1218,CLONE SERGEANT," It's nothing, nothing. All these Wookiees are dead. Move to the east.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1219,CLONE TROOPER," Yes, sir.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1220,narrator,"Suddenly, CHEWBACCA climbs up behind the AT-ST CLONE, dripping wet, and throws the CLONE SERGEANT into the water. CHEWIE BARKS.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,153,1221,CREATURE," Right you are, Chewbacca. Faster that will be.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1222,narrator,"TARFFUL jumps up in the boat, and the CREATURE takes off his hair. It is Yoda.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,153,1223,YODA," Stink, this mud does. A moment to bathe, give me.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1224,narrator,"YODA, covered with mud, jumps into the water. TARFFUL climbs onto the AT-ST with CHEWBACCA. YODA is out of the water and putting his robes back on.",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,153,1225,YODA," (continuing) Not far, are we, from the emergency ship. Quickly . . .",152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,character
+3,153,1226,narrator,YODA whistles and a large ALIEN FLYING INSECT called CAN-CELL appears. YODA jumps on the insect's back and they take off. The WOOKIEES follow on the AT-ST. The CLONES continue to search the swamp.,152 EXT. KASHYYYK-LAKE ON VILLAGE EDGE-DUSK,action
+3,154,1227,narrator,"The AT-ST marches up the hill and stops. The WOOKIEES jump down. YODA lands on CAN-CELL nearby. CHEWBACCA goes to a tree and pulls down one of its branches. The ground opens up, and a small WOOKIEE ESCAPE POD rises into the field. YODA opens the door of the pod.",153 EXT. KASHYYYK-HILLS OVERLOOKING LAKE-DUSK,action
+3,154,1228,YODA," Good-bye. Chewbacca and Tarfful, miss you I will. Good friends you are. For your help, much gratitude and respect, I have.",153 EXT. KASHYYYK-HILLS OVERLOOKING LAKE-DUSK,character
+3,154,1229,narrator,The Wookiees BARK as the Jedi climbs into the WOOKIEE POD and takes off into the dusk sky.,153 EXT. KASHYYYK-HILLS OVERLOOKING LAKE-DUSK,action
+3,165,1310,narrator,The door to the main hallway slides open. OBI-WAN enters and is greeted by YODA and BAIL ORGANA. The three walk down the hallway.,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,action
+3,165,1311,BAIL ORGANA, You made it.,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1312,YODA," Master Kenobi, dark times are these. Good to see you. it is.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1313,OBI-WAN," You were attacked by your Clones, also?",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1314,YODA," With the help of the Wookiees, barely escape, I did.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1315,OBI-WAN, How many other Jedi managed to survive?,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1316,YODA," Heard from no one, have we.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1317,BAIL ORGANA, I saw thousands of troops attack the Jedi Temple. That's why I went looking for Yoda.,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1318,OBI-WAN, Have we had any contact from the Temple?,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1319,YODA," Received a coded retreat message, we have.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1320,BAIL ORGANA, It requests all Jedi to return to the Temple. It says that the war is over . . .,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1321,OBI-WAN," Well, then we must go back! If there are other stragglers, they will fall into the trap and be killed.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1322,BAIL ORGANA, It's too dangerous to return.,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1323,YODA," Suggest dismantling the coded signal, do you?",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1324,OBI-WAN," Yes, Master. There is too much at stake here, and we need a clearer picture of what has happened.",164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,165,1325,YODA, I agree. In a dark place we find ourselves ... a little more knowledge might light our way.,164 INT. ALDERAAN-STARCRUISER-HALLWAY-DAY,character
+3,168,1331,narrator,"The Republic Cruiser heads toward Coruscant. OBI-WAN, BAIL, YODA, and TWO PILOTS sit in the cockpit.",167 INT. CRUISER-COCKPIT,action
+3,168,1332,PILOT," We are receiving a message from the Chancellor's office, sir.",167 INT. CRUISER-COCKPIT,character
+3,168,1333,BAIL ORGANA, Send it through.,167 INT. CRUISER-COCKPIT,character
+3,168,1334,PILOT," Yes, sir.",167 INT. CRUISER-COCKPIT,character
+3,168,1335,narrator,The PILOT pushes some buttons. MAS AMEDDA appears on screen.,167 INT. CRUISER-COCKPIT,action
+3,168,1336,MAS AMEDDA, Senator Organa . . . the Supreme Chancellor of the Republic requests your presence at a special session of Congress.,167 INT. CRUISER-COCKPIT,character
+3,168,1337,BAIL ORGANA, Tell the Chancellor I will be there.,167 INT. CRUISER-COCKPIT,character
+3,168,1338,MAS AMEDDA, Very well. He will be expecting you.,167 INT. CRUISER-COCKPIT,character
+3,168,1339,narrator,MAS AMEDDA's image disappears from the screen.,167 INT. CRUISER-COCKPIT,action
+3,168,1340,BAIL ORGANA, It could be a trap.,167 INT. CRUISER-COCKPIT,character
+3,168,1341,OBI-WAN," No, I don't think so. The Chancellor will not be able to control the thousands of star systems without keeping the Senate intact.",167 INT. CRUISER-COCKPIT,character
+3,168,1342,YODA," If a special session of Congress there is, easier for us to enter the Jedi Temple it will be.",167 INT. CRUISER-COCKPIT,character
+3,175,1359,narrator,"A DOZEN CLONE TROOPERS stand guard at the entrance of the Jedi Temple. Suddenly there is a flash of a lightsaber, a flurry of confusion, and all of the Clone Troopers are dead on the floor. YODA and OBI-WAN stand in the middle of the carnage.",174 INT. CORUSCANT-JEDI TEMPLE-MAIN ENTRANCE-LATE DAY,action
+3,175,1360,OBI-WAN, There are several battalions of Clone Troopers on every level. Many are dressed as Jedi.,174 INT. CORUSCANT-JEDI TEMPLE-MAIN ENTRANCE-LATE DAY,character
+3,175,1361,YODA," Dismantle the coded signal quickly. That group back there, soon discovered will be.",174 INT. CORUSCANT-JEDI TEMPLE-MAIN ENTRANCE-LATE DAY,character
+3,178,1372,narrator,"YODA and OBI-WAN make their way through the Temple, avoiding the HUNDREDS OF CLONE TROOPERS. They use the Force to distract the CLONES when they can. YODA and OBI-WAN walk through the ruins of the Temple until they come across the bodies of some students.",177 INT. CORUSCANT-JEDI TEMPLE-HALLWAY-SUNSET,action
+3,178,1373,OBI-WAN, Not even the younglings survived.,177 INT. CORUSCANT-JEDI TEMPLE-HALLWAY-SUNSET,character
+3,178,1374,YODA," Killed not by clones, this Padawan. By a lightsaber, he was.",177 INT. CORUSCANT-JEDI TEMPLE-HALLWAY-SUNSET,character
+3,178,1375,OBI-WAN, . . .Who?? Who could have done this?,177 INT. CORUSCANT-JEDI TEMPLE-HALLWAY-SUNSET,character
+3,185,1400,narrator,"OBI-WAN stands in a large computer area as YODA looks on, in the hatchway to the Main Control Center.",184 INT. CORUSCANT-JEDI TEMPLE-COMPUTER ROOM-NIGHT,action
+3,185,1401,OBI-WAN, I've recalibrated the code warning all surviving Jedi to stay away.,184 INT. CORUSCANT-JEDI TEMPLE-COMPUTER ROOM-NIGHT,character
+3,185,1402,YODA," Good . . . For the Clones to discover the recalibration, a long time it will take. To change it back, longer still. Hurry.",184 INT. CORUSCANT-JEDI TEMPLE-COMPUTER ROOM-NIGHT,character
+3,186,1403,narrator,OBI-WAN enters the Main Control Center with YODA and heads for the hologram area.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,action
+3,186,1404,OBI-WAN," Wait, Master. There is something I must know . . .",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1405,YODA," If into the security recordings you go, only pain will you find.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1406,OBI-WAN," I must know the truth, Master.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1407,narrator,"OBI-WAN moves to a panel and flips some switches. He sees a HOLOGRAM of ANAKIN slaughtering JEDI, including the YOUNG ONES. OBI-WAN and YODA react.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,action
+3,186,1408,OBI-WAN, (continuing) It can't be . . . It can't be . . .,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1409,narrator,"As ANAKIN surveys the carnage, a DARK-ROBED SITH LORD enters. ANAKIN turns to DARTH SIDIOUS and kneels before him.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,action
+3,186,1410,ANAKIN," The traitors have been taken care of, Lord Sidious.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1411,DARTH SlDIOUS," Good . . . good . . . You have done well, my new apprentice. Do you feel your power growing?",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1412,ANAKIN," Yes, My Master.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1413,DARTH SlDIOUS," Now, Lord Vader, now go and bring peace to the Empire.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1414,narrator,OBI-WAN watches in horror. Tears well up in his eyes.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,action
+3,186,1415,OBI-WAN, I can't watch any more.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1416,narrator,OBI-WAN switches off the hologram. The TWO JEDI stand in silence for a few moments.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,action
+3,186,1417,YODA," Destroy the Sith, we must.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1418,OBI-WAN, Send me to kill the Emperor. I will not kill Anakin.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1419,YODA," To fight this Lord Sidious, strong enough, you are not.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1420,OBI-WAN, He is like my brother ... I cannot do it.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1421,YODA," Twisted by the dark side, young Skywalker has become. The boy you trained, gone he is . . . Consumed by Darth Vader.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1422,OBI-WAN, How could it have come to this?,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1423,YODA," To question, no time there is.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1424,OBI-WAN, I do not know where the Emperor has sent him. I don't know where to look.,185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1425,YODA," Use your feelings, Obi-Wan, and find him, you will. Visit the new Emperor, my task is. May the Force be with you.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,186,1426,OBI-WAN," May the Force be with you, Master Yoda.",185 INT. CORUSCANT-JEDI TEMPLE-CONTROL CENTER-NIGHT,character
+3,197,1540,narrator,"YODA enters, using the Force to throw two RED GUARDS against the wall, knocking them unconscious. DARTH SIDIOUS turns his chair toward YODA. MAS AMEDDA stands behind SIDIOUS's desk.",196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,197,1541,YODA," I hear a new apprentice, you have. Emperor, or should I call you Darth Sidious.",196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,197,1542,DARTH SlDIOUS," Master Yoda, you survived.",196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,197,1543,YODA, Surprised?,196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,197,1544,DARTH SlDIOUS," Your arrogance blinds you, Master Yoda. Now you will experience the full power of the dark side.",196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,197,1545,narrator,"The Dark Lord raises his arms, and LIGHTNING BOLTS shoot out, surrounding YODA. YODA is picked up and thrown across the room, hitting the wall and sliding down in a crumpled heap. DARTH SIDIOUS chuckles.",196 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1550,narrator,MAS AMEDDA leaves the room. PALPATINE approaches a stunned YODA.,199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1551,DARTH SlDIOUS," I have waited a long time for this moment, my little green friend. At last, the Jedi are no more.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1552,YODA," Not if anything I have to say about it, Lord Sidious.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1553,narrator,"YODA uses the Force to throw DARTH SIDIOUS back, knocking him clear over his desk and onto the floor in a heap.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1554,YODA," (continuing) At an end your rule is and not short enough it was, I must say.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1555,narrator,"DARTH SIDIOUS flies through the air, cape flapping, heading toward the exit. At the last second, YODA flies into the exit and stops the Dark Lord.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1556,YODA," (continuing) If so powerful you are, why leave??",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1557,narrator,YODA ignites his lightsaber.,199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1558,DARTH SlDIOUS, You will not stop me. Darth Vader will become more powerful than either of us.,199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1559,narrator,DARTH SIDIOUS ignites his lightsaber.,199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,200,1560,YODA," Faith in your new apprentice, misplaced may be, as is your faith in the dark side of the Force.",199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,character
+3,200,1561,narrator,Their swords CLASH. The battle is extremely fast and furious.,199 INT. CORRIDOR-SENATE ARENA-CHANCELLOR'S HOLDING OFFICE-NIGHT,action
+3,204,1572,narrator,"YODA unleashes a ferocious assault on PALPATINE, causing him to almost go over the edge. The Dark Lord drops his lightsaber but recovers with a BLAST OF ENERGY from his hands that surrounds YODA. YODA is deflecting the Sith Lord's lightning bolts. The energy bolts begin to arc back on the Emperor. It looks as if the Dark Lord is doomed.",203 INT. CORUSCANT-SENATE CHAMRER-MAIN ARENA-NIGHT,action
+3,204,1573,YODA," Destroy you I will, just as Master Kenobi, your apprentice will destroy.",203 INT. CORUSCANT-SENATE CHAMRER-MAIN ARENA-NIGHT,character
+3,204,1574,narrator,"YODA jumps to a lower Senate Pod. PALPATINE reaches out with one hand, and a Senate pod is released from its mooring and heads toward the Podium. PALPATINE uses the Force to hurl pod after pod at YODA, who ducks and jumps from one flying pod to another. YODA leaps away from the pods. He uses the Force to hold one pod suspended in the air. The pod spins and YODA throws it back at PALPATINE, who leaps away at the last moment. YODA leaps after him, but PALPATINE quickly turns and aims the full force of his energy bolts at the tiny green Jedi, catching him in mid-air and throwing him back hard against the Podium. The force causes YODA to drop his lightsaber. YODA blocks the lightning and throws PALPATINE backwards off the podium. YODA is knocked off the Podium and falls several hundred feet to the base of the Podium. PALPATINE follows in his pod, searching for YODA.",203 INT. CORUSCANT-SENATE CHAMRER-MAIN ARENA-NIGHT,action
+3,208,1578,narrator,YODA squishes his way through a mass of wires in a small chute. He talks on his comlink.,207 INT. CORUSCANT-SENATE OFFICE BUILDING-WIRING CHUTE-NIGHT,action
+3,208,1579,YODA, Hurry. Careful timing we will need.,207 INT. CORUSCANT-SENATE OFFICE BUILDING-WIRING CHUTE-NIGHT,character
+3,208,1580,BAIL ORGANA, (in speeder) There aren't many troops on this side. Activate your homing beacon when you're ready.,207 INT. CORUSCANT-SENATE OFFICE BUILDING-WIRING CHUTE-NIGHT,character
+3,212,1592,narrator,YODA straightens himself out.,211 INT. CORUSCANT-BAIL ORGANA'S SPEEDER-NIGHT,action
+3,212,1593,YODA," Into exile I must go. Failed, I have.",211 INT. CORUSCANT-BAIL ORGANA'S SPEEDER-NIGHT,character
+3,212,1594,narrator,YODA and BAIL fly into the traffic of the city.,211 INT. CORUSCANT-BAIL ORGANA'S SPEEDER-NIGHT,action
+3,223,1631,narrator,"On the isolated asteroid of Polis Massa, YODA meditates.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,action
+3,223,1632,YODA," Failed to stop the Sith Lord, I have. Still much to learn, there is ...",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1633,QUI -GON," (V.O.) Patience. You will have time. I did not. When I became one with the Force I made a great discovery. With my training, you will be able to merge with the Force at will. Your physical self will fade away, but you will still retain your consciousness. You will become more powerful than any Sith.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1634,YODA, Eternal consciousness.,222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1635,QUI-GON," (V.O.) The ability to defy oblivion can be achieved, but only for oneself. It was accomplished by a Shaman of the Whills. It is a state acquired through compassion, not greed.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1636,YODA," . . . to become one with the Force, and influence still have . . . A power greater than all, it is.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1637,QUI-GON," (V.O.) You will learn to let go of everything. No attachment, no thought of self. No physical self.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1638,YODA," A great Jedi Master, you have become, Qui-Gon Jinn. Your apprentice I gratefully become.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,223,1639,narrator,"YODA thinks about this for a minute, then BAIL ORGANA enters the room and breaks his meditation.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,action
+3,223,1640,BAIL ORGANA," Excuse me, Master Yoda. Obi-Wan Kenobi has made contact.",222 INT. POLIS MASSA-OBSERVATION DOME-NIGHT,character
+3,227,1645,narrator,"POLIS MEDICS work, on PADME in an operating theater. OBI-WAN and one of the MEDICAL DROIDS enter an observation room where BAIL and YODA are waiting.",226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,action
+3,227,1646,MEDICAL DROID," Medically, she is completely healthy. For reasons we can't explain, we are losing her.",226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1647,OBI-WAN, She's dying?,226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1648,MEDICAL DROID, We don't know why. She has lost the will to live. We need to operate quickly if we are to save the babies.,226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1649,BAIL ORGANA, Babies??!!,226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1650,MEDICAL DROID, She's carrying twins.,226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1651,YODA," Save them, we must. They are our last hope.",226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,227,1652,narrator,"The MEDICAL DROID rushes back to the operating room. ARTOO and THREEPIO watch, greatly puzzled. ARTOO BEEPS.",226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,action
+3,227,1653,C-3PO," It s some kind of reproductive process, I think.",226 INT. POLIS MASSA-MEDICAL CENTER-NIGHT,character
+3,234,1687,narrator,"BAIL ORGANA, YODA, and OBI-WAN sit around a conference table.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,action
+3,234,1688,YODA," Pregnant, she must still appear. Hidden, safe, the children must be kept.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1689,OBI-WAN, We must take them somewhere the Sith will not sense their presence.,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1690,YODA," Split up, they should be.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1691,BAIL ORGANA, My wife and I will take the girl. We've always talked of adopting a baby girl. She will be loved with us.,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1692,OBI-WAN, And what of the boy?,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1693,YODA," To Tatooine. To his family, send him.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1694,OBI-WAN," I will take the child and watch over him. Master Yoda, do you think Anakin's twins will be able to defeat Darth Sidious?",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1695,YODA," Strong the Force runs, in the Skywalker line. Hope, we can . . . Done, it is. Until the time is right, disappear we will.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1696,narrator,BAIL leaves the conference room. YODA stops OBI-WAN.,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,action
+3,234,1697,YODA," (continuing) Master Kenobi, wait a moment. In your solitude on Tatooine, training I have for you.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1698,OBI-WAN, Training??,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1699,YODA, An old friend has learned the path to immortality.,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1700,OBI-WAN, Who?,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1701,YODA," One who has returned from the netherworld of the Force to train me . . . your old Master, Qui-Gon Jinn.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1702,OBI-WAN," Qui-Gon? But, how could he accomplish this?",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1703,YODA," The secret of the Ancient Order of the Whills, he studied. How to commune with him. I will teach you.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1704,OBI-WAN, I will be able to talk with him?,233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+3,234,1705,YODA," How to join the Force, he will train you. Your consciousness you will retain, when one with the Force. Even your physical self, perhaps.",233 INT. ALDERAAN CRUISER-CONFERENCE ROOM,character
+6,48,341,,"The tip of a walking stick taps hesitantly across the earthen floor of  the cottage. Our view travels up the stick to the small green hand that  clutches it, and then to the familiar face of YODA, THE JEDI MASTER.  His manner is frail, and his voice, though cheerful, seems weaker.",50   INT YODA'S HOUSE,character
+6,48,342,YODA,Hmm. That face you make. Look I so old to young eyes?,50   INT YODA'S HOUSE,character
+6,48,343,narrator,"Luke is sitting in a corner of the cramped space and, indeed, his look  has been woeful. Caught, he tries to hide it.",50   INT YODA'S HOUSE,action
+6,48,344,LUKE,No... of course not.,50   INT YODA'S HOUSE,character
+6,48,345,"YODA	 (tickled, chuckles)","I do, yes, I do!  Sick have I become. Old and weak. ",50   INT YODA'S HOUSE,character
+6,48,346,narrator,"(Points a crooked finger) When nine hundred years old you reach, look as good you will not. Hmm? Yoda chuckles at this, coughs, and hobbles over toward his bed.",50   INT YODA'S HOUSE,action
+6,48,347,YODA,"Soon will I rest. Yes, forever sleep. Earned it, I have.",50   INT YODA'S HOUSE,character
+6,48,348,narrator,"Yoda sits himself on his bed, with great effort.",50   INT YODA'S HOUSE,action
+6,48,349,LUKE,"Master Yoda, you can't die.",50   INT YODA'S HOUSE,character
+6,48,350,YODA,Strong am I with the Force... but not that strong! Twilight is upon me ,50   INT YODA'S HOUSE,character
+6,48,351,narrator,and soon night must fall. That is the way of things... the way of the  Force.,50   INT YODA'S HOUSE,action
+6,48,352,LUKE,But I need your help. I've come back to complete the training.,50   INT YODA'S HOUSE,character
+6,48,353,YODA,No more training do you require. Already know you that which you need.,50   INT YODA'S HOUSE,character
+6,48,354,narrator,"Yoda sighs, and lies back on his bed.",50   INT YODA'S HOUSE,action
+6,48,355,LUKE,Then I am a Jedi?,50   INT YODA'S HOUSE,character
+6,48,356,YODA	 (shakes his head),"Ohhh. Not yet. One thing remains: Vader. You must confront Vader. Then, ",50   INT YODA'S HOUSE,character
+6,48,357,narrator,"only then, a Jedi will you be. And confront him you will. Luke is in agony. He is silent for a long moment, screwing up his  courage. Finally he is able to ask.",50   INT YODA'S HOUSE,action
+6,48,358,LUKE,Master Yoda... is Darth Vader my father?,50   INT YODA'S HOUSE,character
+6,48,359,narrator,"Yoda's eyes are full of weariness and compassion. An odd, sad smile  creases his face. He turns painfully on his side, away from Luke.",50   INT YODA'S HOUSE,action
+6,48,360,YODA,Mmm... rest I need. Yes... rest.,50   INT YODA'S HOUSE,character
+6,48,361,narrator,"Luke watches him, each moment an eternity.",50   INT YODA'S HOUSE,action
+6,48,362,LUKE,"Yoda, I must know.",50   INT YODA'S HOUSE,character
+6,48,363,YODA,Your father he is.,50   INT YODA'S HOUSE,character
+6,48,364,narrator,Luke reacts as if cut.,50   INT YODA'S HOUSE,action
+6,48,365,YODA,"Told you, did he?",50   INT YODA'S HOUSE,character
+6,48,366,LUKE,Yes.,50   INT YODA'S HOUSE,character
+6,48,367,narrator,A new look of concern crosses Yoda's face.  He closes his eyes.,50   INT YODA'S HOUSE,action
+6,48,368,YODA,"Unexpected this is, and unfortunate...",50   INT YODA'S HOUSE,character
+6,48,369,LUKE,Unfortunate that I know the truth?,50   INT YODA'S HOUSE,character
+6,48,370,narrator,Yoda opens his eyes again and studies the youth.,50   INT YODA'S HOUSE,action
+6,48,371,YODA		 (gathering all his strength),No. Unfortunate that you rushed to face him... that incomplete was your ,50   INT YODA'S HOUSE,character
+6,48,372,narrator,training. Not ready for the burden were you.,50   INT YODA'S HOUSE,action
+6,48,373,LUKE,"Well, I'm sorry.",50   INT YODA'S HOUSE,character
+6,48,374,YODA,"Remember, a Jedi's strength flows from the Force.  But beware.  Anger, ",50   INT YODA'S HOUSE,character
+6,48,375,narrator,"fear, aggression. The dark side are they.  Once you start down the dark path, forever  will it dominate your destiny. He beckons the young Jedi closer to him.",50   INT YODA'S HOUSE,action
+6,48,376,YODA,"Luke...Luke...Do not...Do not underestimate the powers of the Emperor, ",50   INT YODA'S HOUSE,character
+6,48,377,narrator,"or suffer your father's fate, you will. Luke, when gone am I (cough), the last of the Jedi will you be. Luke, the Force runs strong in your  family. Pass on what you have learned, Luke...  (with great effort) There is...another...Sky...Sky...walker. He catches his breath. A shiver runs through the ancient green  creature, and he dies. Luke stares at his dead master as he disappears  in front of his eyes.",50   INT YODA'S HOUSE,action
