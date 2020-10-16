@@ -2923,13 +2923,16 @@ sense to ID them by name vs. a plain old string.</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><p>Exercise: Model at least 2 superheros as data.</p>
 
 <p>For example, Batman may have the
-following characteristics:
-* His name is "Batman"
-* His alias is "Bruce Wayne"
-* His powers are that he is rich
-* His weapons are his utility belt and a kryptonite spear
-* His alignment is "Chaotic Good"
-* His nemeses include the Joker and Penguin</p>
+following characteristics:</p>
+
+<ul>
+<li>His name is "Batman"</li>
+<li>His alias is "Bruce Wayne"</li>
+<li>His powers are that he is rich</li>
+<li>His weapons are his utility belt and a kryptonite spear</li>
+<li>His alignment is "Chaotic Good"</li>
+<li>His nemeses include the Joker and Penguin</li>
+</ul>
 
 <p>How might you model referential relations, such as nemeses, alliances, or
 familial relationships?</p>
@@ -2990,12 +2993,15 @@ relations it is common to "lift" a form into a function.</p>
 <h3>Exercise: Interact with our data</h3>
 
 <p>Explore the data generated in the last ns and write a useful function.
-Examples:
-* Find everyone with a given power.
-* List the names of all characters that are the nemesis of someone with a
-given power.
-* Find the alias of the nemesis of everyone with an alias.
-* Lift one of these explorations to a function.</p>
+Examples:</p>
+
+<ul>
+<li>Find everyone with a given power.</li>
+<li>List the names of all characters that are the nemesis of someone with a
+given power.</li>
+<li>Find the alias of the nemesis of everyone with an alias.</li>
+<li>Lift one of these explorations to a function.</li>
+</ul>
 </td><td class="codes"></td></tr><tr><td class="docs"><h2>Some Utility Functions</h2>
 
 <p>It is common to develop an data model and then bring in data from an external
@@ -3023,18 +3029,24 @@ a value is empty, nil, or "-", remove it from the map.</li>
 </ul>
 
 <p>Step 1: Inspect the data. We can see that the first row is the column names
-and the rest are data. We also see some data quality issues:
-* The first column (index?) has no name
-* Nonexistent values are "-"
-* Nothing is done to parse non-string values</p>
+and the rest are data. We also see some data quality issues:</p>
+
+<ul>
+<li>The first column (index?) has no name</li>
+<li>Nonexistent values are "-"</li>
+<li>Nothing is done to parse non-string values</li>
+</ul>
 </td><td class="codes"><pre class="brush: clojure">(comment
   (-&gt;&gt; &quot;resources/heroes_information.csv&quot;
        slurp
        csv/parse-csv
        ;Just look a a sampling of the data
-       (take 4)))</pre></td></tr><tr><td class="docs"><p>Remove entries in a seq of pairs for which any of the following are true:
-* The first item (key) is nil
-* The second item (value) is nil, "", or "-"</p>
+       (take 4)))</pre></td></tr><tr><td class="docs"><p>Remove entries in a seq of pairs for which any of the following are true:</p>
+
+<ul>
+<li>The first item (key) is nil</li>
+<li>The second item (value) is nil, "", or "-"</li>
+</ul>
 </td><td class="codes"><pre class="brush: clojure">(defn remove-bad-entries [m]
   ;TODO - implement)</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
@@ -3042,7 +3054,7 @@ and the rest are data. We also see some data quality issues:
      (remove-bad-entries {nil &quot;A&quot; :a nil :b &quot;&quot; :c &quot;OK&quot;}))
   (= [[:c &quot;OK&quot;]]
      (remove-bad-entries [[nil &quot;A&quot;] [:a nil] [:b &quot;&quot;] [:c &quot;OK&quot;]])))</pre></td></tr><tr><td class="docs"><p>Convert a sequence of vectors into a sequence of maps, assuming the first row
-of the vectors is a header row</p>
+of the vectors is a header row.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn table-&gt;maps [[headers &amp; cols]]
   ;TODO - implement)</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
@@ -3091,21 +3103,24 @@ will be using to parse our data.</p>
        (filter (fn [{:keys [powers]}] (get powers &quot;Bullet Immunity&quot;)))
        (mapcat :nemesis))
 
-  ;; Find the alias of the nemesis of everyone with an alias
+  ;; Find the alias of the nemesis of everyone with an alias.
   (let [d (-&gt;&gt; data (filter :alias) (mapcat :nemesis) (map :name) set)]
     (-&gt;&gt; data
          (filter (fn [{:keys [name]}] (d name)))
          (map :alias)))
-  )</pre></td></tr><tr><td class="docs"><p>Remove entries in a seq of pairs for which any of the following are true:
-* The first item (key) is nil
-* The second item (value) is nil, "", or "-"</p>
+  )</pre></td></tr><tr><td class="docs"><p>Remove entries in a seq of pairs for which any of the following are true:</p>
+
+<ul>
+<li>The first item (key) is nil</li>
+<li>The second item (value) is nil, "", or "-"</li>
+</ul>
 </td><td class="codes"><pre class="brush: clojure">(defn remove-bad-entries [m]
   (into (empty m)
         (remove (fn [[k v]] (or (nil? k) (contains? #{&quot;-&quot;  nil} v))) m)))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
   (remove-bad-entries
     {nil &quot;A&quot; :a nil :b &quot;&quot; :c &quot;OK&quot;}))</pre></td></tr><tr><td class="docs"><p>Convert a sequence of vectors into a sequence of maps, assuming the first row
-of the vectors is a header row</p>
+of the vectors is a header row.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn table-&gt;maps [[headers &amp; cols]]
   (let [h (map cc/keyword headers)]
     (-&gt;&gt; cols
@@ -3223,20 +3238,20 @@ situation and move on.</li>
   (:require [clojure-csv.core :as csv]
             [clojure-north-2020.ch01-data.x02-functions :refer [csv-file-&gt;maps table-&gt;maps]]))</pre></td></tr><tr><td class="docs"><h2>Get Powers Data</h2>
 
-<p>We'll process super<em>hero</em>powers.csv to get powers data.</p>
+<p>We'll process super_hero_powers.csv to get powers data.</p>
 
-<p>Convert map of {:hero-name "name" :powerx "True|False"} to map of
-{:name "name" :powers #{:set :of :powers}}.</p>
+<p>Convert map of <code>{:hero-name "name" :powerx "True|False"}</code> to map of
+<code>{:name "name" :powers #{:set :of :powers}}</code>.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn normalize [raw-hero-map]
   (letfn [(f [m [k v]]
             (cond
               (= k :hero-names) (assoc m :name v)
               (= v &quot;True&quot;) (update m :powers (comp set conj) k)
               :else m))]
-    (reduce f {} raw-hero-map)))</pre></td></tr><tr><td class="docs"><p>Note that the dataset is a seq of maps with the key :hero-names (the name)
+    (reduce f {} raw-hero-map)))</pre></td></tr><tr><td class="docs"><p>Note that the dataset is a seq of maps with the key <code>:hero-names</code> (the name)
 and a boolean (as string) key for each power. Write a function that
-normalizes our data into a map with the hero's name as :name and powers as a
-set of keywords (e.g. #{:super-strength :flight}).</p>
+normalizes our data into a map with the hero's name as <code>:name</code> and powers as
+a set of keywords (e.g. <code>#{:super-strength :flight}</code>).</p>
 </td><td class="codes"><pre class="brush: clojure">(defn powers-data []
   (let [filename &quot;resources/super_hero_powers.csv&quot;]
     (-&gt;&gt; filename
@@ -3346,11 +3361,13 @@ the bottom of the file and view the rich comments.</p>
             [clojure-north-2020.ch01-data.x02-functions :refer [csv-file-&gt;maps]]))</pre></td></tr><tr><td class="docs"><p>Not used today :( Sorry!
 However, you can inspect it with our generic csv-file->maps function.</p>
 </td><td class="codes"><pre class="brush: clojure">(comment
-  (csv-file-&gt;maps &quot;resources/yoda-corpus.csv&quot;))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.datahike-utils" name="clojure-north-2020.ch02-datalog.datahike-utils"><h1 class="project-name">clojure-north-2020.ch02-datalog.datahike-utils</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+  (csv-file-&gt;maps &quot;resources/yoda-corpus.csv&quot;))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch02-datalog.datahike-utils" name="clojure-north-2020.ch02-datalog.datahike-utils"><h1 class="project-name">clojure-north-2020.ch02-datalog.datahike-utils</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h2>A few utility functions for working with Datahike</h2>
+
+<p>Nothing special to see here.</p>
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch02-datalog.datahike-utils
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
-            [datahike.api :as d]))</pre></td></tr><tr><td class="docs">
+            [datahike.api :as d]))</pre></td></tr><tr><td class="docs"><p>Create a datahike connection backed by the given directory name.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn conn-from-dirname [dirname]
   (let [db-dir (doto (io/file dirname) io/make-parents)
         uri (str &quot;datahike:&quot; (io/as-url db-dir))
@@ -3358,11 +3375,11 @@ However, you can inspect it with our generic csv-file->maps function.</p>
             (d/create-database uri))
         conn (d/connect uri)]
     (alter-meta! conn assoc :uri uri)
-    conn))</pre></td></tr><tr><td class="docs">
+    conn))</pre></td></tr><tr><td class="docs"><p>Release a datahike connection and delete the database.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn cleanup [conn]
   (let [{:keys [uri]} (meta conn)]
     (d/release conn)
-    (when uri (d/delete-database uri))))</pre></td></tr><tr><td class="docs">
+    (when uri (d/delete-database uri))))</pre></td></tr><tr><td class="docs"><p>read an edn resource to data.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn read-edn [resource]
   (-&gt;&gt; (io/resource resource) slurp edn/read-string))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
@@ -3614,8 +3631,8 @@ in the database.</p>
 
 <p>Here we are loading in our pre-created basic hero schema.</p>
 </td><td class="codes"><pre class="brush: clojure">(def schema (du/read-edn &quot;schemas/datahike/hero-schema.edn&quot;))</pre></td></tr><tr><td class="docs"><p>It is common to have a function that transforms the data into a schema
-compliant format. This can also be achieved with database functions, which
-are beyond the scope of this workshop.</p>
+compliant format. This can also be achieved with database or transaction
+functions, which are beyond the scope of this workshop.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn hero-&gt;dh-format [{:keys [publisher] :as hero}]
   (cond-&gt; hero publisher (update :publisher (fn [p] {:name p}))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
@@ -3812,9 +3829,10 @@ with both datascript and datahike.</p>
     :in $
     :where
     [?e :name ?name]
-    [?e :powers ?powers]])</pre></td></tr><tr><td class="docs"><h2>Exercise - Return a set of 3-tuples (name, race, power) of all heroes in</h2>
+    [?e :powers ?powers]])</pre></td></tr><tr><td class="docs"><h2>Exercise</h2>
 
-<p>the db of the same race as the input hero.</p>
+<p>Return a set of 3-tuples (name, race, power) of all heroes in
+the db of the same race as the input hero.</p>
 </td><td class="codes"><pre class="brush: clojure">(def shared-powers-by-race-query
   [])</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(def schema-query
@@ -3828,10 +3846,10 @@ with both datascript and datahike.</p>
     :where
     [?e :name ?name]])</pre></td></tr><tr><td class="docs"><p>Determine the set of valid values for each keyword (enum) type in the db.</p>
 
-<h2>Exercise - write a query that determines all values for attributes where</h2>
+<h2>Exercise</h2>
 
-<p>the type is schema. For example, what are the extant eye-colors or genders in
-the db?</p>
+<p>Write a query that determines all values for attributes where the type is
+schema. For example, what are the extant eye-colors or genders in the db?</p>
 </td><td class="codes"><pre class="brush: clojure">(def distinct-ident-keywords-query
   [])</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(comment
@@ -3852,7 +3870,8 @@ the db?</p>
   (d/pull @conn '[*] [:name &quot;Faora&quot;])
   (-&gt;&gt; (d/q powers-by-count-query @conn)
        (sort-by second))
-  ;;Exercise: Determine the shared powers of heroes of a given race using only
+  ;; ## Exercise
+  ;; Determine the shared powers of heroes of a given race using only
   ;; their name. Using this query, determine the powers of Kryptonians.
   (defn shared-powers-by-race [hero-name]
     (-&gt;&gt; (d/q
@@ -3957,18 +3976,22 @@ server is created. This allows for live code reloading.</p>
   (:require [clojure.pprint :as pp]
             [ring.adapter.jetty :as jetty]))</pre></td></tr><tr><td class="docs"><h2>Handler Roles/Concerns</h2>
 
-<p>Handlers have 3 main concerns:
-* Routing - what subhandler/business logic is to be executed
-* Business Logic - The actual logic you want to execute
-* Response - Transform the BI result into an appropriate HTTP response</p>
+<p>Handlers have 3 main concerns:</p>
+
+<ul>
+<li>Routing - what subhandler/business logic is to be executed</li>
+<li>Business Logic - The actual logic you want to execute</li>
+<li>Response - Transform the BI result into an appropriate HTTP response</li>
+</ul>
 </td><td class="codes"></td></tr><tr><td class="docs"><p>In this namespace we split out our API, handler, and routing logic.</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><h3>Protip - Separate logic from handlers</h3>
 
 <p>Business logic should know <em>nothing</em> about the calling context. If you are
-returning http response codes or passing in web concepts you are complecting
-your application. This particular "API" is contrived, but as we'll see in the
-future we can use completely independent API logic in our servers without the
-logic knowing anything about its surrounding context.</p>
+returning http response codes from or passing in web concepts to your
+business logic you are complecting your application. This particular "API" is
+contrived, but as we'll see in the future we can use completely independent
+API logic in our servers without the logic knowing anything about its
+surrounding context.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn greet [greetee]
   (format &quot;Hello, %s!&quot; (or greetee &quot;Clojurian&quot;)))</pre></td></tr><tr><td class="docs"><h3>Protip - Separate handlers from routing</h3>
 
@@ -4048,9 +4071,10 @@ the previous exercise.</p>
     (not-found &quot;Sorry, I don't understand that path.&quot;)))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defonce server (jetty/run-jetty #'handler {:host  &quot;0.0.0.0&quot;
                                             :port  3000
-                                            :join? false}))</pre></td></tr><tr><td class="docs"><h2>Exercise - Evaluate the following forms to see that these helper functions</h2>
+                                            :join? false}))</pre></td></tr><tr><td class="docs"><h2>Exercise</h2>
 
-<p>are nothing more than simple data manipulators.</p>
+<p>Evaluate the following forms to see that these helper functions
+are nothing more than simple data manipulators.</p>
 </td><td class="codes"><pre class="brush: clojure">(comment
   ;Basic responses
   (ok &quot;All I do is modify maps.&quot;)
@@ -4328,7 +4352,8 @@ current state is retrieved for use in queries.</p>
   {:query &quot;[:find [(pull ?e [*]) ...]
     :in $
     :where
-    [?e :db/ident ?ident]]&quot;})</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.datahike" name="clojure-north-2020.ch04-application.parts.datahike"><h1 class="project-name">clojure-north-2020.ch04-application.parts.datahike</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+    [?e :db/ident ?ident]]&quot;})</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.datahike" name="clojure-north-2020.ch04-application.parts.datahike"><h1 class="project-name">clojure-north-2020.ch04-application.parts.datahike</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><p>Don't look at this until we get to "x03-the-final-system."
+All will be revealed.</p>
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch04-application.parts.datahike
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
@@ -4369,7 +4394,8 @@ current state is retrieved for use in queries.</p>
     (do
       (timbre/debug &quot;Releasing Datahike DB connection.&quot;)
       (d/release connection))
-    (timbre/warn &quot;No Datahike connection to release!&quot;)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.jetty" name="clojure-north-2020.ch04-application.parts.jetty"><h1 class="project-name">clojure-north-2020.ch04-application.parts.jetty</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
+    (timbre/warn &quot;No Datahike connection to release!&quot;)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clojure-north-2020.ch04-application.parts.jetty" name="clojure-north-2020.ch04-application.parts.jetty"><h1 class="project-name">clojure-north-2020.ch04-application.parts.jetty</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><p>Don't look at this until we get to "x03-the-final-system."
+All will be revealed.</p>
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch04-application.parts.jetty
   (:require [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
@@ -4415,15 +4441,15 @@ our new design. We'll just use our bottom-up set of functions as-is.</p>
 <h2>Step 1: Make Centralized, Reloadable Components</h2>
 
 <p>Integrant (aliased as ig) is a library for describing stateful resource
-configurations as maps. Upon initialization, each key in the config map is
-exchanged for a stateful thing thing using the config data in each key's
+configurations as maps. Upon initialization, each val in the config map is
+exchanged for a stateful thing using the config data in each key's
 value. The following example will illustrate the concept.</p>
 
 <p>Note that other good libraries exist for handling state, such as Component
 and Mount.</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><h3>Web Handlers</h3>
 
-<p>These are just some potential web handlers</p>
+<p>In this ns we've just got our single OK handler.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn handler [_request]
   {:status 200 :body &quot;OK&quot;})</pre></td></tr><tr><td class="docs"><h3>Exercise - Change the handler</h3>
 
@@ -4435,7 +4461,10 @@ them (However, this handler does have issues that we'll fix later).
 </td><td class="codes"></td></tr><tr><td class="docs"><h3>Configuration</h3>
 
 <p>Here is our config map. It has one key, ::server, which has configuration
-options for a ring-jetty adapter.</p>
+options for a ring-jetty adapter. Recall that when ig/init is called the vals
+of this map will be exchanged for a stateful component. In this case, we will
+go from the map <code>{::server config-map}</code> to
+<code>{::server web-server-using-the-config-map}</code>.</p>
 </td><td class="codes"><pre class="brush: clojure">(def config
   {::server {:host    &quot;0.0.0.0&quot;
              :port    3000
@@ -4536,7 +4565,7 @@ through the handler. We'll do this in the next section.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn hello-handler [{:keys [params] :as _request}]
   (ok (greet (params &quot;name&quot;))))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defn request-dump-handler [request]
-  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs">
+  (ok (with-out-str (pp/pprint request))))</pre></td></tr><tr><td class="docs"><p>Note that <code>dh-conn</code> is now in the request map vs. being a global variable.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn load-schemas-handler [{:keys [dh-conn] :as _request}]
   (load-schemas dh-conn)
   (ok &quot;Schemas Loaded&quot;))</pre></td></tr><tr><td class="docs">
@@ -4664,23 +4693,28 @@ injected into the handler function.</p>
 
 <p>To make things more modular and reusable, we are going to move our
 multimethods to their own namespace to create a library of components. Take a
-look at the following:
-* clojure-north-2020.ch04-application.parts.jetty - This contains the same
-  multimethod used in the previous namespace with one important change that
-  we'll discuss in a moment.
-* clojure-north-2020.ch04-application.parts.datahike - This contains
-  Integrant multimethods for creating both a datahike database and
-  connection.</p>
+look at the following:</p>
+
+<ul>
+<li>clojure-north-2020.ch04-application.parts.jetty - This contains the same
+multimethod used in the previous namespace with one important change that
+we'll discuss in a moment.</li>
+<li>clojure-north-2020.ch04-application.parts.datahike - This contains
+Integrant multimethods for creating both a datahike database and
+connection.</li>
+</ul>
 
 <h2>The wrap-component Middleware</h2>
 
 <p>The clojure-north-2020.ch04-application.parts.jetty ns now has this function,
-which wraps the inbound handler from the configuration map:
-```
+which wraps the inbound handler from the configuration map:</p>
+
+<p>`
 (defn wrap-component [handler component]
   (fn [request] (handler (into component request))))
-```
-This <code>middleware</code> takes a request and pours the configured component into it
+`</p>
+
+<p>This <code>middleware</code> takes a request and pours the configured component into it
 prior to passing the request into the handler. Note that it is only the
 server component from the config that gets poured into the request, not the
 entire system.</p>
@@ -4694,13 +4728,16 @@ called "Partsbin," can be found <a href="https://github.com/markbastian/partsbin
 
 <h3>Configuring the Components</h3>
 
-<p>Here is our config map. It now has 3 components:
-* ::datahike/database - Configuration required to create a datahike database.
-* ::datahike/connection - Configuration required to create a datahike
-  connection. Note that the connection requires a database, which is referred
-  to using ig/ref but aliased locally as db-config.
-* ::jetty/server - Config for the web server, which also declares a
-  dependency on the datahike connection as dh-conn.</p>
+<p>Here is our config map. It now has 3 components:</p>
+
+<ul>
+<li>::datahike/database - Configuration required to create a datahike database.</li>
+<li>::datahike/connection - Configuration required to create a datahike
+connection. Note that the connection requires a database, which is referred
+to using ig/ref but aliased locally as db-config.</li>
+<li>::jetty/server - Config for the web server, which also declares a
+dependency on the datahike connection as dh-conn.</li>
+</ul>
 
 <p>Recall that our new functional handler needs a dh-conn in each request to
 invoke datahike-aware functions. When ig/init is called the config map
@@ -4744,21 +4781,24 @@ into it and feed that into the handler.</p>
 </td><td class="codes"><pre class="brush: clojure">(ns clojure-north-2020.ch04-application.x04-parting-thoughts)</pre></td></tr><tr><td class="docs"><h1>In Conclusion</h1>
 
 <p>In this workshop, we've learned some key concepts that should help you in
-your Clojure journey from novice to full-stack, stateful system developer:
-1. Always start with your data. Model the data, think about the data. Don't
-   write any code until you understand the data.
-2. Manipulate your data using Clojure's baked in functions. Clojure truly is
-   a data DSL. As transformations become useful, elevate them to functions.
-3. Datascript/hike, Datomic, and similar are powerful, data-oriented
-   databases. These allow you to model domains at the attribute level rather
-   than the record level, giving a much more powerful and flexible way to
-   work with your data.
-3. Stateful systems can be converted into functional systems by pushing all
-   stateful components to the edge of the system. One powerful library for
-   doing this is Integrant. Once this is done, all stateful components are
-   bundled at one edge of the system, all logic is functions, and needed
-   aspects of the various components are threaded through the functions to be
-   used as system-agnostic parameters.</p>
+your Clojure journey from novice to full-stack, stateful system developer:</p>
+
+<ol>
+<li>Always start with your data. Model the data, think about the data. Don't
+write any code until you understand the data.</li>
+<li>Manipulate your data using Clojure's baked in functions. Clojure truly is
+a data DSL. As transformations become useful, elevate them to functions.</li>
+<li>Datascript/hike, Datomic, and similar are powerful, data-oriented
+databases. These allow you to model domains at the attribute level rather
+than the record level, giving a much more powerful and flexible way to
+work with your data.</li>
+<li>Stateful systems can be converted into functional systems by pushing all
+stateful components to the edge of the system. One powerful library for
+doing this is Integrant. Once this is done, all stateful components are
+bundled at one edge of the system, all logic is functions, and needed
+aspects of the various components are threaded through the functions to be
+used as system-agnostic parameters.</li>
+</ol>
 
 <h2>Additional Material</h2>
 

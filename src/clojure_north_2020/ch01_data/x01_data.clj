@@ -48,6 +48,7 @@
 ;;
 ;; For example, Batman may have the
 ;; following characteristics:
+;;
 ;; * His name is "Batman"
 ;; * His alias is "Bruce Wayne"
 ;; * His powers are that he is rich

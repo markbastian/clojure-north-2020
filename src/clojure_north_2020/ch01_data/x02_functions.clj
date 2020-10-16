@@ -14,6 +14,7 @@
 ;; ### Exercise: Interact with our data
 ;; Explore the data generated in the last ns and write a useful function.
 ;; Examples:
+;;
 ;; * Find everyone with a given power.
 ;; * List the names of all characters that are the nemesis of someone with a
 ;; given power.
@@ -33,6 +34,7 @@
 ;; future since we're just dealing with data.
 ;;
 ;; ### Exercise: Write a csv->data function
+;;
 ;; * Write a function that consumes a csv file and produces a sequence of maps
 ;;   for each entry in the file.
 ;; * Modify the function to convert column names to keywords. Tip: Clojure
@@ -44,6 +46,7 @@
 ;;
 ;; Step 1: Inspect the data. We can see that the first row is the column names
 ;; and the rest are data. We also see some data quality issues:
+;;
 ;; * The first column (index?) has no name
 ;; * Nonexistent values are "-"
 ;; * Nothing is done to parse non-string values
@@ -55,6 +58,7 @@
        (take 4)))
 
 ;; Remove entries in a seq of pairs for which any of the following are true:
+;;
 ;; * The first item (key) is nil
 ;; * The second item (value) is nil, "", or "-"
 (defn remove-bad-entries [m]
@@ -68,7 +72,7 @@
      (remove-bad-entries [[nil "A"] [:a nil] [:b ""] [:c "OK"]])))
 
 ;; Convert a sequence of vectors into a sequence of maps, assuming the first row
-;; of the vectors is a header row
+;; of the vectors is a header row.
 (defn table->maps [[headers & cols]]
   ;TODO - implement
   )
@@ -95,6 +99,7 @@
 ;; will be using to parse our data.
 
 ;; ### Keywordize strings by:
+;;
 ;;  1. replacing all sequences of nonword characters with a space
 ;;  1. Removing all single quotes
 ;;  1. Turning the string into a keyword using the 

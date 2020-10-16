@@ -20,6 +20,7 @@
 ;; To make things more modular and reusable, we are going to move our
 ;; multimethods to their own namespace to create a library of components. Take a
 ;; look at the following:
+;;
 ;; * clojure-north-2020.ch04-application.parts.jetty - This contains the same
 ;;   multimethod used in the previous namespace with one important change that
 ;;   we'll discuss in a moment.
@@ -30,10 +31,12 @@
 ;; ## The wrap-component Middleware
 ;; The clojure-north-2020.ch04-application.parts.jetty ns now has this function,
 ;; which wraps the inbound handler from the configuration map:
-;; ```
+;;
+;; `
 ;; (defn wrap-component [handler component]
 ;;   (fn [request] (handler (into component request))))
-;; ```
+;; `
+;;
 ;; This `middleware` takes a request and pours the configured component into it
 ;; prior to passing the request into the handler. Note that it is only the
 ;; server component from the config that gets poured into the request, not the
@@ -47,6 +50,7 @@
 ;;
 ;; ### Configuring the Components
 ;; Here is our config map. It now has 3 components:
+;;
 ;; * ::datahike/database - Configuration required to create a datahike database.
 ;; * ::datahike/connection - Configuration required to create a datahike
 ;;   connection. Note that the connection requires a database, which is referred

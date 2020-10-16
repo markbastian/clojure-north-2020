@@ -3,6 +3,7 @@
 ;; # In Conclusion
 ;; In this workshop, we've learned some key concepts that should help you in
 ;; your Clojure journey from novice to full-stack, stateful system developer:
+;;
 ;; 1. Always start with your data. Model the data, think about the data. Don't
 ;;    write any code until you understand the data.
 ;; 2. Manipulate your data using Clojure's baked in functions. Clojure truly is

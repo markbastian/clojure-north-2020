@@ -1,3 +1,5 @@
+;; Don't look at this until we get to "x03-the-final-system."
+;; All will be revealed.
 (ns clojure-north-2020.ch04-application.parts.jetty
   (:require [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
