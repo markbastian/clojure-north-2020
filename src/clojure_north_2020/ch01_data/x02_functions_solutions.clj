@@ -8,7 +8,7 @@
        (filter (fn [{:keys [powers]}] (get powers "Bullet Immunity")))
        (mapcat :nemesis))
 
-  ;; Find the alias of the nemesis of everyone with an alias
+  ;; Find the alias of the nemesis of everyone with an alias.
   (let [d (->> data (filter :alias) (mapcat :nemesis) (map :name) set)]
     (->> data
          (filter (fn [{:keys [name]}] (d name)))
@@ -16,6 +16,7 @@
   )
 
 ;; Remove entries in a seq of pairs for which any of the following are true:
+;;
 ;; * The first item (key) is nil
 ;; * The second item (value) is nil, "", or "-"
 (defn remove-bad-entries [m]
@@ -27,7 +28,7 @@
     {nil "A" :a nil :b "" :c "OK"}))
 
 ;; Convert a sequence of vectors into a sequence of maps, assuming the first row
-;; of the vectors is a header row
+;; of the vectors is a header row.
 (defn table->maps [[headers & cols]]
   (let [h (map cc/keyword headers)]
     (->> cols

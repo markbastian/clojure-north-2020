@@ -28,15 +28,15 @@
 ;;
 ;; ## Step 1: Make Centralized, Reloadable Components
 ;; Integrant (aliased as ig) is a library for describing stateful resource
-;; configurations as maps. Upon initialization, each key in the config map is
-;; exchanged for a stateful thing thing using the config data in each key's
+;; configurations as maps. Upon initialization, each val in the config map is
+;; exchanged for a stateful thing using the config data in each key's
 ;; value. The following example will illustrate the concept.
 ;;
 ;; Note that other good libraries exist for handling state, such as Component
 ;; and Mount.
 
 ;; ### Web Handlers
-;; These are just some potential web handlers
+;; In this ns we've just got our single OK handler.
 (defn handler [_request]
   {:status 200 :body "OK"})
 
@@ -49,7 +49,10 @@
 
 ;; ### Configuration
 ;; Here is our config map. It has one key, ::server, which has configuration
-;; options for a ring-jetty adapter.
+;; options for a ring-jetty adapter. Recall that when ig/init is called the vals
+;; of this map will be exchanged for a stateful component. In this case, we will
+;; go from the map `{::server config-map}` to
+;; `{::server web-server-using-the-config-map}`.
 (def config
   {::server {:host    "0.0.0.0"
              :port    3000

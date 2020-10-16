@@ -39,7 +39,8 @@
                                             :port  3000
                                             :join? false}))
 
-;; ## Exercise - Evaluate the following forms to see that these helper functions
+;; ## Exercise
+;; Evaluate the following forms to see that these helper functions
 ;; are nothing more than simple data manipulators.
 (comment
   ;Basic responses

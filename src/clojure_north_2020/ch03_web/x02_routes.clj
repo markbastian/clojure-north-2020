@@ -4,6 +4,7 @@
 
 ;; ## Handler Roles/Concerns
 ;; Handlers have 3 main concerns:
+;;
 ;; * Routing - what subhandler/business logic is to be executed
 ;; * Business Logic - The actual logic you want to execute
 ;; * Response - Transform the BI result into an appropriate HTTP response
@@ -12,10 +13,11 @@
 
 ;; ### Protip - Separate logic from handlers
 ;; Business logic should know *nothing* about the calling context. If you are
-;; returning http response codes or passing in web concepts you are complecting
-;; your application. This particular "API" is contrived, but as we'll see in the
-;; future we can use completely independent API logic in our servers without the
-;; logic knowing anything about its surrounding context.
+;; returning http response codes from or passing in web concepts to your
+;; business logic you are complecting your application. This particular "API" is
+;; contrived, but as we'll see in the future we can use completely independent
+;; API logic in our servers without the logic knowing anything about its
+;; surrounding context.
 (defn greet [greetee]
   (format "Hello, %s!" (or greetee "Clojurian")))
 

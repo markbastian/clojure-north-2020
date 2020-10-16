@@ -50,7 +50,8 @@
     [?e :name ?name]
     [?e :powers ?powers]])
 
-;; ## Exercise - Return a set of 3-tuples (name, race, power) of all heroes in
+;; ## Exercise
+;; Return a set of 3-tuples (name, race, power) of all heroes in
 ;; the db of the same race as the input hero.
 (def shared-powers-by-race-query
   [])
@@ -67,9 +68,9 @@
     :where
     [?e :name ?name]])
 
-;; ## Exercise - write a query that determines all values for attributes where
-;; the type is schema. For example, what are the extant eye-colors or genders in
-;; the db?
+;; ## Exercise
+;; Write a query that determines all values for attributes where the type is
+;; schema. For example, what are the extant eye-colors or genders in the db?
 (def distinct-ident-keywords-query
   "Determine the set of valid values for each keyword (enum) type in the db."
   [])
@@ -96,7 +97,8 @@
   (->> (d/q powers-by-count-query @conn)
        (sort-by second))
 
-  ;;Exercise: Determine the shared powers of heroes of a given race using only
+  ;; ## Exercise
+  ;; Determine the shared powers of heroes of a given race using only
   ;; their name. Using this query, determine the powers of Kryptonians.
   (defn shared-powers-by-race [hero-name]
     (->> (d/q

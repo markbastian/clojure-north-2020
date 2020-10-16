@@ -63,6 +63,7 @@
 (defn request-dump-handler [request]
   (ok (with-out-str (pp/pprint request))))
 
+;; Note that `dh-conn` is now in the request map vs. being a global variable.
 (defn load-schemas-handler [{:keys [dh-conn] :as _request}]
   (load-schemas dh-conn)
   (ok "Schemas Loaded"))

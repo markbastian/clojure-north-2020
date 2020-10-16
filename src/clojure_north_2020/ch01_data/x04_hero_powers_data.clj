@@ -4,10 +4,10 @@
 
 ;; ## Get Powers Data
 ;;
-;;; We'll process super_hero_powers.csv to get powers data.
+;;; We'll process super\_hero\_powers.csv to get powers data.
 ;;
-;; Convert map of {:hero-name "name" :powerx "True|False"} to map of
-;; {:name "name" :powers #{:set :of :powers}}.
+;; Convert map of `{:hero-name "name" :powerx "True|False"}` to map of
+;; `{:name "name" :powers #{:set :of :powers}}`.
 (defn normalize [raw-hero-map]
   (letfn [(f [m [k v]]
             (cond
@@ -16,10 +16,10 @@
               :else m))]
     (reduce f {} raw-hero-map)))
 
-;; Note that the dataset is a seq of maps with the key :hero-names (the name)
+;; Note that the dataset is a seq of maps with the key `:hero-names` (the name)
 ;; and a boolean (as string) key for each power. Write a function that
-;; normalizes our data into a map with the hero's name as :name and powers as a
-;; set of keywords (e.g. #{:super-strength :flight}).
+;; normalizes our data into a map with the hero's name as `:name` and powers as
+;; a set of keywords (e.g. `#{:super-strength :flight}`).
 (defn powers-data []
   (let [filename "resources/super_hero_powers.csv"]
     (->> filename
